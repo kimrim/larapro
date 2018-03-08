@@ -1,0 +1,34 @@
+﻿@extends('layouts.app')
+@section('style')
+	@include('header.style.five')
+@endsection
+@section('topbar')
+	@include('header.topbar.topbar')
+@endsection
+@section('logo')
+   @include('header.logo.two')
+@endsection
+@section('menu')
+	@include('header.menu.acc.buying_selling')
+@endsection
+@section('img')
+   @include('header.img.five')
+@endsection
+@section('sidebar')
+	@include('sidebar.acc.account_book.book_management.account_ledger')
+@endsection
+@section('content')
+   @include('content.conmain.acc.account_book.book_management.account_ledger')
+@endsection
+@section('footertop')
+	@include('footer.footertop.acc.account_book.book_management.account_ledger')
+@endsection
+@section('footermain')
+	@include('footer.footermain')
+@endsection
+@section('script')
+	@include('footer.script.five')
+@endsection
+@section('scriptbot')
+	@include('footer.scriptbot.acc.account_book.book_management.account_ledger')
+@endsection
