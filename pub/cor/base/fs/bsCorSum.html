@@ -1,0 +1,2298 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../asset/favicon.ico">
+    <title>Jumbotron Template for Bootstrap</title>
+    <!-- <link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../../../asset/css/nanumgothic.css" />
+    <!-- Bootstrap core CSS -->
+    <link href="../../../asset/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../../asset/css/jumbotron-navbar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../asset/css/header-content.css" />
+    <link rel="stylesheet" href="../../../asset/jquery-ui-1.11.4.custom/jquery-ui.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../../asset/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../../asset/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <!--<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../asset/js/html5shiv.min.js"></script>')</script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../asset/js/respond.min.js"></script>')</script> -->
+      <script src="../../../asset/js/html5shiv.min.js"></script>
+      <script src="../../../asset/js/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="../../../asset/css/jssor.css" rel="stylesheet">
+    <link href="../../../asset/css/style.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/media/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/media/css/dataTables.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/extensions/Scroller/css/scroller.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/extensions/Buttons/css/buttons.jqueryui.css">
+    <style type="text/css" class="init">
+	
+    </style>
+</head>
+<body>    
+  <!-- Static navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"> Kimrim Project</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">사용자정보 <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+              <li><a href="#">김영식</a></li>
+              <li></li>
+              <li><a href="#">경기도</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">(주)삼성전자 회장</li>
+              <li><a href="#">Se@dd.com</a></li>
+              <li><a href="#">나는 누구인가?</a></li>
+            </ul>       
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="./">Logoout <span class="sr-only">(current)</span></a></li>
+          <li><a href="../navbar-static-top/">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">        
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사용회사 <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li>       
+                <table class="table table-bordered table-condensed" style="width: 250px;margin:10px;">
+                  <thead>
+                    <tr>
+                      <th>코드</th>
+                      <th>회사명</th>
+                      <th>사용여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="success">
+                      <td>1001</td>
+                      <td>(주)kimrim</td>
+                      <td>사용</td>
+                    </tr>
+                    <tr class="warning">
+                      <td>1002</td>
+                      <td>박후영</td>
+                      <td>미사용</td>
+                    </tr>
+                    <tr class="danger">
+                      <td>1003</td>
+                      <td>김배현</td>
+                      <td>사용</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="nav navbar-nav navbar-right">
+                  <div class="btn-group btn-group-sm" style="padding-right: 30px; margin-bottom: 10px;">
+                    <button type="button" class="btn btn-info">확인</button>
+                    <button type="button" class="btn btn-success">닫기</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3 logo">
+          <div class="well well-sm">
+            <h5>Logo</h5>
+            <img src="../../../asset/img/logo_2.jpg" class="img-responsive img-thumbnail" id="logo" alt="Responsive image">
+            <p>안녕하세요 박후영님</p>
+          </div>
+        </div>
+        <div class="col-md-9 menu-open">
+          <div class="navbar navbar-default" role="navigation">
+             <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav h-c">
+                  <li class="dropdown">
+                    <a href="../../../acc/tradeInsert/trade_insert/revenue.html" class="dropdown-toggle" role="button">회계관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../vat/report/report01/report.html" class="dropdown-toggle" role="button">부가가치세 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                     <a href="../../../stk/sales/sales_trade/sales.html" class="dropdown-toggle" role="button">물류관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../pay/salary/earned_income/salary_insert.html" class="dropdown-toggle" role="button">급여관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown open">
+                    <a href="../../base/base_establishment/totalCorTable.html" class="dropdown-toggle">법인조정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="../../base/base_establishment/totalCorTable.html">기초사항</a></li>
+                      <li><a href="../../incomeTaxStandard/subject_01/taxDuesDetails.html">소득금액/특별/감가</a></li>
+                      <li><a href="../../taxCalc/tax_confirmation/cor_tax_standard_report.html">세액계산신고</a></li>
+                      <li><a href="../../otherDeclaration/transper/transfer_plan.html">기타신고</a></li>
+                      <li><a href="../../declarationAttachment/report_attachment/smaller_enterprises_standard_review.html">신고부속/기타서식</a></li>
+                      <li><a href="../../nonprofit/basic/common_benefit_revenue_bussiness.html">비영리</a></li>
+                      <li><a href="../../commonBenefit/common_benefit_01/contribution_property_report.html">공익</a></li>
+                      <li><a href="../../business_inpartnership/basic/tax_special_application.html">동업</a></li>
+                      <li><a href="../../sincerity/basic/deductionTaxCalc.html">성실</a></li>
+                      <li><a href="../../elecDeclaration/elec/elecCor.html">전자신고</a></li>
+                      <li><a href="../../connection/relate/tax_payment_way_apply.html">연결납세</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../per/base/base_establishment/totalPerTable.html" class="dropdown-toggle">개인조정 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">환경설정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="#">시스템 구성</a></li>
+                      <li><a href="#">화면셋팅</a></li>
+                    </ul>
+                  </li>
+                </ul> 
+             </div><!--/.nav-collapse -->                                    
+          </div> 
+          <div class="container" id="page">
+            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden; visibility: hidden;">
+              <!-- Loading Screen -->
+              <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position:absolute;display:block;background:url('../../../asset/img/jssor/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+              </div>
+              <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden;">
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/005.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/006.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/011.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/013.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/014.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/019.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/020.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/021.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/022.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/024.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/025.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/027.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/029.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/031.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/034.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/038.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/039.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/043.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/044.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/047.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/050.jpg" />
+               </div>
+             </div>
+             <!-- Bullet Navigator -->
+             <div data-u="navigator" class="jssorb03" style="bottom:10px;right:10px;">
+               <!-- bullet navigator item prototype -->
+               <div data-u="prototype" style="width:21px;height:21px;">
+                <div data-u="numbertemplate"></div>
+               </div>
+             </div>
+             <!-- Arrow Navigator -->
+             <span data-u="arrowleft" class="jssora03l" style="top:123px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <span data-u="arrowright" class="jssora03r" style="top:123px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
+           </div>
+           <!-- #endregion Jssor Slider End -->
+        </div><!-- div class="container" id="page" end -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+         <div class="well well-sm">      
+         <div class="panel-group">
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse11">기초정보관리</a></h4>
+            </div>
+            <div id="collapse11" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../base_establishment/expenditureReview.html" class="list-group-item">지출증빙서류검토표 <span class="badge">65</span></a>
+                <a href="../base_establishment/accountProofHh.html" class="list-group-item">계정별증빙현황 <span class="badge">25</span></a>
+                <a href="../base_establishment/adjustmentSubjectRegister.html" class="list-group-item">조정과목등록 <span class="badge">8</span></a>
+                <a href="../base_establishment/totalCorTable.html" class="list-group-item">세무조정계산서총괄표 <span class="badge">65</span></a>
+                <a href="../base_establishment/totalCorPrint.html" class="list-group-item">세무조정계산서일괄출력 <span class="badge">50</span></a>
+		<a href="../base_establishment/settlementTotalPrint.html" class="list-group-item">결산부속서류일괄출력 <span class="badge">145</span></a> 
+                <a href="../base_establishment/totalCorSign.html" class="list-group-item">세무조정계산서표지 <span class="badge">8</span></a>
+                <a href="../base_establishment/settlementReportSign.html" class="list-group-item">결산보고서표지 <span class="badge">65</span></a>
+                <a href="../base_establishment/cor.html" class="list-group-item">회사등록 <span class="badge">50</span></a>
+                <a href="../base_establishment/environment.html" class="list-group-item">환경등록 <span class="badge">65</span></a>
+                <a href="../base_establishment/accountBriefs.html" class="list-group-item">계정과목및적요등록 <span class="badge">25</span></a>                 
+	      </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse14">표준재무제표</a></h4>
+            </div>
+            <div id="collapse14" class="panel-collapse collapse in">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../fs/bsCor.html" class="list-group-item">표준대차대조표(일반법인용) <span class="badge">8</span></a>
+                <a href="../fs/bsCorSum.html" class="list-group-item active">합계표준대차대조표(일반법인용) <span class="badge">8</span></a>
+                <!-- <a href="../fs/bsBank.html" class="list-group-item">표준대차대조표(금융ㆍ보험ㆍ증권업 법인용)  <span class="badge">8</span></a> -->
+                <!-- <a href="../fs/bsBankSum.html" class="list-group-item">합계표준대차대조표(금융ㆍ보험ㆍ증권업 법인용)  <span class="badge">8</span></a> -->
+                <a href="../fs/plCor.html" class="list-group-item">표준손익계산서(일반법인용) <span class="badge">65</span></a>
+                <!-- <a href="../fs/plBank.html" class="list-group-item">표준손익계산서(금융ㆍ보험ㆍ증권업 법인용) <span class="badge">65</span></a> -->
+                <a href="../fs/attachmentDetailsProduce.html" class="list-group-item">부속명세서(제조,공사) <span class="badge">65</span></a>
+                <a href="../fs/attachmentDetailsLease.html" class="list-group-item">부속명세서(임대,분양) <span class="badge">65</span></a>
+                <a href="../fs/attachmentDetailsTransit.html" class="list-group-item">부속명세서(운송,기타) <span class="badge">65</span></a>
+                <a href="../fs/profitDisposal.html" class="list-group-item">이익잉여금처분계산서 <span class="badge">50</span></a>               
+	      </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse12">수입금액조정</a></h4>
+            </div>
+            <div id="collapse12" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>무엇을 써야하나?</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../revenue/revenue_amount_control.html" class="list-group-item"><span class="glyphicon glyphicon-camera"></span>수입금액조정명세서 <span class="badge">25</span></a>
+                <a href="../revenue/control_after_revenue_amount.html" class="list-group-item"><span class="glyphicon glyphicon-file"></span>조정후수입금액명세서 <span class="badge">145</span></a>
+                <a href="../revenue/revenue_share.html" class="list-group-item"><span class="glyphicon glyphicon-music"></span>수입배당금액명세서 <span class="badge">50</span></a>
+                <a href="../revenue/rentalDeposit.html" class="list-group-item"><span class="glyphicon glyphicon-music"></span>임대보증금등의 간주익금조정명세서 <span class="badge">65</span></a>
+              </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse13">감가상각비조정</a></h4>
+            </div>
+            <div id="collapse13" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>무엇을 써야하나?</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../depreciation/way_year.html" class="list-group-item">감가상각방법/내용연수신고서 <span class="badge">50</span></a>
+		<a href="../depreciation/adjustment.html" class="list-group-item">미상각자산감가상각비조정명세서 <span class="badge">145</span></a>
+                <a href="../depreciation/controlDetails.html" class="list-group-item">감가상각비신고조정명세서  <span class="badge">8</span></a>
+                <a href="../depreciation/controlDetailsTotal.html" class="list-group-item">감가상각비조정명세서합계표  <span class="badge">8</span></a>
+              </div>
+            </div>
+	  </div>                          
+        </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="btn-toolbar mar_b3">         
+          <button type="button" class="btn btn-xs btn-success">종료(ESC)</button>                                     
+          <button type="button" class="btn btn-xs btn-primary">도움(F1)</button> 
+          <button type="button" class="btn btn-xs btn-danger">인쇄(F9)</button> 
+        </div>
+        <ol class="breadcrumb mar_b3">
+          <li><a href="#">기초사항</a></li>
+          <li><a href="#">표준재무제표</a></li>
+          <li class="active">합계표준대차대조표(일반법인용)</li>
+        </ol>
+         <div class="well well-sm">자산항목</div>        
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="success">
+             <th>차 변 합 계</th>
+             <th>계 정 과 목</th>
+             <th>코드</th>
+             <th>대 변 합 계</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>Ⅰ.유동자산</td>      
+             <td>1</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(1)당좌자산</td>      
+             <td>2</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>1.현금 및 현금성자산</td>      
+             <td>3</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>2.단기예금</td>      
+             <td>4</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>3.유가증권</td>      
+             <td>5</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.단기매매증권</td>      
+             <td>6</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>나.유동성매도가능증권</td>      
+             <td>7</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>다.유동성만기보유증권</td>      
+             <td>8</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>4.매출채권(공사ㆍ분양수입 외)</td>      
+             <td>9</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.외상매출금</td>      
+             <td>10</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>11</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>나.받을어음</td>      
+             <td>12</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>13</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>다.기타매출채권</td>      
+             <td>14</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>15</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>5.단기대여금</td>      
+             <td>24</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>가.관계회사</td>      
+             <td>25</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>26</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>나.주주ㆍ임원ㆍ종업원</td>      
+             <td>27</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>28</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>다.기타</td>      
+             <td>29</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>30</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>6.미수금</td>      
+             <td>31</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.분양미수금</td>      
+             <td>32</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>33</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>나.공사미수금</td>      
+             <td>34</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>35</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>다.기타미수금</td>      
+             <td>36</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>37</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>7.선급금</td>      
+             <td>38</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>8.기타당좌자산</td>      
+             <td>39</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(2)재고자산</td>      
+             <td>44</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>1.상품</td>      
+             <td>45</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>2.제품</td>      
+             <td>46</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>3.반제품</td>      
+             <td>47</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>4.재공품</td>      
+             <td>48</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>5.부산물</td>      
+             <td>49</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>6.원재료(원자재)</td>      
+             <td>50</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>가.원재료</td>      
+             <td>51</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>나.부재료</td>      
+             <td>52</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>다.기타원재료</td>      
+             <td>53</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>7.가설재</td>      
+             <td>54</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>8.저장품</td>      
+             <td>55</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>9.미착상품(미착재료)</td>      
+             <td>56</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>10.완성주택</td>      
+             <td>57</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>11.미완성주택</td>      
+             <td>58</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>12.용지(건설업)</td>      
+             <td>59</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>13.완성공사(주택외)</td>      
+             <td>60</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>14.미완성공사(주택외)</td>      
+             <td>61</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>15.기타재고자산</td>      
+             <td>62</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+           </tbody>
+          </table>
+          <div class="well well-sm mar_tm18">자산항목</div>        
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>차 변 합 계</th>
+             <th>계 정 과 목</th>
+             <th>코드</th>
+             <th>대 변 합 계</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(3)기타유동자산</td>      
+             <td>67</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>1.미수수익</td>      
+             <td>68</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>2.선급비용</td>      
+             <td>69</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>3.이연법인세자산</td>      
+             <td>70</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>4.기타유동자산</td>      
+             <td>71</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.선급법인세</td>      
+             <td>72</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>나.부가가치세대급금</td>      
+             <td>73</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>다.선급관세</td>      
+             <td>74</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>라.기타유동자산</td>      
+             <td>75</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>II.비유동자산</td>      
+             <td>80</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(1)투자자산</td>      
+             <td>81</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>1.장기예금</td>      
+             <td>82</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>2.장기투자증권</td>      
+             <td>83</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.매도가능증권</td>      
+             <td>84</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>나.만기보유증권</td>      
+             <td>85</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>3.지분법적용투자주식</td>      
+             <td>86</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>4.장기대여금</td>      
+             <td>87</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.관계회사</td>      
+             <td>88</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>89</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>90</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>나.주주ㆍ임원ㆍ종업원</td>      
+             <td>91</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>92</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>6.미수금</td>      
+             <td>31</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.분양미수금</td>      
+             <td>32</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>93</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>다.기타</td>      
+             <td>94</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>95</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>96</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>5.투자부동산</td>      
+             <td>97</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.토지</td>      
+             <td>98</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>나.건물</td>      
+             <td>99</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>다.기타투자부동산</td>      
+             <td>100</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>6.기타투자자산</td>      
+             <td>105</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(2)유형자산</td>      
+             <td>110</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>1.토지</td>      
+             <td>111</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(손상차손누계액)</td>      
+             <td>112</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(정부보조금등차감액)</td>      
+             <td>113</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>2.건물</td>      
+             <td>114</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(감가상각누계액)</td>      
+             <td>115</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(손상차손누계액)</td>      
+             <td>116</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(정부보조금등차감액)</td>      
+             <td>117</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>3.구축물</td>      
+             <td>118</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(감가상각누계액)</td>      
+             <td>119</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(손상차손누계액)</td>      
+             <td>120</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(정부보조금등차감액)</td>      
+             <td>121</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>4.기계장치</td>      
+             <td>122</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(감가상각누계액)</td>      
+             <td>123</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(손상차손누계액)</td>      
+             <td>124</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(정부보조금등차감액)</td>      
+             <td>125</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>5.선박ㆍ항공기</td>      
+             <td>126</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(감가상각누계액)</td>      
+             <td>127</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(손상차손누계액)</td>      
+             <td>128</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>차 변 합 계</th>
+             <th>계 정 과 목</th>
+             <th>코드</th>
+             <th>대 변 합 계</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(정부보조금등차감액)</td>      
+             <td>129</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>6.건설용장비</td>      
+             <td>130</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(감가상각누계액)</td>      
+             <td>131</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(손상차손누계액)</td>      
+             <td>132</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(정부보조금등차감액)</td>      
+             <td>133</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>7.차량운반구</td>      
+             <td>134</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(감가상각누계액)</td>      
+             <td>135</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(손상차손누계액)</td>      
+             <td>136</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(정부보조금등차감액)</td>      
+             <td>137</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>8.건설중인유형자산</td>      
+             <td>138</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(손상차손누계액)</td>      
+             <td>139</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(정부보조금등차감액)</td>      
+             <td>140</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>9.시설장치</td>      
+             <td>141</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(감가상각누계액)</td>      
+             <td>142</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(손상차손누계액)</td>      
+             <td>143</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(정부보조금등차감액)</td>      
+             <td>144</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>10.공구ㆍ기구ㆍ비품</td>      
+             <td>145</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(감가상각누계액)</td>      
+             <td>146</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(손상차손누계액)</td>      
+             <td>147</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(정부보조금등차감액)</td>      
+             <td>148</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>11.기타유형자산</td>      
+             <td>149</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(감가상각누계액)</td>      
+             <td>150</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(손상차손누계액)</td>      
+             <td>151</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(정부보조금등차감액)</td>      
+             <td>152</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(3)무형자산</td>      
+             <td>169</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>1.영업권</td>      
+             <td>9170</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>2.산업재산권</td>      
+             <td>171</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.특허권</td>      
+             <td>172</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>나.상표권</td>      
+             <td>173</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>다.실용신안권</td>      
+             <td>174</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>라.의장권</td>      
+             <td>175</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>마.기타산업재산권</td>      
+             <td>176</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>3.광업권</td>      
+             <td>181</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>4.어업권</td>      
+             <td>182</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>5.차지권</td>      
+             <td>183</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>6.개발비</td>      
+             <td>184</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>7.사용수익기부자산가액</td>      
+             <td>185</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>8.소프트웨어</td>      
+             <td>186</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>9.저작권</td>      
+             <td>187</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>10.제이용권</td>      
+             <td>188</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>11.기타무형자산</td>      
+             <td>189</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(4)기타비유동자산</td>      
+             <td>194</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>1.장기매출채권</td>      
+             <td>195</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.장기외상매출금</td>      
+             <td>196</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>197</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>198</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>나.장기받을어음</td>      
+             <td>199</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>200</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>201</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>다.장기기타매출채권</td>      
+             <td>202</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>          
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>차 변 합 계</th>
+             <th>계 정 과 목</th>
+             <th>코드</th>
+             <th>대 변 합 계</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>203</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>204</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>2.장기미수금</td>      
+             <td>205</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.분양장기미수금</td>      
+             <td>206</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>207</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>208</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>나.공사장기미수금</td>      
+             <td>209</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>210</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>211</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>다.기타장기미수금</td>      
+             <td>212</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>213</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>214</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>3.장기선급금</td>      
+             <td>215</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>216</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>4.보증금</td>      
+             <td>217</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.임차보증금</td>      
+             <td>218</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>219</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>나.기타보증금</td>      
+             <td>220</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(대손충당금)</td>      
+             <td>221</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td> 5.이연법인세자산</td>      
+             <td>222</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>6.기타</td>      
+             <td>223</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>자산총계(Ⅰ+Ⅱ)</td>      
+             <td>228</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>             
+           </tbody>
+          </table>
+          <div class="well well-sm mar_tm18">부채항목</div> 
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>차 변 합 계</th>
+             <th>계 정 과 목</th>
+             <th>코드</th>
+             <th>대 변 합 계</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>I.유동부채</td>      
+             <td>229</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>1.매입채무</td>      
+             <td>230</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>가.외상매입금</td>      
+             <td>231</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>나.지급어음</td>      
+             <td>232</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>다.기타매입채무</td>      
+             <td>233</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>2.단기차입금</td>      
+             <td>234</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>가.관계회사</td>      
+             <td>235</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>나.주주ㆍ임원ㆍ종업원</td>      
+             <td>236</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>다.기타</td>      
+             <td>237</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>3.미지급금</td>      
+             <td>238</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>가.미지급법인세</td>      
+             <td>239</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>나.미지급배당금</td>      
+             <td>240</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>다.기타미지급금</td>      
+             <td>241</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>4.선수금</td>      
+             <td>242</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>가.분양선수금</td>      
+             <td>243</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>나.공사선수금</td>      
+             <td>244</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>다.기타</td>      
+             <td>245</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>5.예수금</td>      
+             <td>246</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>가.부가가치세예수금</td>      
+             <td>247</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>나.제세예수금</td>      
+             <td>248</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>다.예수보증금</td>      
+             <td>249</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>라.기타예수금</td>      
+             <td>250</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>6.미지급비용</td>      
+             <td>251</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>7.선수수익</td>      
+             <td>252</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>8.유동성장기부채</td>      
+             <td>253</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.유동성장기차입금</td>      
+             <td>254</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>255</td>
+             <td><input type="text" class="form-control"></td>
+            </tr>              
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>차 변 합 계</th>
+             <th>계 정 과 목</th>
+             <th>코드</th>
+             <th>대 변 합 계</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>나.유동성사채</td>      
+             <td>256</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>257</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>다.기타유동성장기부채</td>      
+             <td>258</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>259</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>9.단기충당부채</td>      
+             <td>268</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.단기공사손실충당부채</td>      
+             <td>269</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>나.단기제품보증충당부채</td>      
+             <td>270</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>다.단기반품추정충당부채</td>      
+             <td>271</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>라.단기하자보수충당부채</td>      
+             <td>272</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>마.단기기타충당부채</td>      
+             <td>273</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>10.이연법인세부채</td>      
+             <td>278</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>11.기타유동부채</td>      
+             <td>279</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>II.비유동부채</td>      
+             <td>284</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>1.사채</td>      
+             <td>285</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>286</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>2.전환사채등신종사채</td>      
+             <td>287</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>288</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>3.장기차입금</td>      
+             <td>289</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>가.관계회사</td>      
+             <td>290</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>291</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>나.주주ㆍ임원ㆍ종업원</td>      
+             <td>292</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>293</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>다.기타</td>      
+             <td>294</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>295</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>4.장기매입채무</td>      
+             <td>296</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.장기외상매입금</td>      
+             <td>297</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>298</td>
+             <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>나.장기지급어음</td>      
+             <td>299</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>300</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>다.장기기타매입채무</td>      
+             <td>301</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>302</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>5.장기미지급금</td>      
+             <td>303</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(현재가치할인차금)</td>      
+             <td>304</td>
+             <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>6.장기선수금</td>      
+             <td>305</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>가.장기분양선수금</td>      
+             <td>306</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>나.장기공사선수금</td>      
+             <td>307</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>다.장기기타선수금</td>      
+             <td>308</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>7.퇴직급여충당부채</td>      
+             <td>309</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>8.퇴직연금미지급금</td>      
+             <td>310</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(국민연금전환금)</td>      
+             <td>311</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>(퇴직보험예치금)</td>      
+             <td>312</td>
+             <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>(퇴직연금운용자산)</td>      
+             <td>313</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>9.장기충당부채</td>      
+             <td>314</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>가.장기공사손실충당부채</td>      
+             <td>315</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>나.장기제품보증충당부채</td>      
+             <td>316</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>다.장기반품추정충당부채</td>      
+             <td>317</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>라.장기하자보수충당부채</td>      
+             <td>318</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>마.장기기타충당부채</td>      
+             <td>319</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>10.제준비금</td>      
+             <td>324</td>
+             <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>11.이연법인세부채</td>      
+             <td>325</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>12.장기임대보증금</td>      
+             <td>326</td>
+             <td><input type="text" class="form-control"></td>
+            </tr>           
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>차 변 합 계</th>
+             <th>계 정 과 목</th>
+             <th>코드</th>
+             <th>대 변 합 계</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>13.장기기타보증금</td>      
+             <td>327</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>14.기타비유동부채</td>      
+             <td>328</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>부채총계(Ⅰ+Ⅱ)</td>      
+             <td>333</td>
+             <td><input type="text" class="form-control"></td>
+            </tr>           
+           </tbody>
+          </table>
+           <div class="well well-sm mar_tm18">자본항목</div> 
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>차 변 합 계</th>
+             <th>계 정 과 목</th>
+             <th>코드</th>
+             <th>대 변 합 계</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>III.자본금</td>      
+             <td>334</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>1.보통주자본금</td>      
+             <td>335</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>2.우선주자본금</td>      
+             <td>336</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>Ⅳ.자본잉여금</td>      
+             <td>337</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>1.주식발행초과금</td>      
+             <td>338</td>
+             <td><input type="text" class="form-control"></td> 
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>2.감자차익</td>      
+             <td>339</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>3.합병차익</td>      
+             <td>340</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>4.자기주식처분이익</td>      
+             <td>341</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>5.재평가적립금</td>      
+             <td>342</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>6.기타자본잉여금</td>      
+             <td>343</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>V.자본조정</td>      
+             <td>348</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>1.주식할인발행차금</td>      
+             <td>349</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>2.감자차손</td>      
+             <td>350</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>3.자기주식</td>      
+             <td>351</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>4.미교부주식배당금</td>      
+             <td>352</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>5.자기주식처분손실</td>      
+             <td>353</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>6.부의지분법자본변동</td>      
+             <td>354</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>7.주식매수선택권</td>      
+             <td>355</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>8.기타자본조정</td>      
+             <td>356</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>Ⅵ.기타포괄손익누계액</td>      
+             <td>361</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>1.매도가능증권평가손익</td>      
+             <td>362</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>2.해외사업환산손익</td>      
+             <td>363</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>3.지분법자본변동</td>      
+             <td>364</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>4.파생상품평가손익</td>      
+             <td>365</td>
+             <td><input type="text" class="form-control"></td>     
+            </tr> 
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>5.재평가잉여금</td>      
+             <td>366</td>
+             <td><input type="text" class="form-control"></td>
+            </tr> 
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>6.기타</td>      
+             <td>367</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>VII.이익잉여금</td>      
+             <td>372</td>
+             <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>1.이익준비금</td>      
+             <td>373</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>2.재무구조개선적립금</td>      
+             <td>374</td>
+             <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>3.「조세특례제한법상」준비금</td>      
+             <td>375</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>4.기타임의적립금</td>      
+             <td>376</td>
+             <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>5.미처분이익잉여금(미처리결손금)</td>      
+             <td>381</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>
+            <tr class="warning">
+             <td><input type="text" class="form-control"></td>
+             <td>자본총계(Ⅲ+～Ⅶ)</td>      
+             <td>382</td>
+             <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td>부채와 자본총계</td>      
+             <td>383</td>
+             <td><input type="text" class="form-control"></td>    
+            </tr>              
+           </tbody>
+          </table>
+      <div class="nav navbar-nav navbar-right">
+               <div class="btn-group btn-group-xs mtm10mb10pr30">
+                <button type="button" class="btn btn-info tableinput-toggle" name="tab-tax1">수정취소</button>
+                <button type="button" class="btn btn-success table-toggle">재수정</button>
+               </div>
+             </div>               
+  </div> <!-- end col-md-9 -->
+  </div> <!-- end row -->
+  </div> <!-- end container -->
+
+<div class="container"> 
+<div class="row">
+<div class="col-md-12">    
+<div class="footer well">
+<div class="">
+        <p><a href="#" title="당신&apos;s 이름은">Tooltips</a> 무엇인가요?. 자세히 보아야 예쁘다
+오래 보아야 사랑스럽다
+너도 그렇다</p>
+        <p>But as it's not a native tooltip, it can be styled. Any themes built with<a href="http://jqueryui.com/themeroller/" title="당신은 나의 동반자">ThemeRoller</a>will also style tooltips accordingly.</p>
+        <p>그대가 꺾어준 꽃
+시들 때 까지 들여다 보았네
+그대가 남기고 간 시든 꽃
+다시 필 때까지</p>
+        <p><label for="age">Your age:</label> <input id="age" title="We ask for your age only for statistical purposes."></p>
+        <p>Hover the field to see the tooltip.</p>
+      </div>
+             <div class="bs-example"> 
+    <button type="button" class="btn btn-default" rel="txtTooltip" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+<button type="button" class="btn btn-primary" rel="txtTooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+<button type="button" class="btn btn-info" rel="txtTooltip" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+<button type="button" class="btn btn-danger" rel="txtTooltip" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+</div>
+ </div>
+</div>
+</div>
+</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!--<script>window.jQuery || document.write('<script src="../../../js/jquery.min.js"></script>')</script> -->
+    <script src="../../../asset/js/jquery.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.12.3.min.js"></script> -->
+
+    <script src="../../../asset/js/bootstrap.min.js"></script>
+    <script src="../../../asset/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../../asset/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="../../../asset/js/header-content.js"></script>
+
+    <script src="../../../asset/js/jssor/jssor.slider.mini.js"></script>
+    <script src="../../../asset/js/jssor.js"></script>
+  
+    <script src="../../../asset/js/main.js"></script> 
+    <script src="../../../asset/js/main_popup.js"></script> 
+    <script src="../../../asset/js/main_popup_item.js"></script> 
+    <script src="../../../asset/js/datepicker.js"></script>
+    <script src="../../../asset/js/lan_ko.js"></script>
+    <script src="../../../asset/js/con_tab.js"></script>
+    <script src="../../../asset/js/con_topmenu.js"></script>
+    <script src="../../../asset/js/toolbar_popup.js"></script>
+    <script src="../../../asset/js/con_mainmenu.js"></script>
+        
+    <!-- dialog로딩 시 autofocus없애기 -->
+    <script>$.ui.dialog.prototype._focusTabbable = function(){};</script>
+   
+    <script src="../../../asset/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="../../../asset/DataTables/media/js/dataTables.jqueryui.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/dataTables.buttons.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.jqueryui.js"></script>
+    <script src="../../../asset/DataTables/extensions/Scroller/js/dataTables.scroller.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.html5.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.print.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.colVis.js"></script>
+    <script class="init">
+ 
+    </script>
+  </body>
+</html>

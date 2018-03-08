@@ -1,0 +1,23 @@
+﻿{ "aaData": [
+	[ "1.매출액", "Armand", "Warren", "56045", "Taiwan, Province of China", "한글판해적선", "aa" ],
+	[ "제품매출", "Xenos", "Salas", "71090", "Liberia", "", "" ],
+	[ "2.매출원가", "Virginia", "Whitaker", "62723", "Nicaragua", "", "" ],
+	[ "제품매출원가", "Kato", "Patrick", "97662", "Palau", "", "" ],
+	[ "기초제품재고액", "Penelope", "Hensley", "76634", "Greenland", "", ""  ],
+	[ "당기제품제조원가", "Georgia", "Erickson", "81358", "Bolivia", "", ""  ],
+	[ "기말제품재고액", "Shad", "Pena", "20600", "Palestinian Territory, Occupied", "", "" ],
+	[ "3.매출총이익", "Tanisha", "Humphrey", "93371", "Kenya", "", ""  ],
+	[ "4.판매비와관리비", "Claire", "Espinoza", "I8S 2S8", "Panama", "", ""  ],
+	[ "급여", "Raya", "Tucker", "O8D 8W7", "Botswana", "", ""  ],
+	[ "상여금", "Otto", "Briggs", "57590", "Anguilla", "", ""  ],
+	[ "퇴직급여", "Logan", "Burt", "53041", "Venezuela", "", ""  ],
+	[ "복리후생비", "Cooper", "Pennington", "36994", "France", "", ""  ],
+	[ "여비교통비", "Kristen", "Peterson", "52917", "Sao Tome and Principe", "", ""  ],
+	[ "접대비", "Jordan", "Velasquez", "08884", "Switzerland", "", ""  ],
+	[ "통신비", "Zelda", "Freeman", "F9H 1J9", "Holy See (Vatican City State)", "", ""  ],
+	[ "수도광열비", "Mary", "Pacheco", "A7Y 6X9", "Niger", "", "" ],
+	[ "전력비", "Tiger", "Robles", "44533", "Malaysia", "", ""  ],
+	[ "세금과공과금", "Zelenia", "Buckner", "Q8N 6E5", "Malawi", "", ""  ],
+	[ "감가상각비", "Coby", "Johnston", "N6I 2O9", "Rwanda", "", ""  ],
+	[ "보험료", "Gillian", "Strickland", "12258", "Cook Islands", "", ""  ]
+] }

@@ -1,0 +1,1594 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../asset/favicon.ico">
+    <title>Jumbotron Template for Bootstrap</title>
+    <!-- <link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../../../asset/css/nanumgothic.css" />
+    <!-- Bootstrap core CSS -->
+    <link href="../../../asset/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../../asset/css/jumbotron-navbar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../asset/css/header-content.css" />
+    <link rel="stylesheet" href="../../../asset/jquery-ui-1.11.4.custom/jquery-ui.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../../asset/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../../asset/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <!--<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../asset/js/html5shiv.min.js"></script>')</script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../asset/js/respond.min.js"></script>')</script> -->
+      <script src="../../../asset/js/html5shiv.min.js"></script>
+      <script src="../../../asset/js/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="../../../asset/css/jssor.css" rel="stylesheet">
+    <link href="../../../asset/css/style.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/media/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/media/css/dataTables.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/extensions/Scroller/css/scroller.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/extensions/Buttons/css/buttons.jqueryui.css">
+    <style type="text/css" class="init">
+	
+    </style>
+</head>
+<body>    
+  <!-- Static navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"> Kimrim Project</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">사용자정보 <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+              <li><a href="#">김영식</a></li>
+              <li></li>
+              <li><a href="#">경기도</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">(주)삼성전자 회장</li>
+              <li><a href="#">Se@dd.com</a></li>
+              <li><a href="#">나는 누구인가?</a></li>
+            </ul>       
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="./">Logoout <span class="sr-only">(current)</span></a></li>
+          <li><a href="../navbar-static-top/">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">        
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사용회사 <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li>       
+                <table class="table table-bordered table-condensed" style="width: 250px;margin:10px;">
+                  <thead>
+                    <tr>
+                      <th>코드</th>
+                      <th>회사명</th>
+                      <th>사용여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="success">
+                      <td>1001</td>
+                      <td>(주)kimrim</td>
+                      <td>사용</td>
+                    </tr>
+                    <tr class="warning">
+                      <td>1002</td>
+                      <td>박후영</td>
+                      <td>미사용</td>
+                    </tr>
+                    <tr class="danger">
+                      <td>1003</td>
+                      <td>김배현</td>
+                      <td>사용</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="nav navbar-nav navbar-right">
+                  <div class="btn-group btn-group-sm" style="padding-right: 30px; margin-bottom: 10px;">
+                    <button type="button" class="btn btn-info">확인</button>
+                    <button type="button" class="btn btn-success">닫기</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3 logo">
+          <div class="well well-sm">
+            <h5>Logo</h5>
+            <img src="../../../asset/img/logo_2.jpg" class="img-responsive img-thumbnail" id="logo" alt="Responsive image">
+            <p>안녕하세요 박후영님</p>
+          </div>
+        </div>
+        <div class="col-md-9 menu-open">
+          <div class="navbar navbar-default" role="navigation">
+             <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav h-c">
+                  <li class="dropdown">
+                    <a href="../../../acc/tradeInsert/trade_insert/revenue.html" class="dropdown-toggle" role="button">회계관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../vat/report/report01/report.html" class="dropdown-toggle" role="button">부가가치세 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                     <a href="../../../stk/sales/sales_trade/sales.html" class="dropdown-toggle" role="button">물류관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../pay/salary/earned_income/salary_insert.html" class="dropdown-toggle" role="button">급여관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown open">
+                    <a href="../../base/base_establishment/totalCorTable.html" class="dropdown-toggle">법인조정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="../../base/base_establishment/totalCorTable.html">기초사항</a></li>
+                      <li><a href="../../incomeTaxStandard/subject_01/taxDuesDetails.html">소득금액/특별/감가</a></li>
+                      <li><a href="../../taxCalc/tax_confirmation/cor_tax_standard_report.html">세액계산신고</a></li>
+                      <li><a href="../../otherDeclaration/transper/transfer_plan.html">기타신고</a></li>
+                      <li><a href="../../declarationAttachment/report_attachment/smaller_enterprises_standard_review.html">신고부속/기타서식</a></li>
+                      <li><a href="../../nonprofit/basic/common_benefit_revenue_bussiness.html">비영리</a></li>
+                      <li><a href="../../commonBenefit/common_benefit_01/contribution_property_report.html">공익</a></li>
+                      <li><a href="../../business_inpartnership/basic/tax_special_application.html">동업</a></li>
+                      <li><a href="../../sincerity/basic/deductionTaxCalc.html">성실</a></li>
+                      <li><a href="../../elecDeclaration/elec/elecCor.html">전자신고</a></li>
+                      <li><a href="../../connection/relate/tax_payment_way_apply.html">연결납세</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../per/base/base_establishment/totalPerTable.html" class="dropdown-toggle">개인조정 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">환경설정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="#">시스템 구성</a></li>
+                      <li><a href="#">화면셋팅</a></li>
+                    </ul>
+                  </li>
+                </ul> 
+             </div><!--/.nav-collapse -->                                    
+          </div> 
+          <div class="container" id="page">
+            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden; visibility: hidden;">
+              <!-- Loading Screen -->
+              <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position:absolute;display:block;background:url('../../../asset/img/jssor/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+              </div>
+              <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden;">
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/005.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/006.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/011.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/013.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/014.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/019.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/020.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/021.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/022.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/024.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/025.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/027.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/029.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/031.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/034.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/038.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/039.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/043.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/044.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/047.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/050.jpg" />
+               </div>
+             </div>
+             <!-- Bullet Navigator -->
+             <div data-u="navigator" class="jssorb03" style="bottom:10px;right:10px;">
+               <!-- bullet navigator item prototype -->
+               <div data-u="prototype" style="width:21px;height:21px;">
+                <div data-u="numbertemplate"></div>
+               </div>
+             </div>
+             <!-- Arrow Navigator -->
+             <span data-u="arrowleft" class="jssora03l" style="top:123px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <span data-u="arrowright" class="jssora03r" style="top:123px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
+           </div>
+           <!-- #endregion Jssor Slider End -->
+        </div><!-- div class="container" id="page" end -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+         <div class="well well-sm">      
+         <div class="panel-group">
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse11">기초정보관리</a></h4>
+            </div>
+            <div id="collapse11" class="panel-collapse collapse in">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../base_establishment/expenditureReview.html" class="list-group-item">지출증빙서류검토표 <span class="badge">65</span></a>
+                <a href="../base_establishment/accountProofHh.html" class="list-group-item">계정별증빙현황 <span class="badge">25</span></a>
+                <a href="../base_establishment/adjustmentSubjectRegister.html" class="list-group-item">조정과목등록 <span class="badge">8</span></a>
+                <a href="../base_establishment/totalCorTable.html" class="list-group-item active">세무조정계산서총괄표 <span class="badge">65</span></a>
+                <a href="../base_establishment/totalCorPrint.html" class="list-group-item">세무조정계산서일괄출력 <span class="badge">50</span></a>
+		<a href="../base_establishment/settlementTotalPrint.html" class="list-group-item">결산부속서류일괄출력 <span class="badge">145</span></a> 
+                <a href="../base_establishment/totalCorSign.html" class="list-group-item">세무조정계산서표지 <span class="badge">8</span></a>
+                <a href="../base_establishment/settlementReportSign.html" class="list-group-item">결산보고서표지 <span class="badge">65</span></a>
+                <a href="../base_establishment/cor.html" class="list-group-item">회사등록 <span class="badge">50</span></a>
+                <a href="../base_establishment/environment.html" class="list-group-item">환경등록 <span class="badge">65</span></a>
+                <a href="../base_establishment/accountBriefs.html" class="list-group-item">계정과목및적요등록 <span class="badge">25</span></a>                 
+	      </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse14">표준재무제표</a></h4>
+            </div>
+            <div id="collapse14" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../fs/bsCor.html" class="list-group-item">표준대차대조표(일반법인용) <span class="badge">8</span></a>
+                <a href="../fs/bsCorSum.html" class="list-group-item">합계표준대차대조표(일반법인용) <span class="badge">8</span></a>
+                <!-- <a href="../fs/bsBank.html" class="list-group-item">표준대차대조표(금융ㆍ보험ㆍ증권업 법인용)  <span class="badge">8</span></a> -->
+                <!-- <a href="../fs/bsBankSum.html" class="list-group-item">합계표준대차대조표(금융ㆍ보험ㆍ증권업 법인용)  <span class="badge">8</span></a> -->
+                <a href="../fs/plCor.html" class="list-group-item">표준손익계산서(일반법인용) <span class="badge">65</span></a>
+                <!-- <a href="../fs/plBank.html" class="list-group-item">표준손익계산서(금융ㆍ보험ㆍ증권업 법인용) <span class="badge">65</span></a> -->
+                <a href="../fs/attachmentDetailsProduce.html" class="list-group-item">부속명세서(제조,공사) <span class="badge">65</span></a>
+                <a href="../fs/attachmentDetailsLease.html" class="list-group-item">부속명세서(임대,분양) <span class="badge">65</span></a>
+                <a href="../fs/attachmentDetailsTransit.html" class="list-group-item">부속명세서(운송,기타) <span class="badge">65</span></a>
+                <a href="../fs/profitDisposal.html" class="list-group-item">이익잉여금처분계산서 <span class="badge">50</span></a>               
+	      </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse12">수입금액조정</a></h4>
+            </div>
+            <div id="collapse12" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>무엇을 써야하나?</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../revenue/revenue_amount_control.html" class="list-group-item"><span class="glyphicon glyphicon-camera"></span>수입금액조정명세서 <span class="badge">25</span></a>
+                <a href="../revenue/control_after_revenue_amount.html" class="list-group-item"><span class="glyphicon glyphicon-file"></span>조정후수입금액명세서 <span class="badge">145</span></a>
+                <a href="../revenue/revenue_share.html" class="list-group-item"><span class="glyphicon glyphicon-music"></span>수입배당금액명세서 <span class="badge">50</span></a>
+                <a href="../revenue/rentalDeposit.html" class="list-group-item"><span class="glyphicon glyphicon-music"></span>임대보증금등의 간주익금조정명세서 <span class="badge">65</span></a>
+              </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse13">감가상각비조정</a></h4>
+            </div>
+            <div id="collapse13" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>무엇을 써야하나?</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../depreciation/way_year.html" class="list-group-item">감가상각방법/내용연수신고서 <span class="badge">50</span></a>
+		<a href="../depreciation/adjustment.html" class="list-group-item">미상각자산감가상각비조정명세서 <span class="badge">145</span></a>
+                <a href="../depreciation/controlDetails.html" class="list-group-item">감가상각비신고조정명세서  <span class="badge">8</span></a>
+                <a href="../depreciation/controlDetailsTotal.html" class="list-group-item">감가상각비조정명세서합계표  <span class="badge">8</span></a>
+              </div>
+            </div>
+	  </div>                          
+        </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="btn-toolbar mar_b3">         
+          <button type="button" class="btn btn-xs btn-success">종료(ESC)</button>                                     
+          <button type="button" class="btn btn-xs btn-primary">도움(F1)</button> 
+          <button type="button" class="btn btn-xs btn-danger">인쇄(F9)</button> 
+        </div>
+        <ol class="breadcrumb mar_b3">
+          <li><a href="#">기초사항</a></li>
+          <li><a href="#">기초정보관리</a></li>
+          <li class="active">세무조정계산서총괄표</li>
+        </ol>                
+        <form class="form-inline well well-sm" style="margin-bottom: 2px;">
+          <div class="form-group">
+            <label for="from">기 &nbsp;&nbsp;간</label>
+            <input type="text" class="form-control" id="from" placeholder="2016-01-01" readonly="readonly">
+          </div>
+          <div class="form-group">
+            <label for="to">~</label>
+            <input type="text" class="form-control" id="to" placeholder="2016-12-31" readonly="readonly">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="1기 확정">
+          </div>      
+        </form> 
+       <div class="row"> 
+         <div class="col-md-3">         
+          <table class="table table-bordered table-hover table-condensed">
+           <thead>
+            <tr class="success">
+             <th>기초정보관리</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td>지출증빙서류검토표</td>      
+            </tr> 
+            <tr class="danger">
+             <td>계정별증빙현황</td>
+            </tr>
+            <tr class="success">
+             <td>조정과목등록</td>
+            </tr>
+            <tr class="warning">
+             <td><a href="../../base/base_establishment/totalCorTable.html" class="dropdown-toggle">세무조정계산서총괄표</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td>세무조정계산서일괄출력</td>
+            </tr>
+            <tr class="success">
+             <td>결산부속서류일괄출력</td>
+            </tr>
+            <tr class="warning">
+             <td>세무조정계산서표지</td>      
+            </tr> 
+            <tr class="danger">
+             <td>결산보고서표지</td>
+            </tr>
+            <tr class="success">
+             <td>회사등록</td>
+            </tr>
+            <tr class="warning">
+             <td>환경등록</td>      
+            </tr> 
+            <tr class="danger">
+             <td>계정과목및적요등록</td>
+            </tr>    
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="success">
+             <th>표준재무제표</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../base/fs/bsCor.html">표준대차대조표(일반법인용)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../base/fs/bsCorSum.html">합계표준대차대조표(일반법인용)</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../base/fs/plCor.html">표준손익계산서(일반법인용)</a></td>
+            </tr>
+            <tr class="warning">
+             <td><a href="../../base/fs/attachmentDetailsProduce.html">부속명세서(제조,공사)</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../base/fs/attachmentDetailsLease.html">부속명세서(임대,분양)</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../base/fs/attachmentDetailsTransit.html">부속명세서(운송,기타)</a></td>
+            </tr>
+            <tr class="warning">
+             <td><a href="../../base/fs/profitDisposal.html">이익잉여금처분계산서</a></td>      
+            </tr>    
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="success">
+             <th>수입금액조정</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../base/revenue/revenue_amount_control.html">수입금액조정명세서</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../base/revenue/control_after_revenue_amount.html">조정후수입금액명세서</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../base/revenue/revenue_share.html">수입배당금명세서</a></td>
+            </tr>
+            <tr class="warning">
+             <td><a href="../../base/revenue/a04.html">임대보증금등의간주익금조정명세서</a></td>      
+            </tr>       
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="success">
+             <th>감가상각비조정</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tbody>
+            <tr class="warning">
+             <td><a href="../../base/depreciation/way_year.html">감가상각방법/내용연수신고서(Ⅱ-3)</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../base/depreciation/adjustment.html">미상각분감가상각비</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../base/depreciation/controlDetails.html">감가상각비신고조정명세서</a></td>
+            </tr>
+            <tr class="warning">
+             <td><a href="../../base/depreciation/controlDetailsTotal.html">감가상각비조정명세서합계표(Ⅰ-29)</a></td>      
+            </tr>       
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="success">
+             <th>비영리법인</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tbody>
+            <tr class="warning">
+             <td><a href="../../nonprofit/basic/native_purpose_01.html">고유목적사업준비금조정명세서(갑)</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../nonprofit/basic/cor_tax_agriculture_special_tax_standard_report.html">법인세.농어촌특별세 과세표준(조정계산)및 세액신고서(이자소득만있는 비영리법인 신고용)</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../nonprofit/basic/origin_payment_tax_01.html">원천납부세액명세서(갑)</a></td>
+            </tr>
+            <tr class="warning">
+             <td><a href="../../nonprofit/basic/common_benefit_revenue_bussiness.html">비영리법인의 수익사업 수입명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../nonprofit/basic/common_benefit_addition_tax.html">가산세액계산서(이자소득만있는 비영리법인신고용)</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../nonprofit/basic/nonProfitCorAssignmentIncomeReport.html">비영리내국법인의 양도소득과세표준예정신고서</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../nonprofit/basic/assignmentIncomeCalcDetails.html">양도소득금액 계산명세서</a></td>
+            </tr>
+            <tr class="warning">
+             <td><a href="../../nonprofit/basic/stockAssignmentIncomeCalcDetails.html">주식 양도소득금액 계산명세서</a></td>      
+            </tr>     
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="success">
+             <th>공익법인1</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tbody>
+            <tr class="warning">
+             <td><a href="../../commonBenefit/common_benefit_01/contribution_property_report.html">공익법인 출연재산 등에 대한 보고서</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../commonBenefit/common_benefit_01/application_earnings_use.html">운용소득 사용명세서</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../commonBenefit/common_benefit_01/director_election.html">이사 등 선임명세서</a></td>
+            </tr>
+            <tr class="warning">
+             <td><a href="../../commonBenefit/common_benefit_01/stock_retain.html">주식(출자지분) 보유명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../commonBenefit/common_benefit_01/contribution_property_use.html">출연받은 재산의 사용명세서</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../commonBenefit/common_benefit_01/contribution_property_sell_use.html">출연재산 매각대금 사용명세서</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../commonBenefit/common_benefit_01/contribution_property_use_plan.html">출연재산ㆍ운용소득ㆍ매각대금의 사용계획 및 진도내역서</a></td>
+            </tr>
+            <tr class="warning">
+             <td><a href="../../commonBenefit/common_benefit_01/speial_cor_advertisement.html">특정기업광고 등 명세서</a></td>      
+            </tr>   
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="success">
+             <th>공익법인2</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tbody>
+            <tr class="warning">
+             <td><a href="../../commonBenefit/common_benefit_02/taxationConfirm.html">공익법인 등의 세무확인서</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../commonBenefit/common_benefit_02/taxationConfirmtotalTable.html">공익법인 등의 세무확인결과 집계표</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../commonBenefit/common_benefit_02/specialUseDetails.html">출연자 등 특수관계인 사용수익명세서</a></td>
+            </tr>
+            <tr class="warning">
+             <td><a href="../../commonBenefit/common_benefit_02/beneficiaryInadequateDetails.html">수혜자 선정 부적정명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../commonBenefit/common_benefit_02/historyInadequateDetails.html">재산의 운용 및 수익사업내역 부적정 명세서</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../commonBenefit/common_benefit_02/defaultDetails.html">장부의 작성·비치의무 불이행 등 명세서</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../commonBenefit/common_benefit_02/possessedRealEstateDetails.html">보유부동산 명세서</td>
+            </tr>   
+           </tbody>
+          </table> 
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="success">
+             <th>동업기업-기본사항</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tbody>
+            <tr class="warning">
+             <td><a href="../../business_inpartnership/basic/tax_special_application.html">동업기업과세특례 적용신청서</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../business_inpartnership/basic/tax_special_renounce.html">동업기업과세특례 포기신청서</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../business_inpartnership/basic/semi_clearing_tax_standard_report.html">준청산소득에 대한 법인세 과세표준 및 세액신고서</a></td>
+            </tr>
+            <tr class="warning">
+             <td><a href="../../business_inpartnership/basic/share_control.html">지분가액 조정명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../business_inpartnership/basic/assignmentDetails.html">춮자지분 양도명세서</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../business_inpartnership/basic/division_limit_exceed_loss.html">배분한도 초과결손금 계산서</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../business_inpartnership/basic/passivity_partnership_loss.html">수동적 동업자 이월결손금 계산서</a></td>
+            </tr>
+            <tr class="warning">
+             <td><a href="../../business_inpartnership/basic/tax_division.html">동업기업 세액배분명세서</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../business_inpartnership/basic/allotment_loss.html">배당금등의 의제상당액 손금산입 명세서</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../business_inpartnership/basic/tax_special_application_confirm.html">동업기업 과세특례적용 및 동업자 과세여부확인서</a></td>
+            </tr>   
+           </tbody>
+          </table>  
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="success">
+             <th>동업기업-신고서식</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tbody>
+            <tr class="warning">
+             <td><a href="../../business_inpartnership/distributionDetails/distributionDetailsDeclaration.html">동업기업 소득계산 및 배분명세 신고서</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../business_inpartnership/distributionDetails/residentCorIncomeCalc.html">거주자군 동업기업 소득금액(결손금) 계산서</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../business_inpartnership/distributionDetails/residentPersonIncomeDetails.html">거주자군 동업자 소득금액(결손금) 배분명세서</a></td>
+            </tr>
+            <tr class="warning">
+             <td><a href="../../business_inpartnership/distributionDetails/nonResidentCorIncomeCalc.html">비거주자군 동업기업 소득금액(결손금) 계산서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../business_inpartnership/distributionDetails/nonResidentPersonIncomeDetails.html">비거주자군 동업자 소득금액(결손금) 배분명세서</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../business_inpartnership/distributionDetails/domesticCorIncomeCalc.html">내국법인군 동업기업 소득금액(결손금) 계산서</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../business_inpartnership/distributionDetails/domesticIncomeDetails.html">내국법인군 동업자 소득금액(결손금) 배분명세서</a></td>
+            </tr>
+            <tr class="warning">
+             <td><a href="../../business_inpartnership/distributionDetails/foreignCorIncomeCalc.html">외국법인군 동업기업 소득금액(결손금) 계산서</a></td>      
+            </tr> 
+            <tr class="danger">
+             <td><a href="../../business_inpartnership/distributionDetails/foreignCorIncomeDetails.html">외국법인군 동업자 소득금액(결손금) 배분명세서</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../business_inpartnership/distributionDetails/residentPersonIncomeDetailsBuoy.html">거주자군 동업자 소득금액(결손금) 배분명세서(부표)</a></td>
+            </tr>   
+            <tr class="success">
+             <td><a href="../../business_inpartnership/distributionDetails/nonResidentPersonOneIncomeDetailsBuoy.html">비거주자군(1) 동업자 소득금액(결손금) 배분명세서(부표)</a></td>
+            </tr>  
+            <tr class="success">
+             <td><a href="../../business_inpartnership/distributionDetails/nonResidentPersonTwoIncomeDetailsBuoy.html">비거주자군(2) 동업자 소득금액(결손금) 배분명세서(부표)</a></td>
+            </tr>   
+            <tr class="success">
+             <td><a href="../../business_inpartnership/distributionDetails/domesticIncomeDetailsBuoy.html">내국법인군 동업자 소득금액(결손금) 배분명세서(부표)</a></td>
+            </tr>
+            <tr class="success">
+             <td><a href="../../business_inpartnership/distributionDetails/foreignCorOneIncomeDetailsBuoy.html">외국법인군(1) 동업자 소득금액(결손금) 배분명세서(부표)</a></td>
+            </tr>   
+            <tr class="success">
+             <td><a href="../../business_inpartnership/distributionDetails/foreignCorTwoIncomeDetailsBuoy.html">외국법인군(2) 동업자 소득금액(결손금) 배분명세서(부표)</a></td>
+            </tr>
+           </tbody>
+          </table>            
+         </div>
+         <div class="col-md-3">         
+          <table class="table table-bordered table-hover table-condensed">
+           <thead>
+            <tr class="danger">
+             <th>과목별세무조정1</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_01/retirementControlDetails.html">퇴직급여충당금조정명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_01/retirementFallingDetails.html">퇴직금추계액명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_01/retirementPensionDetails.html">퇴직연금부담금 조정명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_01/badDebtControlDetails.html">대손충당금 및 대손금조정명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_01/hospitalityControlDetails.html">접대비조정명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_01/stockControlDetails.html">재고자산(유가증권)평가조정명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_01/taxDuesDetails.html">세금과공과금명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_01/prepaidExpensesDetails.html">선급비용명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_01/contribution_details.html">기부금조정명세서</a></td>      
+            </tr>       
+           </tbody>
+          </table> 
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>과목별세무조정2</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_02/ga_payment_01.html">가지급금등의인정이자조정명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_02/bussiness_notconnected_real_estate_01.html">업무무관 부동산등에 관련한 차입금이자조정명세서(갑)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_02/asset_exchange.html">자산의 교환에 따른 양도차익의 손금산입조정명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_02/constructionInterestControlDetails.html">건설자금이자조정명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_02/foreignCurrencyControlDetails.html">외화자산 등 평가차손익조정명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_02/information_contribution.html">정보화지원사업출연금등 손금산입조정명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_02/government_subsidy.html">(국고보조금,공사부담금,보험차익)상당액손금산입조정명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/subject_02/government_subsidy_use_project.html">국고보조금등(공사부담금)사용계획서</a></td>      
+            </tr>     
+           </tbody>
+          </table> 
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>소득 및 과표계산</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/tax_stsndard/income_control_sum.html">소득금액조정합계표</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/tax_stsndard/subject_income_control_details.html">과목별소득금액조정명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/tax_stsndard/income_separation_calculation.html">소득구분계산서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/tax_stsndard/income_data.html">소득자료(인정상여,인정배당,기타소득)명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/tax_stsndard/branch_reserve_income_calculation.html">지점유보소득금액계산서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/tax_stsndard/inventory_estimate.html">재고자산평가차익익금불산입신청서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/tax_stsndard/noTaxDetails.html">비과세소득명세서</a></td>      
+            </tr>        
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>준비금 등 조정</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/reserve/special_cost.html">특별비용조정명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../incomeTaxStandard/reserve/research.html">연구및인력개발준비금명세서</a></td>      
+            </tr>                 
+           </tbody>
+          </table> 
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>전자신고/일괄출력</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../elecDeclaration/elec/elecCor.html">법인세전자신고</a></td>      
+            </tr>               
+           </tbody>
+          </table>  
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>성실기업</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../sincerity/basic/sincerity_tax_standard_report.html">성실중소법인 법인세 과세표준 및 세액신고서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../sincerity/basic/deductionTaxCalc.html">성실중소법인 공제세액 계산서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../sincerity/basic/depreciationControlDetails.html">성실중소법인 감가상각비조정명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../sincerity/basic/donationControlDetails.html">성실중소법인 기부금 조정명세서</a></td>      
+            </tr>  
+            <tr class="warning">
+             <td><a href="../../sincerity/basic/entertainmentControlDetails.html">성실중소법인 접대비 조정명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../sincerity/basic/retirementBenefitControlDetails.html">성실중소법인 퇴직급여충당금조정명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../sincerity/basic/middleDeclarationCalc.html">성실중소법인 법인세 중간예납 신고납부계산서</a></td>      
+            </tr>               
+           </tbody>
+          </table> 
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>연결납세-관련서식</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../connection/relate/tax_payment_way_apply.html">연결납세방식 적용신청서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/relate/tax_payment_way_renounce.html">연결납세방식 포기신고서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/relate/cor_change.html">연결법인 변경신고서</a></td>      
+            </tr> 
+           </tbody>
+          </table> 
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>연결납세-신고서식</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_cor_tax_standard_report.html">각 연결사업연도의 소득에 대한 법인세 과세표준 및 세액신고서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_cor_tax_standard_control.html">연결집단 법인세 과세표준 및 세액조정계산서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_earnings_amount_control.html">연결소득금액 조정명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_asset_transfer_control.html">연결법인간 이연대상 자산양도소득 조정명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_asset_transfer_loss_control.html">연결법인간 이연대상 자산양도손실 조정명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_bad_debt_appropriation_control.html">연결법인 채권에 대한 대손충당금상당액 조정명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/combination_asset_loss_control.html">피합병법인으로부터 양도받은 자산 및 연결취득자법인의 자산 처분손실 조정명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_transfer_deficit.html">연결법인 이월결손금 등 명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_invest_hh.html">연결법인간 출자현황 및 연결법인간 거래명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_share_control_01.html">연결법인 수입배당금 조정명세서(갑)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_share_control_02.html">연결법인 수입배당금 조정명세서(을)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_reception_control_01.html">연결법인 접대비조정명세서(갑)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_reception_control_02.html">연결법인 접대비조정명세서(을)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_contribution_01.html">연결법인 기부금조정명세서(갑)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_contribution_02.html">연결법인 기부금조정명세서(을)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_addition_tax_01.html">연결법인 가산세액계산서(갑)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_addition_tax_02.html">연결법인 가산세액계산서(을)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_smaller_enterprises_standard_review.html">연결법인 중소기업기준검토표(연결집단용)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_agriculture_special_tax_standard_report.html">연결법인 농어촌특별세 과세표준 및 세액신고서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_agriculture_special_tax_standard_control_group.html">연결법인 농어촌특별세 과세표준 및 세액조정계산서(연결집단)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_agriculture_special_tax_standard_control_cor.html">연결법인 농어촌특별세 과세표준 및 세액조정계산서(연결법인별)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_base_tax_report.html">연결(모자)법인별 기본사항 및 법인세 신고서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_cor_tax_standard_control.html">연결법인별 법인세 과세표준 및 세액조정계산서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_minimum_tax_control.html">연결법인 최저한세조정계산서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_earnings_separation.html">연결법인 소득구분계산서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../connection/report/connection_cor_tax_middle_prepayment.html">연결법인 법인세 중간예납 신고납부계산서</a></td>      
+            </tr>
+           </tbody>
+          </table>           
+         </div>
+         <div class="col-md-3">         
+          <table class="table table-bordered table-hover table-condensed">
+           <thead>
+            <tr class="success">
+             <th>세액계산및신고서/납부서</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_confirmation/cor_tax_standard_report.html">법인세과세표준 및 세액신고서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalctax_confirmation/cor_tax_standard_control.html">법인세과세표준 및 세액조정계산서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_confirmation/cor_tax_middle_prepayment.html">법인세중간예납신고납부계산서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_confirmation/addition_tax.html">가산세액계산서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_confirmation/minimum_tax_control.html">최저한세조정명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_confirmation/origin_payment_tax_01.html">원천납부세액명세서(갑)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_confirmation/tax_stsndard_change.html">과세표준수정신고서 및 추가자진납부계산서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalctax_confirmation/tax_stsndard_determine.html">과세표준 및 세액의 결정(경정)청구서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_confirmation/mulnabApply.html">법인세물납신청서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_confirmation/retroactiveDeductionRefundsApply.html">소급공제 법인세액환급신청서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_confirmation/noRefluxDeclaration.html">미환류소득에 대한 법인세 신고서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td>법인세납부서</td>      
+            </tr>    
+           </tbody>
+          </table> 
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>농어촌특별세신고/지방소득세</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../taxCalc/local_income_tax/agriculture_special_tax_standard_control.html">농어촌특별세과세표준 및 세액조정계산서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/local_income_tax/agriculture_special_tax_standard_report.html">농어촌특별세과세표준 및 세액신고서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalclocal_income_tax/agriculture_special_tax_sum.html">농특세감면세액합계표</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/local_income_tax/localIncomeStandardDeclaration.html">지방소득세과세표준및세액신고서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/local_income_tax/localIncomeStandardControlCalc.html">지방소득세과세표준및세액조정계산서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td>공제감면세액 및 추가납부세액합계표</td>      
+            </tr> 
+            <tr class="warning">
+             <td>지방소득세가산세액계산서</td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/local_income_tax/localIncomeCollectionDetails.html">지방소득세특별징수세액명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td>지방소득세과세표준(조정계... </td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/local_income_tax/corLocalIncomeProrationDeclaration.html">지방소득세안분신고서(일반법인용)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/local_income_tax/bussinessPlaceLocalIncomeProrationDeclaration.html">사업장별지방소득세안분신고서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/local_income_tax/retroactiveDeductionLocalIncomeRefundsApply.html">소급공제지방소득세환급신청서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td>비영리내국법인의지방소득에...</td>      
+            </tr> 
+            <tr class="warning">
+             <td>과세표준및세액의결정또는결...</td>      
+            </tr> 
+            <tr class="warning">
+             <td>지방소득세전자신고</td>      
+            </tr>          
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>조특법서식1</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_01/foregin_resource_investment.html">해외자원투자개발신고서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_01/debt_repayment.html">채무상환(예정)명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_01/financial_institution_debt_repayment.html">금융기관 부채상환(예정)명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_01/tax_deduction.html">세액공제신청서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_01/tax_reduce.html">세액감면신청서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_01/bill.html">기업의 어음제도개선을 위한 공제세액계산서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_01/metropolitan_area_out_reduction_tax.html">수도권과밀억제권역외의지역으로이전하는중소기업감면세액계산서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_01/metropolitan_area_out_special_tax_reduction.html">공장 및 본사를 수도권 밖으로 이전하는 법인에 대한 감면세액계산서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_01/middleCorEmployincreaseCalc.html">중소기업 고용증가 인원에 대한 사회보험료 세액공제 공제세액계산서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_01/employ_maintain_earnings_deduction.html">고용유지중소기업소득공제신청서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_01/high_school.html">산업수요맟춤형고등학교등졸업자복직중소기업세액공제신청서</a></td>      
+            </tr>        
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>조특법서식2</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_02/spots_invest.html">현물출자명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_02/tax_divorce.html">과세이연신청서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_02/tax_divorce_asset.html">과세이연신청서(자산)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_02/agricultureCorExemptionCalc.html">농업회사법인 면제(감면)세액계산서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/tax_special_case_02/transfer_taxation.html">이월과세적용신청서</a></td>      
+            </tr>       
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>공제감면추납세액</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../taxCalc/deduction/deduction_addition_01.html">공제감면세액 및 추가납부세액합계표(갑)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/deduction/deduction_addition_sub_01.html">공제감면세액계산서(01)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/deduction/deduction_addition_sub_02.html">공제감면세액계산서(2)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/deduction/deduction_addition_sub_03.html">세액공제조정명세서(3)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/deduction/deduction_addition_sub_04.html">공제감면세액계산서(04)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/deduction/deduction_addition_sub_05.html">공제감면세액계산서(05)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/deduction/deduction_addition_sub_06.html">추가납부계산서(06)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/deduction/research_develop.html">일반연구 및 인력개발비명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/deduction/income_deduction.html">소득공제조정명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../taxCalc/deduction/a0913.html">고용창출투자세액공제공제세액계산서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../taxCalc/deduction/grow_research_develop.html">신성장동력산업및 원천기술연구개발비명세서</a></td>      
+            </tr>       
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>이전완료/재무구조</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/transper/tax_reduction_31.html">세액감면신청서(31)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/transper/tax_reduction_35.html">세액감면신청서(35)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/transper/transfer_completion_report.html">이전완료보고서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/transper/transfer_plan.html">이전계획서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/transper/obtain_completion_report.html">취득완료보고서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td>재무구조개선계획서</td>      
+            </tr> 
+            <tr class="warning">
+             <td>재무구조개선 계획 이행보고서</td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/transper/financial_struct.html">재무구조개선(자구)계획 이행상황명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td>자구계획서</td>      
+            </tr>
+            <tr class="warning">
+             <td>자구계획이행보고서</td>      
+            </tr>      
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>해운기업/영농조합</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/shipping/based_sell_plan.html">본사사용대금처분계획서(명세서)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/shipping/land_alienation_margin.html">토지등 양도차익명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/shipping/shipping_special_apply.html">해운기업의 법인세과세표준특례적용신청서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/shipping/shipping_special_requirement.html">해운기업의 법인세과세표준특례요건명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/shipping/shipping_special_apply_renounce.html">해운기업의 법인세과세표준계산특례포기신청서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/shipping/farming_exemption_tax.html">영농조합법인 면제세액계산서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/shipping/english_exemption_tax.html">영어조합법인 면제세액계산서</a></td>      
+            </tr>        
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>합병분할보조금등</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/combination/combination_tax_special.html">합병과세특례신청서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/combination/division_tax_special.html">분할과세특례신청서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/combination/physical_division_tax_special.html">물적분할과세특례신청서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/combination/spots_invest_special.html">현물출자특례신청서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/combination/amount_control_accounts_01.html">자산조정 계정명세서(갑)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/combination/amount_control_accounts_02.html">자산조정 계정명세서(을)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/combination/amount_transfer_01.html">자산의 양도차익에 관한 명세서(갑)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/combination/amount_transfer_02.html">자산의 양도차익에 관한 명세서(을)</a></td>      
+            </tr>             
+           </tbody>
+          </table> 
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>청산/수증자산명세</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/clearing/asset_alienation.html">양도차익명세서 및 손금산입조정명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/clearing/debt_exemption.html">채무면제명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/clearing/invest_debt_exemption.html">출자전환채무면제명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../otherDeclaration/clearing/assignmentMarginDetails.html">양도차익명세 및 분할익금산입조정명세</a></td>      
+            </tr>               
+           </tbody>
+          </table>             
+         </div>
+         <div class="col-md-3">         
+          <table class="table table-bordered table-hover table-condensed">
+           <thead>
+            <tr class="success">
+             <th>신고부속서류</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_attachment/smaller_enterprises_standard_review.html">중소기업기준검토표</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachmentreport_attachment/a0501.html">조정반지정신청서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_attachment/capital_control_02.html">자본금과   적립금조정명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_attachment/major_accounts_01.html">주요계정명세서(갑)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_attachment/elec_organization.html">전산조직운용명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_attachment/stockChangeDetails.html">주식등   변동상황명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_attachment/no_fact.html">사실과다른회계처리로인하여과다납부한금액의세액공제명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_attachment/asset_exchange.html">자산교환명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_attachment/special_relation_trade_01.html">특수관계자간   거래명세서(갑)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_attachment/special_relation_trade_02.html">특수관계자간   거래명세서(을)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_attachment/expense_send.html">경비등의   송금명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_attachment/support_receiving.html">보조금등   수취명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td>보유토지명세서</td>      
+            </tr>      
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>신고(신청)서1</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_01/businessYearChange1.html">사업연도변경신고서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_01/earnings_deduction.html">소득공제신청서(법인세)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_01/earnings_deduction_special.html">소득공제신청서(조특법)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_01/disaster_deduction.html">재해손실세액공제신청서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_01/inventory_evaluation_way.html">재고자산등(채권등의보유기간계산)평가방법신고서</a></td>      
+            </tr>     
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>신고(신청)서2</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_02/bad_debt_appropriation_noprofit.html">대손충당금익금불산입신청서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_02/spotInvestmentDetails.html">현물출자명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_02/sippingProfit.html">선박표준이익산출명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_02/currency_special_evaluation.html">화폐성외화자산등 특별계정평가방법신고서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/report_02/function_currency.html">기능통화.해외사업장 과세표준계산방법신고(변경신청)서</a></td>      
+            </tr>        
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>국제거래서식1</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_01/indirect_foregin_pay_tax_deduction.html">간접외국납부세액공제명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_01/foregin_common_cost_division.html">외국기업본점등의 공통경비배분계산서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_01/foregin_rule_stockholder_payment_interest_01.html">국외지배주주에게 지급하는 이자에 대한 조정명세서(갑)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_01/foregin_rule_stockholder_payment_interest_02.html">국외지배주주에게 지급하는 이자에 대한 조정명세서(을)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_01/foregin_invest_report.html">국외출자명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_01/outside_special_relation_pl.html">국외특수관계자의 요약손익계산서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_01/international_trade_report.html">국제거래명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_01/formless_asset_normal_price.html">무형자산에 대한 정상가격산출방법신고서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_01/service_trade_normal_price.html">용역거래에 대한 정상가격산출방법신고서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_01/normal_price.html">정상가격산출방법신고서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_01/origin_collection_control.html">원천징수세액조정명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_01/reserve_earnings_sum_tax_judge_01.html">특정외국법인의 유보소득합산과세판정명세서(갑)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_01/reserve_earnings_sum_tax_judge_02.html">특정외국법인의 유보소득합산과세판정명세서(을)</a></td>      
+            </tr>       
+           </tbody>
+          </table>
+          <table class="table table-bordered table-hover table-condensed mar_tm18">
+           <thead>
+            <tr class="danger">
+             <th>국제거래서식2</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/earnings_type_foregin_pay_tax_deduction.html">소득종류별 외국납부세액공제명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/reserve_earnings_calculation_01.html">특정외국법인의 유보소득계산명세서(갑)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/reserve_earnings_calculation_02.html">특정외국법인의 유보소득계산명세서(을)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/oversea_office_build_hh.html">해외영업소설치현황표</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/oversea_local_cor_financial_report.html">해외현지법인재무상황표</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/lossTrafe.html">손실거래명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/payment_insure_service_trade_report.html">지급보증용역거래명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/trade_price_control.html">거래가격조정신고서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/nation_foregin_pay_tax_deduction.html">국가별 외국납부세액공제명세서</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/oversea_local_cor_report.html">해외현지법인명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/foregin_bank_foregin_rule_loaning.html">외국은행국내지점이 국외지배주주로부터 차입한 금액의 적수계산명세서</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/reserve_earnings_sum_apply_range_tax_judge_01.html">특정외국법인의 유보소득합산과세적용범위판정명세서(갑)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/reserve_earnings_sum_apply_range_tax_judge_02.html">특정외국법인의 유보소득합산과세적용범위판정명세서(을)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/foregin_rule_stockholder_payment_interest_03.html">국외지배주주에게 지급하는 이자에 대한 조정명세서(병)</a></td>      
+            </tr> 
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/deduction_addition_sub_05.html">공제감면세액계산서(05)</a></td>      
+            </tr>
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/overseasRealEstate.html">해외부동산 취득 및 투자운용(임대) 명세서</a></td>      
+            </tr>  
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/hybrid.html">외국 하이브리드(Hybrid) 사업체를 통한 국외투자 관련 외국납부세액공제 명세서</a></td>      
+            </tr>  
+            <tr class="warning">
+             <td><a href="../../declarationAttachment/international_trade_02/reserve_earnings_sum_tax_judge_03.html">특정외국법인의 유보소득합산과세판정명세서(병)</a></td>      
+            </tr>      
+           </tbody>
+          </table>               
+         </div>
+        </div> <!-- end row -->       
+      <div class="nav navbar-nav navbar-right">
+               <div class="btn-group btn-group-xs mtm10mb10pr30">
+                <button type="button" class="btn btn-info tableinput-toggle" name="tab-tax1">수정취소</button>
+                <button type="button" class="btn btn-success table-toggle">재수정</button>
+               </div>
+             </div>               
+  </div> <!-- end col-md-9 -->
+  </div> <!-- end row -->
+  </div> <!-- end container -->
+
+<div class="container"> 
+<div class="row">
+<div class="col-md-12">    
+<div class="footer well">
+<div class="">
+        <p><a href="#" title="당신&apos;s 이름은">Tooltips</a> 무엇인가요?. 자세히 보아야 예쁘다
+오래 보아야 사랑스럽다
+너도 그렇다</p>
+        <p>But as it's not a native tooltip, it can be styled. Any themes built with<a href="http://jqueryui.com/themeroller/" title="당신은 나의 동반자">ThemeRoller</a>will also style tooltips accordingly.</p>
+        <p>그대가 꺾어준 꽃
+시들 때 까지 들여다 보았네
+그대가 남기고 간 시든 꽃
+다시 필 때까지</p>
+        <p><label for="age">Your age:</label> <input id="age" title="We ask for your age only for statistical purposes."></p>
+        <p>Hover the field to see the tooltip.</p>
+      </div>
+             <div class="bs-example"> 
+    <button type="button" class="btn btn-default" rel="txtTooltip" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+<button type="button" class="btn btn-primary" rel="txtTooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+<button type="button" class="btn btn-info" rel="txtTooltip" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+<button type="button" class="btn btn-danger" rel="txtTooltip" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+</div>
+ </div>
+</div>
+</div>
+</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!--<script>window.jQuery || document.write('<script src="../../../js/jquery.min.js"></script>')</script> -->
+    <script src="../../../asset/js/jquery.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.12.3.min.js"></script> -->
+
+    <script src="../../../asset/js/bootstrap.min.js"></script>
+    <script src="../../../asset/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../../asset/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="../../../asset/js/header-content.js"></script>
+
+    <script src="../../../asset/js/jssor/jssor.slider.mini.js"></script>
+    <script src="../../../asset/js/jssor.js"></script>
+  
+    <script src="../../../asset/js/main.js"></script> 
+    <script src="../../../asset/js/main_popup.js"></script> 
+    <script src="../../../asset/js/main_popup_item.js"></script> 
+    <script src="../../../asset/js/datepicker.js"></script>
+    <script src="../../../asset/js/lan_ko.js"></script>
+    <script src="../../../asset/js/con_tab.js"></script>
+    <script src="../../../asset/js/con_topmenu.js"></script>
+    <script src="../../../asset/js/toolbar_popup.js"></script>
+    <script src="../../../asset/js/con_mainmenu.js"></script>
+        
+    <!-- dialog로딩 시 autofocus없애기 -->
+    <script>$.ui.dialog.prototype._focusTabbable = function(){};</script>
+   
+    <script src="../../../asset/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="../../../asset/DataTables/media/js/dataTables.jqueryui.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/dataTables.buttons.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.jqueryui.js"></script>
+    <script src="../../../asset/DataTables/extensions/Scroller/js/dataTables.scroller.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.html5.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.print.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.colVis.js"></script>
+    <script class="init">
+ 
+    </script>
+  </body>
+</html>

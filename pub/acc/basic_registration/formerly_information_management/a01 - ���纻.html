@@ -1,0 +1,1197 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../favicon.ico">
+    <title>Jumbotron Template for Bootstrap</title>
+    <!-- <link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../../../css/nanumgothic.css" />
+    <!-- Bootstrap core CSS -->
+    <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../../css/jumbotron-navbar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../css/header-content.css" />
+    <link rel="stylesheet" href="../../../jquery-ui-1.11.4.custom/jquery-ui.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../../js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../../js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <!--<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../js/html5shiv.min.js"></script>')</script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../js/respond.min.js"></script>')</script> -->
+      <script src="../../../js/html5shiv.min.js"></script>
+      <script src="../../../js/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="../../../css/jssor.css" rel="stylesheet">
+    <link href="../../../css/style.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="../../../DataTables/media/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../../../DataTables/media/css/dataTables.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../DataTables/extensions/Scroller/css/scroller.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../DataTables/extensions/Buttons/css/buttons.jqueryui.css">
+    <style type="text/css" class="init">
+	
+    </style>
+</head>
+<body>    
+  <!-- Static navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"> Kimrim Project</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">사용자정보 <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+              <li><a href="#">김영식</a></li>
+              <li></li>
+              <li><a href="#">경기도</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">(주)삼성전자 회장</li>
+              <li><a href="#">Se@dd.com</a></li>
+              <li><a href="#">나는 누구인가?</a></li>
+            </ul>       
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="./">Logoout <span class="sr-only">(current)</span></a></li>
+          <li><a href="../navbar-static-top/">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">        
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사용회사 <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li>       
+                <table class="table table-bordered table-condensed" style="width: 250px;margin:10px;">
+                  <thead>
+                    <tr>
+                      <th>코드</th>
+                      <th>회사명</th>
+                      <th>사용여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="success">
+                      <td>1001</td>
+                      <td>(주)kimrim</td>
+                      <td>사용</td>
+                    </tr>
+                    <tr class="warning">
+                      <td>1002</td>
+                      <td>박후영</td>
+                      <td>미사용</td>
+                    </tr>
+                    <tr class="danger">
+                      <td>1003</td>
+                      <td>김배현</td>
+                      <td>사용</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="nav navbar-nav navbar-right">
+                  <div class="btn-group btn-group-sm" style="padding-right: 30px; margin-bottom: 10px;">
+                    <button type="button" class="btn btn-info">확인</button>
+                    <button type="button" class="btn btn-success">닫기</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3 logo">
+          <div class="well well-sm">
+            <h5>Logo</h5>
+            <img src="../../../img/logo_2.jpg" class="img-responsive img-thumbnail" id="logo" alt="Responsive image">
+            <p>안녕하세요 박후영님</p>
+          </div>
+        </div>
+        <div class="col-md-9 menu-open">
+          <div class="navbar navbar-default" role="navigation">
+              <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav h-c">
+                  <li class="dropdown open">
+                    <a href="../../../acc/A02/trade_insert/revenue.html" class="dropdown-toggle" role="button">회계관리 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2" role="presentation"><a href="../../basic_registration/formerly_information_management/cor_registration.html" role="menuitem">기초등록</a></li>
+                      <li role="presentation"><a href="../../A02/trade_insert/revenue.html" role="menuitem">거래입력</a></li>
+                      <li role="presentation"><a href="../../account_book/book_management/buying_selling.html" role="menuitem">회계장부</a></li>
+                      <li role="presentation"><a href="../../A04/settlement/data_insert_01.html" role="menuitem">결산/재무제표</a></li>
+                      <li role="presentation"><a href="../../A05/fixing_asset/fixing_asset_regeister.html" role="menuitem">고정자산</a></li>
+                      <li role="presentation"><a href="#" role="menuitem">어음수표</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../vat/A01/report01/report.html" class="dropdown-toggle" role="button">부가가치세 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2" role="presentation"><a href="../../vat/report01/report.html" role="menuitem">신고서 1</a></li>
+                      <li role="presentation"><a href="../../vat/report02/notax_deduction.html" role="menuitem">신고서 2</a></li>
+                      <li role="presentation"><a href="../../vat/report03/bussiness_unit.html" role="menuitem">신고서 3</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="../../../stk/A02/sales_trade/sales.html" class="dropdown-toggle" role="button">물류관리 <span class="caret"></span></a>
+                     <ul class="dropdown-menu child" role="menu">
+                      <li role="presentation"><a href="../../A01/formerly_information_management/item_register.html" role="menuitem">기초등록</a></li>
+                      <li class="open2" role="presentation"><a href="../../A02/sales_trade/sales.html" role="menuitem">판매관리</a></li>
+                      <li role="presentation"><a href="../../A03/purchase_trade/purchase.html" role="menuitem">구매관리</a></li>
+                      <li role="presentation"><a href="../../A04/inventory_management/inventory_report.html" role="menuitem">재고관리</a></li>
+                      <li role="presentation"><a href="../../A05/profit_hh/client_profit_hh.html" role="menuitem">영업관리</a></li>
+                      <li role="presentation"><a href="../../pro/product_management/product_insert.html" role="menuitem">생산관리</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../pay/A02/earned_income/salary_insert.html" class="dropdown-toggle" role="button">급여관리 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li role="presentation"><a href="#" role="menuitem">기초정보등록</a></li>
+                      <li class="open2" role="presentation"><a href="../../A02/earned_income/salary_insert.html" role="menuitem">근로소득</a></li>
+                      <li role="presentation"><a href="../../A03/bussiness_earnings/bussiness_earnings_person_register.html" role="menuitem">사업.기타소득</a></li>
+                      <li role="presentation"><a href="../../A04/tax_report/yearend_performance.html" role="menuitem">원천징수</a></li>
+                      <li role="presentation"><a href="../../A05/yearend/yearend_additional_insert.html" role="menuitem">연말정산</a></li>
+                      <li role="presentation"><a href="#" role="menuitem">세무신고서류</a></li>
+                      <li role="presentation"><a href="../../A07/e_report/withholding_e_report.html" role="menuitem">전자신고</a></li>
+                      <li role="presentation"><a href="../../A08/social_insurance/bussiness_place_register.html" role="menuitem">사회보험</a></li>                      
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../cor/base/base_establishment/a010107.html" class="dropdown-toggle">법인조정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="../../base/base_establishment/a010107.html">기초사항</a></li>
+                      <li><a href="../../A02/subject_01/a01.html">소득금액/특별/감가</a></li>
+                      <li><a href="../../A03/tax_confirmation/cor_tax_standard_report.html">세액계산신고</a></li>
+                      <li><a href="../../A04/AA01/transfer_plan.html">기타신고</a></li>
+                      <li><a href="../../A05/report_attachment/smaller_enterprises_standard_review.html">신고부속/기타서식</a></li>
+                      <li><a href="../../A06/business_inpartnership/earnings_calculation_division.html">비영리/공익/동업/성실</a></li>
+                      <li><a href="../../A07/AA01/a0701.html">전자신고</a></li>
+                      <li><a href="../../connection/relate/tax_payment_way_apply.html">연결납세</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">환경설정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="#">시스템 구성</a></li>
+                      <li><a href="#">화면셋팅</a></li>
+                    </ul>
+                  </li>
+                </ul>                
+              </div><!--/.nav-collapse -->                                    
+          </div>         
+          <div class="container" id="page">
+            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden; visibility: hidden;">
+              <!-- Loading Screen -->
+              <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position:absolute;display:block;background:url('../../../img/jssor/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+              </div>
+              <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden;">
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/005.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/006.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/011.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/013.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/014.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/019.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/020.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/021.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/022.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/024.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/025.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/027.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/029.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/031.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/034.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/038.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/039.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/043.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/044.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/047.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/050.jpg" />
+               </div>
+             </div>
+             <!-- Bullet Navigator -->
+             <div data-u="navigator" class="jssorb03" style="bottom:10px;right:10px;">
+               <!-- bullet navigator item prototype -->
+               <div data-u="prototype" style="width:21px;height:21px;">
+                <div data-u="numbertemplate"></div>
+               </div>
+             </div>
+             <!-- Arrow Navigator -->
+             <span data-u="arrowleft" class="jssora03l" style="top:123px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <span data-u="arrowright" class="jssora03r" style="top:123px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
+           </div>
+           <!-- #endregion Jssor Slider End -->
+        </div><!-- div class="container" id="page" end -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="well well-sm" style="padding-left: 5px; padding-right: 5px;">        
+          <div class="panel-group">
+            <div class="panel panel-danger">
+	      <!-- Default panel contents -->
+	      <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" href="#collapse11">기초정보관리</a></h4>
+              </div>
+              <div id="collapse11" class="panel-collapse collapse in">
+	        <div class="panel-body">
+		  <p>여기는 빈공간</p>
+	        </div>
+	        <!-- List group -->
+	        <div class="list-group">
+		  <a href="../../basic_registration/formerly_information_management/information_protect.html" class="list-group-item">개인정보보호설정<span class="badge">50</span></a> 
+		  <a href="../../basic_registration/formerly_information_management/client_registration.html" class="list-group-item">거래처등록<span class="badge">65</span></a>
+		  <a href="../../basic_registration/formerly_information_management/account_outline_registration.html" class="list-group-item">계정과목 및 적요등록<span class="badge">8</span></a>
+                  <a href="../../basic_registration/formerly_information_management/busa_registration.html" class="list-group-item">부서사원등록<span class="badge">50</span></a>
+		  <a href="../../basic_registration/formerly_information_management/user_registration.html" class="list-group-item">사용자등록<span class="badge">145</span></a>
+		  <a href="../../basic_registration/formerly_information_management/user_menu_establishment.html" class="list-group-item">사용자별메뉴설정<span class="badge">30</span></a>  
+		  <a href="../../basic_registration/formerly_information_management/receipt_client_registration.html" class="list-group-item">영수증거래처등록<span class="badge">65</span></a>
+		  <a href="../../basic_registration/formerly_information_management/project_registration.html" class="list-group-item">프로젝트등록<span class="badge">8</span></a>
+                  <a href="../../basic_registration/formerly_information_management/spot_registration.html" class="list-group-item">현장등록<span class="badge">8</span></a>
+                  <a href="../../basic_registration/formerly_information_management/environment_registration.html" class="list-group-item">환경등록<span class="badge">8</span></a>
+		  <a href="../../basic_registration/formerly_information_management/cor_registration.html" class="list-group-item">회사등록<span class="badge">145</span></a>
+                  <a href="../../basic_registration/formerly_information_management/a01.html" class="list-group-item active">권한설정<span class="badge">145</span></a>
+	        </div>
+              </div>
+	    </div>
+            <div class="panel panel-danger">
+	      <!-- Default panel contents -->
+	      <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" href="#collapse12">전기이월</a></h4>
+              </div>
+              <div id="collapse12" class="panel-collapse collapse">
+	        <div class="panel-body">
+		  <p>무엇을 써야하나?</p>
+	        </div>
+	        <!-- List group -->
+	        <div class="list-group">
+                  <a href="../../basic_registration/formerly_transfer/client_formerly_transfer_02.html" class="list-group-item"><span class="glyphicon glyphicon-camera"></span>거래처별초기이월(차입금)<span class="badge">25</span></a>
+                  <a href="../../basic_registration/formerly_transfer/client_formerly_transfer_01.html" class="list-group-item"><span class="glyphicon glyphicon-file"></span>거래처별초기이월<span class="badge">145</span></a>
+                  <a href="../../basic_registration/formerly_transfer/closing_transfer.html" class="list-group-item"><span class="glyphicon glyphicon-file"></span>마감후이월<span class="badge">145</span></a>
+                  <a href="../../basic_registration/formerly_transfer/no_complete_construction_formerly_transfer.html" class="list-group-item"><span class="glyphicon glyphicon-music"></span>미완성공사초기이월<span class="badge">50</span></a>
+                  <a href="../../basic_registration/formerly_transfer/busa_formerly_transfer.html" class="list-group-item"><span class="glyphicon glyphicon-file"></span>부서사원별초기이월<span class="badge">145</span></a>
+                  <a href="../../basic_registration/formerly_transfer/formerly_period_pl.html" class="list-group-item"><span class="glyphicon glyphicon-music"></span>전기분손익계산서<span class="badge">50</span></a>
+                  <a href="../../basic_registration/formerly_transfer/formerly_period_wo.html" class="list-group-item"><span class="glyphicon glyphicon-film"></span>전기분원가명세서<span class="badge">8</span></a>
+                  <a href="../../basic_registration/formerly_transfer/formerly_profit_surplus_disposal_amount.html" class="list-group-item"><span class="glyphicon glyphicon-camera"></span>전기분이익잉여금처분계산서<span class="badge">25</span></a>
+                  <a href="../../basic_registration/formerly_transfer/formerly_capital_change_table.html" class="list-group-item"><span class="glyphicon glyphicon-file"></span>전기분자본변동표<span class="badge">145</span></a>
+                  <a href="../../basic_registration/formerly_transfer/formerly_fs.html" class="list-group-item"><span class="glyphicon glyphicon-file"></span>전기분재무상태표<span class="badge">145</span></a>
+                  <a href="../../basic_registration/formerly_transfer/formerly_cash_flowing_table.html" class="list-group-item"><span class="glyphicon glyphicon-music"></span>전기분현금흐름표<span class="badge">50</span></a>
+                  <a href="../../basic_registration/formerly_transfer/formerly_project_lossandgain.html" class="list-group-item"><span class="glyphicon glyphicon-file"></span>전기프로젝트별손익현황<span class="badge">145</span></a>
+                  <a href="../../basic_registration/formerly_transfer/formerly_project_accumulation_cost.html" class="list-group-item"><span class="glyphicon glyphicon-music"></span>전기프로젝트별원가현황<span class="badge">50</span></a>
+                  <a href="../../basic_registration/formerly_transfer/project_formerly_transfer.html" class="list-group-item"><span class="glyphicon glyphicon-film"></span>프로젝트별초기이월<span class="badge">8</span></a>
+                  <a href="../../basic_registration/formerly_transfer/spot_formerly_transfer.html" class="list-group-item"><span class="glyphicon glyphicon-film"></span>현장별초기이월<span class="badge">8</span></a>
+                </div>
+              </div>
+	    </div>
+          </div>
+        </div><!-- end well -->
+      </div><!-- end col-md-3 -->
+       <div class="col-md-9">
+        <div id="buttons" class="btn-toolbar mar_b3" role="group">
+          <button type="button" class="btn btn-xs btn-success toolbar_dialog" id="esc" title="실행하고있는 메뉴를 종료합니다">종료(ESC)</button>                                     
+          <button type="button" class="btn btn-xs btn-primary toolbar_dialog" id="help" title="사용방법이 조회됩니다">도움(F1)</button> 
+          <button type="button" class="btn btn-xs btn-danger toolbar_dialog" id="password_change11300">관리자암호변경(F4)</button>         
+          <button type="button" class="btn btn-xs btn-info toolbar_dialog" id="delete"">삭제(F5)</button>
+          <button type="button" class="btn btn-xs btn-default">권한설정 사용여부 일괄적용(F6)</button>
+        </div> 
+        <ol class="breadcrumb mar_b3">
+          <li><a href="#">기초등록</a></li>
+          <li><a href="#">기초정보관리</a></li>
+          <li class="active">권한설정</li>
+        </ol>  
+         <div class="panel with-nav-tabs panel-default">   
+            <div class="panel-heading">                                      
+              <ul class="nav nav-tabs" id="" role="tablist">
+                <li role="presentation" class="active"><a href="#tab-tax1" role="tab" data-toggle="tab">전체</a></li>  
+                <li role="presentation"><a href="#tab-tax2" role="tab" data-toggle="tab">회계관리</a></li>
+                <li role="presentation"><a href="#tab-tax3" role="tab" data-toggle="tab">부가가치</a></li>
+                <li role="presentation"><a href="#tab-tax4" role="tab" data-toggle="tab">원천징수</a></li>
+                <li role="presentation"><a href="#tab-tax5" role="tab" data-toggle="tab">법인조정</a></li> 
+                <li role="presentation"><a href="#tab-tax6" role="tab" data-toggle="tab">세무조정</a></li>
+                <li role="presentation"><a href="#tab-tax7" role="tab" data-toggle="tab">물류관리</a></li>    
+             </ul>
+           </div>
+           <div class="panel-body">
+            <div class="tab-content">
+             <div class="tab-pane active" id="tab-tax1"> 
+              <div class="row"> 
+               <div class="col-md-5">                                          
+                <table id="example_90" class="display nowrap" cellspacing="0" width="100%">
+		    <thead>
+                      <tr class="danger">
+                        <th class=""></th>
+                        <th class="">아이디</th> 
+                        <th class="">사원명</th> 
+                        <th class="">암호</th>
+                        <th class="">사용</th> 
+                        <th class="">회사권한</th>      
+                      </tr> 
+                    </thead>
+                  </table>
+               </div>
+               <div class="col-md-4">
+                <table id="example_91" class="display nowrap" cellspacing="0" width="100%">
+		    <thead>
+                      <tr class="danger">
+                        <th class=""></th>
+                        <th class="">코드</th> 
+                        <th class="">회사명</th>  
+                        <th class="">모듈권한</th>       
+                      </tr> 
+                    </thead>
+                  </table>
+              </div>
+              <div class="col-md-3">
+                <table id="example_92" class="display nowrap" cellspacing="0" width="100%">
+		    <thead>
+                      <tr class="danger">
+                        <th class=""></th> 
+                        <th class="">메뉴권한</th>      
+                      </tr> 
+                    </thead>
+                  </table>
+              </div>        
+              </div><!-- end row -->                                           
+                       
+              </div> <!-- end tab-pane -->
+              <div class="tab-pane" id="tab-tax2">
+                  <div class="row"> 
+               <div class="col-md-6">                                          
+                 <form class="form-horizontal" id="form1"> 
+                  <div class="well well-sm">
+                   <div class="form-group">
+                     <label class="control-label col-md-4">1 부가세 소수점 관리</label>
+                   </div>                          
+                   <div class="form-group">
+                     <label class="control-label col-md-3 col-md-offset-3">자리수</label>
+                     <label class="control-label col-md-3">끝전처리</label>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-3">수량</label>
+                     <div class="col-md-3">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>                          
+                   <div class="form-group">
+                     <label class="control-label col-md-3">단가</label>
+                     <div class="col-md-3">
+                       <input type="text" class="form-control input-sm"> 
+                     </div>
+                     <div class="col-md-3">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div> 
+                    <div class="form-group">
+                     <label class="control-label col-md-3">금액</label>
+                     <div class="col-md-3 col-md-offset-3">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">2.분개유형 설정</label>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-3">매출</label>
+                     <div class="col-md-9">
+                        <div class="input-group">
+                          <span class="input-group-addon">12345</span>       
+                          <input type="text" class="form-control" style="z-index: 0;">
+                        </div>
+                     </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-3">매출채권</label>
+                     <div class="col-md-9">
+                        <div class="input-group">
+                          <span class="input-group-addon">12345</span>       
+                          <input type="text" class="form-control" style="z-index: 0;">
+                        </div>
+                     </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-3">매입</label>
+                     <div class="col-md-9">
+                        <div class="input-group">
+                          <span class="input-group-addon">12345</span>       
+                          <input type="text" class="form-control" style="z-index: 0;">
+                        </div>
+                     </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-3">매입채무</label>
+                     <div class="col-md-9">
+                        <div class="input-group">
+                          <span class="input-group-addon">12345</span>       
+                          <input type="text" class="form-control" style="z-index: 0;">
+                        </div>
+                     </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-3">신용카드매출채권</label>
+                     <div class="col-md-9">
+                        <div class="input-group">
+                          <span class="input-group-addon">12345</span>       
+                          <input type="text" class="form-control" style="z-index: 0;">
+                        </div>
+                     </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-3">신용카드매입채무</label>
+                     <div class="col-md-9">
+                        <div class="input-group">
+                          <span class="input-group-addon">12345</span>       
+                          <input type="text" class="form-control" style="z-index: 0;">
+                        </div>
+                     </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">3 추가계정 설정</label>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-2">구분</label>
+                     <label class="control-label col-md-2">유형</label>
+                     <label class="control-label col-md-4">계정과목추가</label>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-2">매출</label>
+                     <label class="control-label col-md-2">매출</label>
+                     <div class="col-md-8">
+                        <div class="input-group">
+                          <span class="input-group-addon">12345</span>       
+                          <input type="text" class="form-control" style="z-index: 0;">
+                        </div>
+                     </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-2 col-md-offset-2">매출채권</label>
+                     <div class="col-md-8">
+                        <div class="input-group">
+                          <span class="input-group-addon">12345</span>       
+                          <input type="text" class="form-control" style="z-index: 0;">
+                        </div>
+                     </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-2">매입</label>
+                     <label class="control-label col-md-2">매입</label>
+                     <div class="col-md-8">
+                        <div class="input-group">
+                          <span class="input-group-addon">12345</span>       
+                          <input type="text" class="form-control" style="z-index: 0;">
+                        </div>
+                     </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-2 col-md-offset-2">매입채무</label>
+                     <div class="col-md-8">
+                        <div class="input-group">
+                          <span class="input-group-addon">12345</span>       
+                          <input type="text" class="form-control" style="z-index: 0;">
+                        </div>
+                     </div>
+                   </div>
+                  </div>
+                 </form> 
+               </div>
+                <div class="col-md-6">                                          
+                 <form class="form-horizontal" id="form2"> 
+                  <div class="well well-sm">
+                   <div class="form-group">
+                     <label class="control-label col-md-6">4 부가세 포함 여부</label>
+                   </div>                          
+                   <div class="form-group">
+                     <label class="control-label col-md-8">카과, 현과의 공급가액에 부가세포함</label>
+                     <div class="col-md-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-8"> 건별 공급가액에 부가세포함</label>
+                     <div class="col-md-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>                          
+                   <div class="form-group">
+                     <label class="control-label col-md-8"> 과세 공급가액에 부가세포함</label>
+                     <div class="col-md-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div> 
+                    <div class="form-group">
+                     <label class="control-label col-md-6">5 봉사료 사용 여부</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div> 
+                   <div class="form-group">
+                     <label class="control-label col-md-6">6 유형:불공(54)의 불공제 사유</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">유형:영세율매출(12.16) 구분</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                  <div class="form-group">
+                     <label class="control-label col-md-6">7 단가표시</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">8.성실신고사업자</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">9.표준(법인세)용재무제표</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">10 건물외 유형고정자산 상각방법</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">11 고정자산 간편자동등록 사용</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">12 현장코드 엔터키 자동복사</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">13 부서사원코드 엔터키 자동복사</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">14 프로젝트코드 엔터키 자동복사</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">15 세금계산서 인쇄시 복수거래 정렬방법</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">16 면세류 입력설정</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6"> 의제류 자동설정</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6"> 의제매입공제율</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">재활용매입공제율</label>
+                     <div class="col-md-2 col-md-offset-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                  </div>
+                 </form> 
+               </div>       
+              </div><!-- end row -->                                           
+              </div><!-- end tab-pane 2 --> 
+              <div class="tab-pane" id="tab-tax3">
+                  <div class="row"> 
+               <div class="col-md-7">                                          
+                 <form class="form-horizontal" id="form1"> 
+                  <div class="well well-sm">
+                   <div class="form-group">
+                     <label class="control-label col-md-6">1 사원코드 형태</label>
+                     <div class="col-md-2">
+                       <select class="form-control">
+                         <option>1.숫자</option>
+                         <option>2.문자</option>
+                       </select>
+                    </div>
+                   </div>                          
+                   <div class="form-group">
+                     <label class="control-label col-md-6">2 급여 산정 기준일 사용 여부</label>
+                     <div class="col-md-4">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">급여 산정 기준일</label>
+                     <div class="col-md-4">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>                          
+                   <div class="form-group">
+                     <label class="control-label col-md-6">3 급여 지급 형태</label>
+                     <div class="col-md-4">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div> 
+                   <div class="form-group">
+                     <label class="control-label col-md-6">4 급여 지급 일자</label>
+                     <div class="col-md-4">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">5 급여자료입력 화면</label>
+                     <div class="col-md-2">
+                       <input type="text" class="form-control input-sm"> 
+                     </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">6 급여 입력 방법</label>
+                     <div class="col-md-4">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>                          
+                   <div class="form-group">
+                     <label class="control-label col-md-6">7 급여자료입력 금액 처리</label>
+                     <div class="col-md-4">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div> 
+                   <div class="form-group">
+                     <label class="control-label col-md-6">8 주민번호 뒷자리 표시 여부</label>
+                     <div class="col-md-4">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">9 총괄 납부 여부</label>
+                     <div class="col-md-2">
+                       <input type="text" class="form-control input-sm"> 
+                     </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">10 원천세 작성 방법</label>
+                     <div class="col-md-4">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>                          
+                   <div class="form-group">
+                     <label class="control-label col-md-6">11 상용직 급여 입력 방식</label>
+                     <div class="col-md-4">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div> 
+                   <div class="form-group">
+                     <label class="control-label col-md-6">12 일용직 급여 입력 방식</label>
+                     <div class="col-md-4">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-6">13 퇴직소득 징수의무자 구분</label>
+                     <div class="col-md-4">
+                       <input type="text" class="form-control input-sm"> 
+                     </div>
+                   </div>
+                  </div>
+                 </form> 
+               </div>
+               <div class="col-md-5">
+               <div class="well well-sm">
+                <div class="list-group">
+                  <a href="#" class="list-group-item active">
+                    <span class="glyphicon glyphicon-camera"></span> 국민은행 <span class="badge">25</span>
+                  </a>
+                  <a href="#" class="list-group-item hide">
+                    <span class="glyphicon glyphicon-file"></span> Documents <span class="badge">145</span>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="glyphicon glyphicon-music"></span> 김영식 회계사 <span class="badge">50</span>
+                  </a>
+                </div>
+              </div>
+            </div>         
+              </div><!-- end row -->                                           
+              </div><!-- end tab-pane 3 --> 
+              <div class="tab-pane" id="tab-tax4">
+                 tab 4
+              </div><!-- end tab-pane 4 --> 
+              <div class="tab-pane" id="tab-tax5">
+                 <div class="row"> 
+               <div class="col-md-6">                                          
+                 <form class="form-horizontal" id="form1"> 
+                  <div class="well well-sm">
+                   <div class="form-group">
+                     <label class="control-label col-md-4">1 평가방법</label>
+                   </div>                          
+                   <div class="form-group">
+                     <label class="control-label col-md-4">상품</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>                          
+                   <div class="form-group">
+                     <label class="control-label col-md-4">원재료</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                     </div>
+                   </div> 
+                    <div class="form-group">
+                     <label class="control-label col-md-4">부재료</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">제품</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>                          
+                   <div class="form-group">
+                     <label class="control-label col-md-4">반제품</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                     </div>
+                   </div> 
+                    <div class="form-group">
+                     <label class="control-label col-md-4">부산품</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">저장품</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">2.품목코드자리수</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">3.소수점관리</label>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4"></label>
+                     <label class="control-label col-md-3">자리수</label>
+                     <label class="control-label col-md-3">끋전처리</label>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">수량</label>
+                     <div class="col-md-3">
+                       <input type="text" class="form-control input-sm"> 
+                     </div>
+                     <div class="col-md-3">
+                       <input type="text" class="form-control input-sm"> 
+                     </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">단가</label>
+                     <div class="col-md-3">
+                       <input type="text" class="form-control input-sm"> 
+                     </div>
+                     <div class="col-md-3">
+                       <input type="text" class="form-control input-sm"> 
+                     </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">금액</label>
+                     <div class="col-md-3">
+                       <input type="text" class="form-control input-sm"> 
+                     </div>
+                     <div class="col-md-3">
+                       <input type="text" class="form-control input-sm"> 
+                     </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">4.재고통제</label>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-9">현재고 마이너스 일때 경고메시지 여부</label>
+                     <div class="col-md-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-9">안전재고 > 현재고 일때 경고메시지 여부</label>
+                     <div class="col-md-2">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                  </div>
+                 </form> 
+               </div>
+                <div class="col-md-6">                                          
+                 <form class="form-horizontal" id="form2"> 
+                  <div class="well well-sm">
+                   <div class="form-group">
+                     <label class="control-label col-md-4">5.단가사용</label>
+                   </div>                          
+                   <div class="form-group">
+                     <label class="control-label col-md-4">기준단가(품목등록)</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>                          
+                   <div class="form-group">
+                     <label class="control-label col-md-4">거래처별 단가등록</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                     </div>
+                   </div> 
+                    <div class="form-group">
+                     <label class="control-label col-md-4">품목별 단가등록</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">직전단가</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>      
+                   <div class="form-group">
+                     <label class="control-label col-md-4">6.단가에 VAT포함여부</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">7.자금관리 사용여부</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">8.판매입력 반영</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">9.조회기간 설정</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                   <div class="form-group">
+                     <label class="control-label col-md-4">한달기준 기준일자</label>
+                     <div class="col-md-6">
+                       <input type="text" class="form-control input-sm"> 
+                    </div>
+                   </div>
+                  </div>
+                 </form> 
+               </div>       
+              </div><!-- end row -->                                           
+              </div><!-- end tab-pane 5 --> 
+              <div class="tab-pane" id="tab-tax6">
+                 tab 6
+              </div><!-- end tab-pane 6 --> 
+              <div class="tab-pane" id="tab-tax7">
+                 tab 7
+              </div><!-- end tab-pane 7 --> 
+             </div> <!-- end tab-content --> 
+           </div> <!-- end panel-body --> 
+        </div> <!-- end panel with-nav-tabs panel-default -->
+           
+             <div class="row">
+           <div class="col-md-12">
+              <div class="nav navbar-nav">
+                <div class="btn-group btn-group-xs">
+                  <button type="button" class="btn btn-primary tableinput-toggle" name="tab-tax1">조회</button>
+                </div>
+              </div>
+           </div>       
+         </div><!-- end row -->        
+           
+    </div> <!-- end col-md-9 -->
+  </div> <!-- end row -->
+  </div> <!-- end container -->
+
+
+
+<div class="container"> 
+<div class="row">
+<div class="col-md-12">    
+<div class="footer well">
+<div class="">
+        <p><a href="#" title="당신&apos;s 이름은">Tooltips</a> 무엇인가요?. 자세히 보아야 예쁘다
+오래 보아야 사랑스럽다
+너도 그렇다</p>
+        <p>But as it's not a native tooltip, it can be styled. Any themes built with<a href="http://jqueryui.com/themeroller/" title="당신은 나의 동반자">ThemeRoller</a>will also style tooltips accordingly.</p>
+        <p>그대가 꺾어준 꽃
+시들 때 까지 들여다 보았네
+그대가 남기고 간 시든 꽃
+다시 필 때까지</p>
+        <p><label for="age">Your age:</label> <input id="age" title="We ask for your age only for statistical purposes."></p>
+        <p>Hover the field to see the tooltip.</p>
+      </div>
+             <div class="bs-example"> 
+    <button type="button" class="btn btn-default" rel="txtTooltip" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+<button type="button" class="btn btn-primary" rel="txtTooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+<button type="button" class="btn btn-info" rel="txtTooltip" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+<button type="button" class="btn btn-danger" rel="txtTooltip" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+</div>
+ </div>
+</div>
+</div>
+</div>
+
+<!-- toolbar_dialog -->
+<!-- dialog_password_change -->
+<div id="dialog_password_change" class="lookup_popup" style="display:none; padding: 7px;"> 
+  <p style="font-size: 12px;">여기에 온것을 환영합니다. 동의하십니까?</p>
+  
+                <div class="table-responsive">     
+                   <table class="table table-bordered table-hover table-condensed">
+                      <tbody>
+                        <tr class="success">
+                          <td>현재비밀번호</td>
+                          <td><input type="password" class="form-control" /></td>
+                        </tr>
+                        <tr class="warning">
+                          <td>새비밀번호</td>
+                          <td><input type="password" class="form-control" /></td>
+                        </tr> 
+                        <tr class="success">
+                          <td>새비밀번호확인</td>
+                          <td><input type="password" class="form-control" /></td>
+                        </tr>                     
+                      </tbody>
+                    </table>
+                   </div>
+             
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                    </button>
+                     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Email:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                    </button>
+                     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>코드</th>
+        <th>회사명</th>
+        <th>사용여부</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>1001</td>
+        <td>(주)kimrim</td>
+        <td>사용</td>
+      </tr>
+      <tr class="warning">
+        <td>1002</td>
+        <td>박후영</td>
+        <td>미사용</td>
+      </tr>
+      <tr class="danger">
+        <td>1003</td>
+        <td>김배현</td>
+        <td>사용</td>
+      </tr>
+    </tbody>
+  </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!--<script>window.jQuery || document.write('<script src="../../../js/jquery.min.js"></script>')</script> -->
+    <script src="../../../js/jquery.min.js"></script>
+
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../jquery-ui-1.11.4.custom/jquery-ui.js"></script> 
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../../js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="../../../js/header-content.js"></script>
+
+    <script src="../../../js/jssor/jssor.slider.mini.js"></script>
+    <script src="../../../js/jssor.js"></script>
+  
+    <script src="../../../js/main.js"></script>
+    <!-- <script src="../../../js/main_popup.js"></script> -->
+    <!-- <script src="../../../js/main_popup_item.js"></script> -->
+    <script src="../../../js/datepicker.js"></script>
+    <script src="../../../js/lan_ko.js"></script>
+    <script src="../../../js/con_tab.js"></script>
+    <script src="../../../js/toolbar_popup.js"></script>
+    <script src="../../../js/con_topmenu.js"></script>
+    <script src="../../../js/con_mainmenu.js"></script>
+    
+    <!-- dialog로딩 시 autofocus없애기 -->
+    <script>$.ui.dialog.prototype._focusTabbable = function(){};</script>
+   
+    <script src="../../../DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="../../../DataTables/media/js/dataTables.jqueryui.js"></script>
+    <script src="../../../DataTables/extensions/Buttons/js/dataTables.buttons.js"></script>
+    <script src="../../../DataTables/extensions/Buttons/js/buttons.jqueryui.js"></script>
+    <script src="../../../DataTables/extensions/Scroller/js/dataTables.scroller.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="../../../DataTables/extensions/Buttons/js/buttons.html5.js"></script>
+    <script src="../../../DataTables/extensions/Buttons/js/buttons.print.js"></script>
+    <script src="../../../DataTables/extensions/Buttons/js/buttons.colVis.js"></script>  
+    <script class="init">	
+      $(document).ready(function() {
+           $("body").con_tab2({exam: "#example_90", url: "../../data/2500_06.txt", searching:false, info:false, paging: false});
+           $("body").con_tab2({exam: "#example_91", url: "../../data/2500_04.txt", searching:false, info:false, paging: false});
+           $("body").con_tab2({exam: "#example_92", url: "../../data/2500_02.txt", searching:false, info:false, paging: false});
+        });
+    </script>
+    <script src="../../../js/common.js"></script>  
+  </body>
+</html>

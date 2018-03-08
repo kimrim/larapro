@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="euc-kr">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../../favicon.ico">
+    <title>Jumbotron Template for Bootstrap</title>
+    <!-- <link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet"> -->
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../../../../css/jumbotron-navbar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../../../css/header-content.css" />
+    <link rel="stylesheet" href="../../../../../jquery-ui-1.11.4.custom/jquery-ui.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../../../../js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../../../../js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="../../../../../css/jssor5.css" rel="stylesheet">
+    <link href="../../../../../css/style.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../media/css/dataTables.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../css/responsive.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../../examples/resources/syntax/shCore.css">
+    <link rel="stylesheet" type="text/css" href="../../../../examples/resources/demo.css">
+    <style type="text/css" class="init">
+	
+    </style>
+</head>
+<body>    
+  <!-- Static navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"> Kimrim Project</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">사용자정보 <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+              <li><a href="#">김영식</a></li>
+              <li></li>
+              <li><a href="#">경기도</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">(주)삼성전자 회장</li>
+              <li><a href="#">Se@dd.com</a></li>
+              <li><a href="#">나는 누구인가?</a></li>
+            </ul>       
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="./">Logoout <span class="sr-only">(current)</span></a></li>
+          <li><a href="../navbar-static-top/">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">        
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사용회사 <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li>       
+                <table class="table table-bordered table-hover table-condensed" style="width: 250px;margin:10px;">
+                  <thead>
+                    <tr class="success">
+                      <th>코드</th>
+                      <th>회사명</th>
+                      <th>사용여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="success">
+                      <td>1001</td>
+                      <td>(주)kimrim</td>
+                      <td>사용</td>
+                    </tr>
+                    <tr class="warning">
+                      <td>1002</td>
+                      <td>박후영</td>
+                      <td>미사용</td>
+                    </tr>
+                    <tr class="danger">
+                      <td>1003</td>
+                      <td>김배현</td>
+                      <td>사용</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="nav navbar-nav navbar-right">
+                  <div class="btn-group btn-group-sm" style="padding-right: 30px; margin-bottom: 10px;">
+                    <button type="button" class="btn btn-info">확인</button>
+                    <button type="button" class="btn btn-success">닫기</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3 logo">
+          <div class="well well-sm">
+            <h5>Logo</h5>
+            <img src="../../../../../img/logo_2.jpg" class="img-responsive img-thumbnail" id="logo" alt="Responsive image">
+            <p>안녕하세요 박후영님</p>
+          </div>
+        </div>
+        <div class="col-md-9 menu-open">
+          <div class="navbar navbar-default" role="navigation">
+              <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav h-c">
+                  <li class="dropdown open">
+                    <a href="../../../acc/A02/trade_insert/revenue.html" class="dropdown-toggle" role="button">회계관리 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li role="presentation"><a href="../../basic_registration/formerly_information_management/cor_registration.html" role="menuitem">기초등록</a></li>
+                      <li role="presentation"><a href="../../A02/trade_insert/revenue.html" role="menuitem">거래입력</a></li>
+                      <li class="open2" role="presentation"><a href="../../account_book/book_management/buying_selling.html" role="menuitem">회계장부</a></li>
+                      <li role="presentation"><a href="../../A04/settlement/data_insert_01.html" role="menuitem">결산/재무제표</a></li>
+                      <li role="presentation"><a href="../../A05/fixing_asset/fixing_asset_regeister.html" role="menuitem">고정자산</a></li>
+                      <li role="presentation"><a href="#" role="menuitem">어음수표</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../vat/A01/report01/report.html" class="dropdown-toggle" role="button">부가가치세 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2" role="presentation"><a href="../../vat/report01/report.html" role="menuitem">신고서 1</a></li>
+                      <li role="presentation"><a href="../../vat/report02/notax_deduction.html" role="menuitem">신고서 2</a></li>
+                      <li role="presentation"><a href="../../vat/report03/bussiness_unit.html" role="menuitem">신고서 3</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="../../../stk/A02/sales_trade/sales.html" class="dropdown-toggle" role="button">물류관리 <span class="caret"></span></a>
+                     <ul class="dropdown-menu child" role="menu">
+                      <li role="presentation"><a href="../../A01/formerly_information_management/item_register.html" role="menuitem">기초등록</a></li>
+                      <li class="open2" role="presentation"><a href="../../A02/sales_trade/sales.html" role="menuitem">판매관리</a></li>
+                      <li role="presentation"><a href="../../A03/purchase_trade/purchase.html" role="menuitem">구매관리</a></li>
+                      <li role="presentation"><a href="../../A04/inventory_management/inventory_report.html" role="menuitem">재고관리</a></li>
+                      <li role="presentation"><a href="../../A05/profit_hh/client_profit_hh.html" role="menuitem">영업관리</a></li>
+                      <li role="presentation"><a href="../../pro/product_management/product_insert.html" role="menuitem">생산관리</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../pay/A02/earned_income/salary_insert.html" class="dropdown-toggle" role="button">급여관리 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li role="presentation"><a href="#" role="menuitem">기초정보등록</a></li>
+                      <li class="open2" role="presentation"><a href="../../A02/earned_income/salary_insert.html" role="menuitem">근로소득</a></li>
+                      <li role="presentation"><a href="../../A03/bussiness_earnings/bussiness_earnings_person_register.html" role="menuitem">사업.기타소득</a></li>
+                      <li role="presentation"><a href="../../A04/tax_report/yearend_performance.html" role="menuitem">원천징수</a></li>
+                      <li role="presentation"><a href="../../A05/yearend/yearend_additional_insert.html" role="menuitem">연말정산</a></li>
+                      <li role="presentation"><a href="#" role="menuitem">세무신고서류</a></li>
+                      <li role="presentation"><a href="../../A07/e_report/withholding_e_report.html" role="menuitem">전자신고</a></li>
+                      <li role="presentation"><a href="../../A08/social_insurance/bussiness_place_register.html" role="menuitem">사회보험</a></li>                      
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../cor/base/base_establishment/a010107.html" class="dropdown-toggle">법인조정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="../../base/base_establishment/a010107.html">기초사항</a></li>
+                      <li><a href="../../A02/subject_01/a01.html">소득금액/특별/감가</a></li>
+                      <li><a href="../../A03/tax_confirmation/cor_tax_standard_report.html">세액계산신고</a></li>
+                      <li><a href="../../A04/AA01/transfer_plan.html">기타신고</a></li>
+                      <li><a href="../../A05/report_attachment/smaller_enterprises_standard_review.html">신고부속/기타서식</a></li>
+                      <li><a href="../../A06/business_inpartnership/earnings_calculation_division.html">비영리/공익/동업/성실</a></li>
+                      <li><a href="../../A07/AA01/a0701.html">전자신고</a></li>
+                      <li><a href="../../connection/relate/tax_payment_way_apply.html">연결납세</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">환경설정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="#">시스템 구성</a></li>
+                      <li><a href="#">화면셋팅</a></li>
+                    </ul>
+                  </li>
+                </ul>                
+              </div><!--/.nav-collapse -->                                    
+          </div>         
+          <div class="container" id="page">
+            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 150px; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('../../../img/jssor5/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 300px; overflow: hidden;">
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="../../../../../img/jssor5/002.jpg" />
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="../../../../../img/jssor5/003.jpg" />
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="../../../../../img/jssor5/004.jpg" />
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="../../../../../img/jssor5/005.jpg" />
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="../../../../../img/jssor5/006.jpg" />
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="../../../../../img/jssor5/007.jpg" />
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="../../../../../img/jssor5/008.jpg" />
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="../../../../../img/jssor5/009.jpg" />
+            </div>
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;" data-autocenter="1">
+            <div data-u="prototype" style="width:12px;height:12px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora13l" style="top:0px;left:30px;width:40px;height:50px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora13r" style="top:0px;right:30px;width:40px;height:50px;" data-autocenter="2"></span>
+        <a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
+    </div>
+
+    <!-- #endregion Jssor Slider End -->
+        </div><!-- div class="container" id="page" end -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="well well-sm" style="padding-left: 5px; padding-right: 5px;">        
+          <div class="panel-group">
+            <div class="panel panel-danger">
+	      <!-- Default panel contents -->
+	      <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" href="#collapse11">장부관리</a></h4>
+              </div>
+              <div id="collapse11" class="panel-collapse collapse in">
+	        <div class="panel-body">
+		  <p>여기는 빈공간</p>
+	        </div>
+	        <!-- List group -->
+	        <div class="list-group">
+		  <a href="../../account_book/book_management/client_account_ledger.html" class="list-group-item">거래처별계정과목별원장 <span class="badge">50</span></a> 
+		  <a href="../../account_book/book_management/client_buying_selling.html" class="list-group-item">거래처별매입매출장<span class="badge">65</span></a>
+		  <a href="../../account_book/book_management/client_ledger.html" class="list-group-item">거래처원장<span class="badge">8</span></a>
+                  <a href="../../account_book/book_management/account_ledger.html" class="list-group-item active">계정별원장 <span class="badge">50</span></a>
+		  <a href="../../account_book/book_management/buying_selling.html" class="list-group-item">매입매출장<span class="badge">145</span></a>
+		  <a href="../../account_book/book_management/journal.html" class="list-group-item">분개장<span class="badge">30</span></a>  
+		  <a href="../../account_book/book_management/tax_calculation_hh.html" class="list-group-item">세금계산서(계산서)현황<span class="badge">65</span></a>
+		  <a href="../../account_book/book_management/tax_calculation_sum_report.html" class="list-group-item">세금계산서합계표(관리용)<span class="badge">8</span></a>
+                  <a href="../../account_book/book_management/daily_month_table.html" class="list-group-item">일계표(월계표)<span class="badge">8</span></a>
+                  <a href="../../account_book/book_management/outline_ledger.html" class="list-group-item">적요별원장<span class="badge">8</span></a>
+		  <a href="../../account_book/book_management/chit.html" class="list-group-item">전표출력<span class="badge">145</span></a>
+		  <a href="../../account_book/book_management/receivables_age.html" class="list-group-item">채권연령분석<span class="badge">30</span></a>  
+		  <a href="../../account_book/book_management/total_account_ledger.html" class="list-group-item">총계정원장<span class="badge">65</span></a>
+                  <a href="../../account_book/book_management/cash_incomingsandoutgoings.html" class="list-group-item">현금출납장<span class="badge">8</span></a>
+	        </div>
+              </div>
+	    </div>
+            <div class="panel panel-danger">
+	      <!-- Default panel contents -->
+	      <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" href="#collapse12">프로젝트관리</a></h4>
+              </div>
+              <div id="collapse12" class="panel-collapse collapse">
+	        <div class="panel-body">
+		  <p>무엇을 써야하나?</p>
+	        </div>
+	        <!-- List group -->
+	        <div class="list-group">
+                  <a href="../../account_book/project_management/part_cost_division.html" class="list-group-item"><span class="glyphicon glyphicon-camera"></span>부문별(현장.프로젝트)원가안분및명세서<span class="badge">25</span></a>
+                  <a href="../../account_book/project_management/project_account_ledger.html" class="list-group-item"><span class="glyphicon glyphicon-file"></span>프로젝트계정별원장<span class="badge">145</span></a>
+                  <a href="../../account_book/project_management/project_client__ledger.html" class="list-group-item"><span class="glyphicon glyphicon-file"></span>프로젝트별 거래처원장<span class="badge">145</span></a>
+                  <a href="../../account_book/project_management/project_account_subject_ledger.html" class="list-group-item"><span class="glyphicon glyphicon-music"></span>프로젝트별 계정과목별원장(내용)<span class="badge">50</span></a>
+                  <a href="../../account_book/project_management/project_accumulation_lossandgain.html" class="list-group-item"><span class="glyphicon glyphicon-file"></span>프로젝트별 누적손익현황<span class="badge">145</span></a>
+                  <a href="../../account_book/project_management/project_accumulation_cost.html" class="list-group-item"><span class="glyphicon glyphicon-music"></span>프로젝트별 누적원가현황<span class="badge">50</span></a>
+                  <a href="../../account_book/project_management/project_buying_selling" class="list-group-item"><span class="glyphicon glyphicon-film"></span>프로젝트별매입매출장<span class="badge">8</span></a>
+                </div>
+              </div>
+	    </div>
+            <div class="panel panel-danger">
+	      <!-- Default panel contents -->
+	      <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" href="#collapse13">현장관리</a></h4>
+              </div>
+              <div id="collapse13" class="panel-collapse collapse">
+	        <div class="panel-body">
+		  <p>무엇을 써야하나?</p>
+	        </div>
+	        <!-- List group -->
+	        <div class="list-group">
+                  <a href="../../account_book/spot_management/construction_account_book.html" class="list-group-item"><span class="glyphicon glyphicon-camera"></span>공사대장(내용 탭)<span class="badge">25</span></a>
+                  <a href="../../account_book/spot_management/part_cost_division.html" class="list-group-item"><span class="glyphicon glyphicon-music"></span>부문별(현장.프로젝트)원가안분및명세서<span class="badge">50</span></a>
+                  <a href="../../account_book/spot_management/part_lossandgain_hh.html" class="list-group-item"><span class="glyphicon glyphicon-film"></span>부문별손익현황<span class="badge">8</span></a>
+                  <a href="../../account_book/spot_management/part_cost_details.html" class="list-group-item"><span class="glyphicon glyphicon-camera"></span>부문별원가명세서<span class="badge">25</span></a>
+                  <a href="../../account_book/spot_management/part_cost_hh.html" class="list-group-item"><span class="glyphicon glyphicon-file"></span>부문별원가현황<span class="badge">145</span></a>
+                  <a href="../../account_book/spot_management/advanced_money_ledger.html" class="list-group-item"><span class="glyphicon glyphicon-music"></span>전도금원장<span class="badge">50</span></a>
+                  <a href="../../account_book/spot_management/total_cost_lossandgain_management.html" class="list-group-item"><span class="glyphicon glyphicon-film"></span>총괄원가손익관리<span class="badge">8</span></a>
+                  <a href="../../account_book/spot_management/spot_client_ledger.html" class="list-group-item"><span class="glyphicon glyphicon-file"></span>현장별 거래처원장(내용)<span class="badge">145</span></a>
+                  <a href="../../account_book/spot_management/spot_buying_selling.html" class="list-group-item"><span class="glyphicon glyphicon-file"></span>현장별매입매출장<span class="badge">145</span></a>
+                  <a href="../../account_book/spot_management/spot_cost_report.html" class="list-group-item"><span class="glyphicon glyphicon-music"></span>현장별원가보고서<span class="badge">50</span></a>
+                  <a href="../../account_book/spot_management/spot_cost_totalization.html" class="list-group-item"><span class="glyphicon glyphicon-film"></span>현장별원가집계표<span class="badge">8</span></a>
+                  <a href="../../account_book/spot_management/spot_ledger.html" class="list-group-item"><span class="glyphicon glyphicon-film"></span>현장별원장<span class="badge">8</span></a>
+                </div>
+              </div>
+	    </div>
+          </div>
+        </div><!-- end well -->
+      </div><!-- end col-md-3 -->
+       <div class="col-md-9">
+        <div class="btn-toolbar mar_b3">         
+          <button type="button" class="btn btn-xs btn-success">종료(ESC)</button>                                     
+          <button type="button" class="btn btn-xs btn-primary">도움(F1)</button> 
+          <button type="button" class="btn btn-xs btn-danger">코드(F2)</button> 
+          <button type="button" class="btn btn-xs btn-info">전표조회/수정(F3)</button>         
+          <button type="button" class="btn btn-xs btn-default disabled">합계옵션(F6)</button>
+          <button type="button" class="btn btn-xs btn-warning">변환(F7)</button>
+          <button type="button" class="btn btn-xs btn-success disabled">인쇄(F9)</button>
+          <button type="button" class="btn btn-xs btn-primary">일괄출력(CF3)</button>
+          <button type="button" class="btn btn-xs btn-danger">선택조회(F11)</button>  
+          <button type="button" class="btn btn-xs btn-info">조회(F12)</button>
+        </div>
+        <ol class="breadcrumb mar_b3">
+          <li><a href="#">회계장부</a></li>
+          <li><a href="#">장부관리</a></li>
+          <li class="active">계정별원장</li>
+        </ol>
+        <form class="form-inline well well-sm">
+          <div class="form-group">
+            <label for="from">기 &nbsp;&nbsp;간</label>
+            <input type="text" class="form-control" id="from" placeholder="2016-01-01" readonly="readonly">
+          </div>
+          <div class="form-group">
+            <label for="to">~</label>
+            <input type="text" class="form-control" id="to" placeholder="2016-12-31" readonly="readonly">
+          </div>
+          <div class="form-group">
+            <label for="from">&nbsp;&nbsp;&nbsp;&nbsp;계정과목</label>
+            <div class="input-group">
+               <span class="input-group-addon">023</span>
+               <input type="text" class="form-control open-dialog" id="account12" readonly="readonly">
+            </div>
+          </div> <br /> <div class="mar_t5"></div>
+          <div class="form-group">
+            <label for="from">거래처</label>
+            <div class="input-group">
+               <span class="input-group-addon">023</span>
+               <input type="text" class="form-control z_i0 open-dialog" id="customer11" readonly="readonly">
+            </div>
+          </div> 
+          <div class="form-group">
+            <label for="from">~</label>
+            <div class="input-group">
+               <span class="input-group-addon">023</span>
+               <input type="text" class="form-control z_i0 open-dialog" id="customer22" readonly="readonly">
+            </div>
+          </div>      
+        </form> 
+        <div class="well" style="margin-bottom: 5px; padding-left: 5px; padding-right: 5px;">                                             
+          <ul class="nav nav-tabs mar_tm18" id="" role="tablist">
+            <li role="presentation" class="active"><a href="#tab-tax1" role="tab">계정별</a></li>  
+            <li role="presentation"><a href="#tab-tax2">부서별</a></li>
+            <li role="presentation"><a href="#tab-tax3">사원별</a></li> 
+            <li role="presentation"><a href="#tab-tax4">현장별</a></li>
+            <li role="presentation"><a href="#tab-tax5">전체</a></li>       
+         </ul>
+         <div class="tab-content">
+            <div class="tab-pane active" id="tab-tax1" style="padding-top: 5px;"> <!-- fade in --> 
+               <div class="col-md-3">
+                  <div class="table-responsive">
+                  <table class="table table-bordered table-hover table-condensed">
+                    <thead>
+                      <tr class="danger">
+                        <th class=""></th>
+                        <th class="">코드</th>
+                        <th class="">계정과목</th>      
+                      </tr> 
+                    </thead>
+                    <tbody>
+                      <tr class="success">
+                        <td>1</td>
+                        <td></td>
+                        <td></td>                             
+                      </tr>
+                      <tr class="warning">
+                        <td>2</td>
+                        <td></td>
+                        <td></td>                           
+                      </tr>
+                      <tr class="success">
+                        <td>3</td>
+                        <td></td>
+                        <td></td>                            
+                      </tr>
+                      <tr class="warning">
+                        <td>4</td>
+                        <td></td>
+                        <td></td>
+                            
+                      </tr>
+                      <tr class="success">
+                        <td>5</td>
+                        <td></td>
+                        <td></td>
+                            
+                      </tr>
+                      <tr class="warning">
+                        <td>6</td>
+                        <td></td>
+                        <td></td>                              
+                      </tr>
+                      <tr class="success">
+                        <td colspan=3>&nbsp;</td>
+                        <td></td>                               
+                      </tr>
+                    </tbody>
+                  </table>
+                 </div>
+               </div> <!-- end col-md-3 --> 
+               <div class="col-md-9"> 
+                 <table id="example" class="display responsive nowrap" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Position</th>
+						<th>Office</th>
+						<th>Age</th>
+						<th>Start date</th>
+						<th>Salary</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th>Name</th>
+						<th>Position</th>
+						<th>Office</th>
+						<th>Age</th>
+						<th>Start date</th>
+						<th>Salary</th>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>Tiger Nixon</td>
+						<td>System Architect</td>
+						<td>Edinburgh</td>
+						<td>61</td>
+						<td>2011/04/25</td>
+						<td>$320,800</td>
+					</tr>
+					<tr>
+						<td>Garrett Winters</td>
+						<td>Accountant</td>
+						<td>Tokyo</td>
+						<td>63</td>
+						<td>2011/07/25</td>
+						<td>$170,750</td>
+					</tr>
+					<tr>
+						<td>Ashton Cox</td>
+						<td>Junior Technical Author</td>
+						<td>San Francisco</td>
+						<td>66</td>
+						<td>2009/01/12</td>
+						<td>$86,000</td>
+					</tr>
+					<tr>
+						<td>Cedric Kelly</td>
+						<td>Senior Javascript Developer</td>
+						<td>Edinburgh</td>
+						<td>22</td>
+						<td>2012/03/29</td>
+						<td>$433,060</td>
+					</tr>
+					<tr>
+						<td>Airi Satou</td>
+						<td>Accountant</td>
+						<td>Tokyo</td>
+						<td>33</td>
+						<td>2008/11/28</td>
+						<td>$162,700</td>
+					</tr>
+					<tr>
+						<td>Brielle Williamson</td>
+						<td>Integration Specialist</td>
+						<td>New York</td>
+						<td>61</td>
+						<td>2012/12/02</td>
+						<td>$372,000</td>
+					</tr>
+					<tr>
+						<td>Herrod Chandler</td>
+						<td>Sales Assistant</td>
+						<td>San Francisco</td>
+						<td>59</td>
+						<td>2012/08/06</td>
+						<td>$137,500</td>
+					</tr>
+					<tr>
+						<td>Rhona Davidson</td>
+						<td>Integration Specialist</td>
+						<td>Tokyo</td>
+						<td>55</td>
+						<td>2010/10/14</td>
+						<td>$327,900</td>
+					</tr>
+					<tr>
+						<td>Colleen Hurst</td>
+						<td>Javascript Developer</td>
+						<td>San Francisco</td>
+						<td>39</td>
+						<td>2009/09/15</td>
+						<td>$205,500</td>
+					</tr>
+					<tr>
+						<td>Sonya Frost</td>
+						<td>Software Engineer</td>
+						<td>Edinburgh</td>
+						<td>23</td>
+						<td>2008/12/13</td>
+						<td>$103,600</td>
+					</tr>
+					<tr>
+						<td>Jena Gaines</td>
+						<td>Office Manager</td>
+						<td>London</td>
+						<td>30</td>
+						<td>2008/12/19</td>
+						<td>$90,560</td>
+					</tr>
+					<tr>
+						<td>Quinn Flynn</td>
+						<td>Support Lead</td>
+						<td>Edinburgh</td>
+						<td>22</td>
+						<td>2013/03/03</td>
+						<td>$342,000</td>
+					</tr>
+					<tr>
+						<td>Charde Marshall</td>
+						<td>Regional Director</td>
+						<td>San Francisco</td>
+						<td>36</td>
+						<td>2008/10/16</td>
+						<td>$470,600</td>
+					</tr>
+					<tr>
+						<td>Haley Kennedy</td>
+						<td>Senior Marketing Designer</td>
+						<td>London</td>
+						<td>43</td>
+						<td>2012/12/18</td>
+						<td>$313,500</td>
+					</tr>
+					<tr>
+						<td>Tatyana Fitzpatrick</td>
+						<td>Regional Director</td>
+						<td>London</td>
+						<td>19</td>
+						<td>2010/03/17</td>
+						<td>$385,750</td>
+					</tr>
+					<tr>
+						<td>Michael Silva</td>
+						<td>Marketing Designer</td>
+						<td>London</td>
+						<td>66</td>
+						<td>2012/11/27</td>
+						<td>$198,500</td>
+					</tr>
+					<tr>
+						<td>Paul Byrd</td>
+						<td>Chief Financial Officer (CFO)</td>
+						<td>New York</td>
+						<td>64</td>
+						<td>2010/06/09</td>
+						<td>$725,000</td>
+					</tr>
+					<tr>
+						<td>Gloria Little</td>
+						<td>Systems Administrator</td>
+						<td>New York</td>
+						<td>59</td>
+						<td>2009/04/10</td>
+						<td>$237,500</td>
+					</tr>
+					<tr>
+						<td>Bradley Greer</td>
+						<td>Software Engineer</td>
+						<td>London</td>
+						<td>41</td>
+						<td>2012/10/13</td>
+						<td>$132,000</td>
+					</tr>
+					<tr>
+						<td>Dai Rios</td>
+						<td>Personnel Lead</td>
+						<td>Edinburgh</td>
+						<td>35</td>
+						<td>2012/09/26</td>
+						<td>$217,500</td>
+					</tr>
+					<tr>
+						<td>Jenette Caldwell</td>
+						<td>Development Lead</td>
+						<td>New York</td>
+						<td>30</td>
+						<td>2011/09/03</td>
+						<td>$345,000</td>
+					</tr>
+					<tr>
+						<td>Yuri Berry</td>
+						<td>Chief Marketing Officer (CMO)</td>
+						<td>New York</td>
+						<td>40</td>
+						<td>2009/06/25</td>
+						<td>$675,000</td>
+					</tr>
+					<tr>
+						<td>Caesar Vance</td>
+						<td>Pre-Sales Support</td>
+						<td>New York</td>
+						<td>21</td>
+						<td>2011/12/12</td>
+						<td>$106,450</td>
+					</tr>
+					<tr>
+						<td>Doris Wilder</td>
+						<td>Sales Assistant</td>
+						<td>Sidney</td>
+						<td>23</td>
+						<td>2010/09/20</td>
+						<td>$85,600</td>
+					</tr>
+					<tr>
+						<td>Angelica Ramos</td>
+						<td>Chief Executive Officer (CEO)</td>
+						<td>London</td>
+						<td>47</td>
+						<td>2009/10/09</td>
+						<td>$1,200,000</td>
+					</tr>
+					<tr>
+						<td>Gavin Joyce</td>
+						<td>Developer</td>
+						<td>Edinburgh</td>
+						<td>42</td>
+						<td>2010/12/22</td>
+						<td>$92,575</td>
+					</tr>
+					<tr>
+						<td>Jennifer Chang</td>
+						<td>Regional Director</td>
+						<td>Singapore</td>
+						<td>28</td>
+						<td>2010/11/14</td>
+						<td>$357,650</td>
+					</tr>
+					<tr>
+						<td>Brenden Wagner</td>
+						<td>Software Engineer</td>
+						<td>San Francisco</td>
+						<td>28</td>
+						<td>2011/06/07</td>
+						<td>$206,850</td>
+					</tr>
+					<tr>
+						<td>Fiona Green</td>
+						<td>Chief Operating Officer (COO)</td>
+						<td>San Francisco</td>
+						<td>48</td>
+						<td>2010/03/11</td>
+						<td>$850,000</td>
+					</tr>
+					<tr>
+						<td>Shou Itou</td>
+						<td>Regional Marketing</td>
+						<td>Tokyo</td>
+						<td>20</td>
+						<td>2011/08/14</td>
+						<td>$163,000</td>
+					</tr>
+					<tr>
+						<td>Michelle House</td>
+						<td>Integration Specialist</td>
+						<td>Sidney</td>
+						<td>37</td>
+						<td>2011/06/02</td>
+						<td>$95,400</td>
+					</tr>
+					<tr>
+						<td>Suki Burks</td>
+						<td>Developer</td>
+						<td>London</td>
+						<td>53</td>
+						<td>2009/10/22</td>
+						<td>$114,500</td>
+					</tr>
+					<tr>
+						<td>Prescott Bartlett</td>
+						<td>Technical Author</td>
+						<td>London</td>
+						<td>27</td>
+						<td>2011/05/07</td>
+						<td>$145,000</td>
+					</tr>
+					<tr>
+						<td>Gavin Cortez</td>
+						<td>Team Leader</td>
+						<td>San Francisco</td>
+						<td>22</td>
+						<td>2008/10/26</td>
+						<td>$235,500</td>
+					</tr>
+					<tr>
+						<td>Martena Mccray</td>
+						<td>Post-Sales support</td>
+						<td>Edinburgh</td>
+						<td>46</td>
+						<td>2011/03/09</td>
+						<td>$324,050</td>
+					</tr>
+					<tr>
+						<td>Unity Butler</td>
+						<td>Marketing Designer</td>
+						<td>San Francisco</td>
+						<td>47</td>
+						<td>2009/12/09</td>
+						<td>$85,675</td>
+					</tr>
+					<tr>
+						<td>Howard Hatfield</td>
+						<td>Office Manager</td>
+						<td>San Francisco</td>
+						<td>51</td>
+						<td>2008/12/16</td>
+						<td>$164,500</td>
+					</tr>
+					<tr>
+						<td>Hope Fuentes</td>
+						<td>Secretary</td>
+						<td>San Francisco</td>
+						<td>41</td>
+						<td>2010/02/12</td>
+						<td>$109,850</td>
+					</tr>
+					<tr>
+						<td>Vivian Harrell</td>
+						<td>Financial Controller</td>
+						<td>San Francisco</td>
+						<td>62</td>
+						<td>2009/02/14</td>
+						<td>$452,500</td>
+					</tr>
+					<tr>
+						<td>Timothy Mooney</td>
+						<td>Office Manager</td>
+						<td>London</td>
+						<td>37</td>
+						<td>2008/12/11</td>
+						<td>$136,200</td>
+					</tr>
+					<tr>
+						<td>Jackson Bradshaw</td>
+						<td>Director</td>
+						<td>New York</td>
+						<td>65</td>
+						<td>2008/09/26</td>
+						<td>$645,750</td>
+					</tr>
+					<tr>
+						<td>Olivia Liang</td>
+						<td>Support Engineer</td>
+						<td>Singapore</td>
+						<td>64</td>
+						<td>2011/02/03</td>
+						<td>$234,500</td>
+					</tr>
+					<tr>
+						<td>Bruno Nash</td>
+						<td>Software Engineer</td>
+						<td>London</td>
+						<td>38</td>
+						<td>2011/05/03</td>
+						<td>$163,500</td>
+					</tr>
+					<tr>
+						<td>Sakura Yamamoto</td>
+						<td>Support Engineer</td>
+						<td>Tokyo</td>
+						<td>37</td>
+						<td>2009/08/19</td>
+						<td>$139,575</td>
+					</tr>
+					<tr>
+						<td>Thor Walton</td>
+						<td>Developer</td>
+						<td>New York</td>
+						<td>61</td>
+						<td>2013/08/11</td>
+						<td>$98,540</td>
+					</tr>
+					<tr>
+						<td>Finn Camacho</td>
+						<td>Support Engineer</td>
+						<td>San Francisco</td>
+						<td>47</td>
+						<td>2009/07/07</td>
+						<td>$87,500</td>
+					</tr>
+					<tr>
+						<td>Serge Baldwin</td>
+						<td>Data Coordinator</td>
+						<td>Singapore</td>
+						<td>64</td>
+						<td>2012/04/09</td>
+						<td>$138,575</td>
+					</tr>
+					<tr>
+						<td>Zenaida Frank</td>
+						<td>Software Engineer</td>
+						<td>New York</td>
+						<td>63</td>
+						<td>2010/01/04</td>
+						<td>$125,250</td>
+					</tr>
+					<tr>
+						<td>Zorita Serrano</td>
+						<td>Software Engineer</td>
+						<td>San Francisco</td>
+						<td>56</td>
+						<td>2012/06/01</td>
+						<td>$115,000</td>
+					</tr>
+					<tr>
+						<td>Jennifer Acosta</td>
+						<td>Junior Javascript Developer</td>
+						<td>Edinburgh</td>
+						<td>43</td>
+						<td>2013/02/01</td>
+						<td>$75,650</td>
+					</tr>
+					<tr>
+						<td>Cara Stevens</td>
+						<td>Sales Assistant</td>
+						<td>New York</td>
+						<td>46</td>
+						<td>2011/12/06</td>
+						<td>$145,600</td>
+					</tr>
+					<tr>
+						<td>Hermione Butler</td>
+						<td>Regional Director</td>
+						<td>London</td>
+						<td>47</td>
+						<td>2011/03/21</td>
+						<td>$356,250</td>
+					</tr>
+					<tr>
+						<td>Lael Greer</td>
+						<td>Systems Administrator</td>
+						<td>London</td>
+						<td>21</td>
+						<td>2009/02/27</td>
+						<td>$103,500</td>
+					</tr>
+					<tr>
+						<td>Jonas Alexander</td>
+						<td>Developer</td>
+						<td>San Francisco</td>
+						<td>30</td>
+						<td>2010/07/14</td>
+						<td>$86,500</td>
+					</tr>
+					<tr>
+						<td>Shad Decker</td>
+						<td>Regional Director</td>
+						<td>Edinburgh</td>
+						<td>51</td>
+						<td>2008/11/13</td>
+						<td>$183,000</td>
+					</tr>
+					<tr>
+						<td>Michael Bruce</td>
+						<td>Javascript Developer</td>
+						<td>Singapore</td>
+						<td>29</td>
+						<td>2011/06/27</td>
+						<td>$183,000</td>
+					</tr>
+					<tr>
+						<td>Donna Snider</td>
+						<td>Customer Support</td>
+						<td>New York</td>
+						<td>27</td>
+						<td>2011/01/25</td>
+						<td>$112,000</td>
+					</tr>
+				</tbody>
+			</table> 
+                </div> <!-- end col-md-9 -->              
+              </div> <!-- end tab-pane -->
+              <div class="tab-pane" id="tab-tax2" style="padding-top: 5px;">tab 2 </div><!-- end tab-pane 2 --> 
+              <div class="tab-pane" id="tab-tax3" style="padding-top: 5px;">tab 3 </div> <!-- end tab-pane 3 --> 
+              <div class="tab-pane" id="tab-tax4" style="padding-top: 5px;">tab 4 </div> <!-- end tab-pane 4 -->
+              <div class="tab-pane" id="tab-tax5" style="padding-top: 5px;">tab 5 </div> <!-- end tab-pane 5 -->
+             </div> <!-- end tab-content --> 
+           
+             <div class="row">
+           <div class="col-md-12">
+              <div class="nav navbar-nav">
+                <div class="btn-group btn-group-sm mtm10mb10pr30">
+                  <button type="button" class="btn btn-primary tableinput-toggle" name="tab-tax1">조회</button>
+                </div>
+              </div>
+           </div>       
+         </div><!-- end row -->
+         
+         
+      </div> <!-- end well --> 
+           
+    </div> <!-- end col-md-9 -->
+  </div> <!-- end row -->
+  </div> <!-- end container -->
+
+
+
+<div class="container"> 
+<div class="row">
+<div class="col-md-12">    
+<div class="footer well">
+<div class="">
+        <p><a href="#" title="당신&apos;s 이름은">Tooltips</a> 무엇인가요?. 자세히 보아야 예쁘다
+오래 보아야 사랑스럽다
+너도 그렇다</p>
+        <p>But as it's not a native tooltip, it can be styled. Any themes built with<a href="http://jqueryui.com/themeroller/" title="당신은 나의 동반자">ThemeRoller</a>will also style tooltips accordingly.</p>
+        <p>그대가 꺾어준 꽃
+시들 때 까지 들여다 보았네
+그대가 남기고 간 시든 꽃
+다시 필 때까지</p>
+        <p><label for="age">Your age:</label> <input id="age" title="We ask for your age only for statistical purposes."></p>
+        <p>Hover the field to see the tooltip.</p>
+      </div>
+             <div class="bs-example"> 
+    <button type="button" class="btn btn-default" rel="txtTooltip" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+<button type="button" class="btn btn-primary" rel="txtTooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+<button type="button" class="btn btn-info" rel="txtTooltip" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+<button type="button" class="btn btn-danger" rel="txtTooltip" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+</div>
+ </div>
+</div>
+</div>
+</div>
+
+<!-- dialog -->
+<div id="dialog_account" class="aaa" style="display:none;> /*title="부서사원"*/
+  <p style="font-size: 12px;">아무 것도 하지 않을 것입니다. 동의하십니까?</p>
+  <div class="well">
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>코드</th>
+        <th>회사명</th>
+        <th>사용여부</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>1001</td>
+        <td>(주)kimrim</td>
+        <td>사용</td>
+      </tr>
+      <tr class="warning">
+        <td>1002</td>
+        <td>박후영</td>
+        <td>사용</td>
+      </tr>
+      <tr class="danger">
+        <td>1003</td>
+        <td>김배현</td>
+        <td>사용</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div id="dialog_customer" class="aaa" style="display:none;> /*title="부서사원"*/
+  <p style="font-size: 12px;">무엇이든 할 것입니다. 동의하십니까?</p>
+  <div class="well">
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>코드</th>
+        <th>거래처명</th>
+        <th>사용여부</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>1001</td>
+        <td>(주)kimrim</td>
+        <td>사용</td>
+      </tr>
+      <tr class="warning">
+        <td>1002</td>
+        <td>박후영</td>
+        <td>사용</td>
+      </tr>
+      <tr class="danger">
+        <td>1003</td>
+        <td>김배현</td>
+        <td>사용</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- dialog_item -->
+<div id="dialog_item" class="bbb" style="display:none;> 
+  <p style="font-size: 12px;">무엇 이든 할것입니다. 동의하십니까?</p>
+  <div class="well">
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>코드</th>
+        <th>품명</th>
+        <th>사용여부</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>100011</td>
+        <td>컴퓨터</td>
+        <td>사용</td>
+      </tr>
+      <tr class="warning">
+        <td>100202</td>
+        <td>키보드</td>
+        <td>사용</td>
+      </tr>
+      <tr class="danger">
+        <td>100303</td>
+        <td>하드디스크</td>
+        <td>사용</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                    </button>
+                     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Email:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                    </button>
+                     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>코드</th>
+        <th>회사명</th>
+        <th>사용여부</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>1001</td>
+        <td>(주)kimrim</td>
+        <td>사용</td>
+      </tr>
+      <tr class="warning">
+        <td>1002</td>
+        <td>박후영</td>
+        <td>미사용</td>
+      </tr>
+      <tr class="danger">
+        <td>1003</td>
+        <td>김배현</td>
+        <td>사용</td>
+      </tr>
+    </tbody>
+  </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../../../../js/bootstrap.min.js"></script>
+    <script src="../../../../../jquery-ui-1.11.4.custom/jquery-ui.js"></script> 
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../../../../js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="../../../../../js/header-content.js"></script>
+
+    <script type="text/javascript" src="../../../../../js/jssor/jssor.slider.mini.js"></script>
+    <script type="text/javascript" src="../../../../../js/jssor5.js"></script>
+  
+    <script src="../../../../../js/main.js"></script>
+    <script src="../../../../../js/con_topmenu.js"></script>
+    <script type="text/javascript" src="../../../../../js/datepicker2.js"></script>
+
+    <!-- dialog로딩 시 autofocus없애기 -->
+    <script>$.ui.dialog.prototype._focusTabbable = function(){};</script>
+
+   <script type="text/javascript" language="javascript" src="../../../../media/js/jquery.dataTables.js"></script>
+   <script type="text/javascript" language="javascript" src="../../../../media/js/dataTables.jqueryui.js"></script>
+   <script type="text/javascript" language="javascript" src="../../js/dataTables.responsive.js"></script>
+   <script type="text/javascript" language="javascript" src="../../js/responsive.jqueryui.js"></script>
+   <script type="text/javascript" language="javascript" src="../../../../examples/resources/syntax/shCore.js"></script>
+   <script type="text/javascript" language="javascript" src="../../../../examples/resources/demo.js"></script>
+
+   <script type="text/javascript" language="javascript" class="init">	
+     $(document).ready(function() {
+	$('#example').DataTable( );
+     } );
+   </script>
+  </body>
+</html>

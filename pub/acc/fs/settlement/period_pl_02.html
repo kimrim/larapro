@@ -1,0 +1,1331 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../favicon.ico">
+    <title>Jumbotron Template for Bootstrap</title>
+    <!-- <link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet"> -->
+    <!-- Bootstrap core CSS -->
+    <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../../css/jumbotron-navbar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../css/header-content.css" />
+    <link rel="stylesheet" href="../../../jquery-ui-1.11.4.custom/jquery-ui.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../../js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../../js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="../../../css/jssor.css" rel="stylesheet">
+    <link href="../../../css/style.css" rel="stylesheet">
+    
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>    
+  <!-- Static navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"> Kimrim Project</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">사용자정보 <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+              <li><a href="#">김영식</a></li>
+              <li></li>
+              <li><a href="#">경기도</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">(주)삼성전자 회장</li>
+              <li><a href="#">Se@dd.com</a></li>
+              <li><a href="#">나는 누구인가?</a></li>
+            </ul>       
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="./">Logoout <span class="sr-only">(current)</span></a></li>
+          <li><a href="../navbar-static-top/">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">        
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사용회사 <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li>       
+                <table class="table table-bordered table-condensed" style="width: 250px;margin:10px;">
+                  <thead>
+                    <tr>
+                      <th>코드</th>
+                      <th>회사명</th>
+                      <th>사용여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="success">
+                      <td>1001</td>
+                      <td>(주)kimrim</td>
+                      <td>사용</td>
+                    </tr>
+                    <tr class="warning">
+                      <td>1002</td>
+                      <td>박후영</td>
+                      <td>미사용</td>
+                    </tr>
+                    <tr class="danger">
+                      <td>1003</td>
+                      <td>김배현</td>
+                      <td>사용</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="nav navbar-nav navbar-right">
+                  <div class="btn-group btn-group-sm" style="padding-right: 30px; margin-bottom: 10px;">
+                    <button type="button" class="btn btn-info">확인</button>
+                    <button type="button" class="btn btn-success">닫기</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3 logo">
+          <div class="well well-sm">
+            <h5>Logo</h5>
+            <img src="../../../img/logo_4.jpg" class="img-responsive img-thumbnail" id="logo" alt="Responsive image">
+            <p>안녕하세요 박후영님</p>
+          </div>
+        </div>
+        <div class="col-md-9 menu-open">
+         <div class="navbar navbar-default" role="navigation">
+              <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav h-c">
+                  <li class="dropdown open">
+                    <a href="../../../acc/tradeInsert/trade_insert/revenue.html" class="dropdown-toggle" role="button">회계관리 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li role="presentation"><a href="../../basic_registration/formerly_information_management/cor_registration.html" role="menuitem">기초등록</a></li>
+                      <li role="presentation"><a href="../../tradeInsert/trade_insert/revenue.html" role="menuitem">거래입력</a></li>
+                      <li role="presentation"><a href="../../account_book/book_management/buying_selling.html" role="menuitem">회계장부</a></li>
+                      <li class="open2" role="presentation"><a href="../../fs/settlement/data_insert_01.html" role="menuitem">결산/재무제표</a></li>
+                      <li role="presentation"><a href="../../fixAsset/fixing_asset/fixing_asset_regeister.html" role="menuitem">고정자산</a></li>
+                      <li role="presentation"><a href="#" role="menuitem">어음수표</a></li>
+                      <li role="presentation"><a href="../../management/fundsBudget/receivableNoteHh.html" role="menuitem">경영관리</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../vat/A01/report01/report.html" class="dropdown-toggle" role="button">부가가치세 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2" role="presentation"><a href="../../vat/report01/report.html" role="menuitem">신고서 1</a></li>
+                      <li role="presentation"><a href="../../vat/report02/notax_deduction.html" role="menuitem">신고서 2</a></li>
+                      <li role="presentation"><a href="../../vat/report03/bussiness_unit.html" role="menuitem">신고서 3</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a href="../../../stk/A02/sales_trade/sales.html" class="dropdown-toggle" role="button">물류관리 <span class="caret"></span></a>
+                     <ul class="dropdown-menu child" role="menu">
+                      <li role="presentation"><a href="../../A01/formerly_information_management/item_register.html" role="menuitem">기초등록</a></li>
+                      <li class="open2" role="presentation"><a href="../../A02/sales_trade/sales.html" role="menuitem">판매관리</a></li>
+                      <li role="presentation"><a href="../../A03/purchase_trade/purchase.html" role="menuitem">구매관리</a></li>
+                      <li role="presentation"><a href="../../A04/inventory_management/inventory_report.html" role="menuitem">재고관리</a></li>
+                      <li role="presentation"><a href="../../A05/profit_hh/client_profit_hh.html" role="menuitem">영업관리</a></li>
+                      <li role="presentation"><a href="../../pro/product_management/product_insert.html" role="menuitem">생산관리</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../pay/A02/earned_income/salary_insert.html" class="dropdown-toggle" role="button">급여관리 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li role="presentation"><a href="#" role="menuitem">기초정보등록</a></li>
+                      <li class="open2" role="presentation"><a href="../../A02/earned_income/salary_insert.html" role="menuitem">근로소득</a></li>
+                      <li role="presentation"><a href="../../A03/bussiness_earnings/bussiness_earnings_person_register.html" role="menuitem">사업.기타소득</a></li>
+                      <li role="presentation"><a href="../../A04/tax_report/yearend_performance.html" role="menuitem">원천징수</a></li>
+                      <li role="presentation"><a href="../../A05/yearend/yearend_additional_insert.html" role="menuitem">연말정산</a></li>
+                      <li role="presentation"><a href="#" role="menuitem">세무신고서류</a></li>
+                      <li role="presentation"><a href="../../A07/e_report/withholding_e_report.html" role="menuitem">전자신고</a></li>
+                      <li role="presentation"><a href="../../A08/social_insurance/bussiness_place_register.html" role="menuitem">사회보험</a></li>                      
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../cor/base/base_establishment/a010107.html" class="dropdown-toggle">법인조정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="../../base/base_establishment/a010107.html">기초사항</a></li>
+                      <li><a href="../../A02/subject_01/a01.html">소득금액/특별/감가</a></li>
+                      <li><a href="../../A03/tax_confirmation/cor_tax_standard_report.html">세액계산신고</a></li>
+                      <li><a href="../../A04/AA01/transfer_plan.html">기타신고</a></li>
+                      <li><a href="../../A05/report_attachment/smaller_enterprises_standard_review.html">신고부속/기타서식</a></li>
+                      <li><a href="../../A06/business_inpartnership/earnings_calculation_division.html">비영리/공익/동업/성실</a></li>
+                      <li><a href="../../A07/AA01/a0701.html">전자신고</a></li>
+                      <li><a href="../../connection/relate/tax_payment_way_apply.html">연결납세</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../per/base/base_establishment/a010107.html" class="dropdown-toggle">개인조정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="../../base/base_establishment/a010107.html">기초사항</a></li>
+                      <li><a href="../../per/A02/subject_01/a01.html">과목별 세무조정</a></li>
+                      <li><a href="../../A03/tax_confirmation/cor_tax_standard_report.html">소득금액및 과표계산</a></li>
+                      <li><a href="../../A04/AA01/transfer_plan.html">세액공제및 감면</a></li>
+                      <li><a href="../../A05/report_attachment/smaller_enterprises_standard_review.html">종합소득세신고서</a></li>
+                      <li><a href="../../A06/business_inpartnership/earnings_calculation_division.html">신고부속/국제거래서식</a></li>
+                      <li><a href="../../A07/AA01/a0701.html">전자신고</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">환경설정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="#">시스템 구성</a></li>
+                      <li><a href="#">화면셋팅</a></li>
+                    </ul>
+                  </li>
+                </ul>                
+              </div><!--/.nav-collapse -->                                    
+          </div>         
+          <div class="container" id="page">
+            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden; visibility: hidden;">
+              <!-- Loading Screen -->
+              <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position:absolute;display:block;background:url('../../../img/jssor/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+              </div>
+              <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden;">
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/005.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/006.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/011.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/013.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/014.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/019.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/020.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/021.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/022.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/024.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/025.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/027.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/029.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/031.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/034.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/038.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/039.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/043.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/044.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/047.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../img/jssor/050.jpg" />
+               </div>
+             </div>
+             <!-- Bullet Navigator -->
+             <div data-u="navigator" class="jssorb03" style="bottom:10px;right:10px;">
+               <!-- bullet navigator item prototype -->
+               <div data-u="prototype" style="width:21px;height:21px;">
+                <div data-u="numbertemplate"></div>
+               </div>
+             </div>
+             <!-- Arrow Navigator -->
+             <span data-u="arrowleft" class="jssora03l" style="top:123px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <span data-u="arrowright" class="jssora03r" style="top:123px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
+           </div>
+           <!-- #endregion Jssor Slider End -->
+        </div><!-- div class="container" id="page" end -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="well well-sm" style="padding-left: 5px; padding-right: 5px;">        
+          <div class="panel-group">
+            <div class="panel panel-danger">
+	      <!-- Default panel contents -->
+	      <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" href="#collapse11">재무제표/결산</a></h4>
+              </div>
+              <div id="collapse11" class="panel-collapse collapse in">
+	        <div class="panel-body">
+		  <p>여기는 빈공간</p>
+	        </div>
+	        <!-- List group -->
+	        <div class="list-group">
+		  <a href="../../A04/settlement/attachment_report.html" class="list-group-item">결산부속명세서 <span class="badge">50</span></a>
+		  <a href="../../A04/settlement/data_insert_01.html" class="list-group-item">결산자료입력 <span class="badge">145</span></a>
+		  <a href="../../A04/settlement/data_insert_02.html" class="list-group-item">결산자료입력2 <span class="badge">30</span></a>  
+		  <a href="../../A04/settlement/cost_remittance.html" class="list-group-item">경비등의 송금명세서 <span class="badge">65</span></a>
+		  <a href="../../A04/settlement/period_pl.html" class="list-group-item active">기간별손익계산서 <span class="badge">8</span></a>
+                  <a href="../../A04/settlement/period_wo.html" class="list-group-item">기간별원가명세서 <span class="badge">8</span></a>
+                  <a href="../../A04/settlement/pl.html" class="list-group-item">손익계산서 <span class="badge">50</span></a>
+		  <a href="../../A04/settlement/connect_capital_change_table.html" class="list-group-item">연결자본변동표 <span class="badge">145</span></a>
+		  <a href="../../A04/settlement/receipt_receive_report.html" class="list-group-item">영수증수취명세서 <span class="badge">30</span></a>  
+		  <a href="../../A04/settlement/profit_surplus_disposal_amount.html" class="list-group-item">이익잉여금처분계산서 <span class="badge">65</span></a>
+		  <a href="../../A04/settlement/profit_surplus_disposal_amount_loss.html" class="list-group-item">이익잉여금처분계산서-결손금처리계산서 <span class="badge">8</span></a>
+                  <a href="../../A04/settlement/capital_change_table.html" class="list-group-item">자본변동표 <span class="badge">8</span></a>
+                  <a href="../../A04/settlement/fs.html" class="list-group-item">재무상태표 <span class="badge">65</span></a>
+		  <a href="../../A04/settlement/formerly_period_pl.html" class="list-group-item">전기기간별 손익계산서 <span class="badge">8</span></a>
+                  <a href="../../A04/settlement/formerly_period_wo.html" class="list-group-item">전기기간별원가명세서 <span class="badge">8</span></a>
+                  <a href="../../A04/settlement/manufacture_wo_report.html" class="list-group-item">제조원가명세서 <span class="badge">50</span></a>
+		  <a href="../../A04/settlement/sum_balance_table.html" class="list-group-item">합계잔액시산표 <span class="badge">145</span></a>
+		  <a href="../../A04/settlement/sum_balance_table_account.html" class="list-group-item">합계잔액시산표-통합계정등록 <span class="badge">30</span></a>  
+		  <a href="../../A04/settlement/cash_flowing_table.html" class="list-group-item">현금흐름표 <span class="badge">65</span></a>
+	        </div>
+              </div>
+	    </div>
+          </div>
+        </div><!-- end well -->
+      </div><!-- end col-md-3 -->
+      <div class="col-md-9">
+        <div class="btn-toolbar mar_b3">         
+          <button type="button" class="btn btn-xs btn-success">종료(ESC)</button>                                     
+          <button type="button" class="btn btn-xs btn-primary">원장조회(F6)</button> 
+          <button type="button" class="btn btn-xs btn-danger">인쇄(F9)</button> 
+          <button type="button" class="btn btn-xs btn-info">계정코드(F11)</button>         
+          <button type="button" class="btn btn-xs btn-warning">조회(F12)</button>
+        </div>
+        <ol class="breadcrumb mar_b3">
+          <li><a href="#">회계관리</a></li>
+          <li><a href="#">재무제표/결산</a></li>
+          <li class="active">기간별손익계산서</li>
+        </ol>
+        <form class="form-inline well well-sm" style="margin-bottom: 2px;">
+          <div class="form-group">
+            <label for="from">기 &nbsp;&nbsp;간</label>
+            <input type="text" class="form-control" id="from" placeholder="2016-01-01" readonly="readonly">
+          </div>
+          <div class="form-group">
+            <label for="to">~</label>
+            <input type="text" class="form-control" id="to" placeholder="2016-12-31" readonly="readonly">
+          </div>        
+        </form>       
+        <div class="well" style="margin-bottom: 5px; padding-left: 5px; padding-right: 5px;">                                             
+          <ul class="nav nav-tabs mar_tm18" id="" role="tablist">
+            <li role="presentation" class="active"><a href="#tab-tax1" role="tab">월별</a></li>  
+            <li role="presentation"><a href="#tab-tax2">분기별</a></li>
+            <li role="presentation"><a href="#tab-tax3">반기별</a></li>
+            <li role="presentation"><a href="#tab-tax4">분기전년대비</a></li>
+            <li role="presentation"><a href="#tab-tax5">반기전년대비</a></li>     
+         </ul>
+         <div class="tab-content">
+            <div class="tab-pane active" id="tab-tax1" style="padding-top: 5px;"> <!-- fade in --> 
+               <div class="table-responsive">
+                  <table class="table table-bordered table-hover table-condensed"> 
+                    <thead>
+                      <tr class="success">
+                        <th class="">과목</th>
+                        <th class="">합계</th>
+                        <th class="">1월</th>  
+                        <th class="">2월</th>
+                        <th class="">3월</th>
+                        <th class="">4월</th>      
+                        <th class="">5월</th>
+                        <th class="">6월</th>
+                        <th class="">7월</th>  
+                        <th class="">8월</th>
+                        <th class="">9월</th>
+                        <th class="">10월</th>      
+                        <th class="">11월</th>
+                        <th class="">12월</th>      
+                      </tr> 
+                    </thead>             
+                    <tbody>
+                      <tr class="danger">
+                        <td>1.매출액</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>           
+                      </tr>
+                      <tr class="success">
+                        <td>제품매출</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="danger">
+                        <td>2.매출원가</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="success">
+                        <td>제품매출원가</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="danger">
+                        <td>기초제품재고액</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="success">
+                        <td>당기제품제조원가</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="danger">
+                        <td>기말제품재고액</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="success">
+                        <td>3.매출총이익</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="danger">
+                        <td>4.판매비와관리비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="success">
+                        <td>급여</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="danger">
+                        <td>상여금</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="success">
+                        <td>퇴직급여</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="danger">
+                        <td>복리후생비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="success">
+                        <td>여비교통비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="danger">
+                        <td>접대비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="success">
+                        <td>통신비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="danger">
+                        <td>수도광열비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="success">
+                        <td>전력비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="danger">
+                        <td>세금과공과금</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="success">
+                        <td>감가상각비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="danger">
+                        <td>보험료</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                    </tbody>
+                  </table> 
+                </div> <!-- end table-responsive -->              
+              </div> <!-- end tab-pane -->
+              <div class="tab-pane" id="tab-tax2" style="padding-top: 5px;">
+                  <table class="table table-bordered table-hover table-condensed"> 
+                    <thead>
+                      <tr class="success">
+                        <th class="">과목</th>
+                        <th class="">전기금액</th>
+                        <th class="">분기합계</th>
+                        <th class="">1/4분기</th>  
+                        <th class="">2/4분기</th>
+                        <th class="">3/4분기</th>
+                        <th class="">4/4분기</th>          
+                      </tr> 
+                    </thead>             
+                    <tbody>
+                      <tr class="danger">
+                        <td>1.매출액</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="success">
+                        <td>제품매출</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>        
+                      </tr>
+                      <tr class="danger">
+                        <td>2.매출원가</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="success">
+                        <td>제품매출원가</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="danger">
+                        <td>기초제품재고액</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="success">
+                        <td>당기제품제조원가</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="danger">
+                        <td>기말제품재고액</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="success">
+                        <td>3.매출총이익</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="danger">
+                        <td>4.판매비와관리비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="success">
+                        <td>급여</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="danger">
+                        <td>상여금</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>        
+                      </tr>
+                      <tr class="success">
+                        <td>퇴직급여</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="danger">
+                        <td>복리후생비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>        
+                      </tr>
+                      <tr class="success">
+                        <td>여비교통비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>       
+                      </tr>
+                      <tr class="danger">
+                        <td>접대비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="success">
+                        <td>통신비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="danger">
+                        <td>수도광열비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="success">
+                        <td>전력비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>         
+                      </tr>
+                      <tr class="danger">
+                        <td>세금과공과금</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>        
+                      </tr>
+                      <tr class="success">
+                        <td>감가상각비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>        
+                      </tr>
+                      <tr class="danger">
+                        <td>보험료</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>      
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>             
+                      </tr>
+                    </tbody>
+                  </table> 
+              </div><!-- end tab-pane 2 --> 
+              <div class="tab-pane" id="tab-tax3" style="padding-top: 5px;">
+                  <table class="table table-bordered table-hover table-condensed"> 
+                    <thead>
+                      <tr class="success">
+                        <th class="">과목</th>
+                        <th class="">전기금액</th>
+                        <th class="">반기합계</th>
+                        <th class="">상반기</th>  
+                        <th class="">하반기</th>       
+                      </tr> 
+                    </thead>             
+                    <tbody>
+                      <tr class="danger">
+                        <td>1.매출액</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>               
+                      </tr>
+                      <tr class="success">
+                        <td>제품매출</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>             
+                      </tr>
+                      <tr class="danger">
+                        <td>2.매출원가</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>              
+                      </tr>
+                      <tr class="success">
+                        <td>제품매출원가</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>               
+                      </tr>
+                      <tr class="danger">
+                        <td>기초제품재고액</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>                
+                      </tr>
+                      <tr class="success">
+                        <td>당기제품제조원가</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>              
+                      </tr>
+                      <tr class="danger">
+                        <td>기말제품재고액</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>              
+                      </tr>
+                      <tr class="success">
+                        <td>3.매출총이익</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>               
+                      </tr>
+                      <tr class="danger">
+                        <td>4.판매비와관리비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>              
+                      </tr>
+                      <tr class="success">
+                        <td>급여</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>              
+                      </tr>
+                      <tr class="danger">
+                        <td>상여금</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>             
+                      </tr>
+                      <tr class="success">
+                        <td>퇴직급여</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>          
+                      </tr>
+                      <tr class="danger">
+                        <td>복리후생비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>              
+                      </tr>
+                      <tr class="success">
+                        <td>여비교통비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>            
+                      </tr>
+                      <tr class="danger">
+                        <td>접대비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>                
+                      </tr>
+                      <tr class="success">
+                        <td>통신비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>                
+                      </tr>
+                      <tr class="danger">
+                        <td>수도광열비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>              
+                      </tr>
+                      <tr class="success">
+                        <td>전력비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>               
+                      </tr>
+                      <tr class="danger">
+                        <td>세금과공과금</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>              
+                      </tr>
+                      <tr class="success">
+                        <td>감가상각비</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>             
+                      </tr>
+                      <tr class="danger">
+                        <td>보험료</td>
+                        <td><input type="text" class="form-control" /></td>       
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>
+                        <td><input type="text" class="form-control" /></td>                 
+                      </tr>
+                    </tbody>
+                  </table> 
+              </div> <!-- end tab-pane 3 -->
+              <div class="tab-pane" id="tab-tax4" style="padding-top: 5px;">tab 4 </div><!-- end tab-pane 4 --> 
+              <div class="tab-pane" id="tab-tax5" style="padding-top: 5px;">tab 5 </div> <!-- end tab-pane 5 --> 
+             </div> <!-- end tab-content --> 
+           
+             <div class="row">
+           <div class="col-md-12">
+              <div class="nav navbar-nav">
+                <div class="btn-group btn-group-sm mtm10mb10pr30">
+                  <button type="button" class="btn btn-primary tableinput-toggle" name="tab-tax1">조회</button>
+                </div>
+              </div>
+           </div>       
+         </div><!-- end row -->
+         
+         
+      </div> <!-- end well --> 
+           
+    </div> <!-- end col-md-9 -->
+  </div> <!-- end row -->
+  </div> <!-- end container -->
+
+
+
+<div class="container"> 
+<div class="row">
+<div class="col-md-12">    
+<div class="footer well">
+<div class="">
+        <p><a href="#" title="당신&apos;s 이름은">Tooltips</a> 무엇인가요?. 자세히 보아야 예쁘다
+오래 보아야 사랑스럽다
+너도 그렇다</p>
+        <p>But as it's not a native tooltip, it can be styled. Any themes built with<a href="http://jqueryui.com/themeroller/" title="당신은 나의 동반자">ThemeRoller</a>will also style tooltips accordingly.</p>
+        <p>그대가 꺾어준 꽃
+시들 때 까지 들여다 보았네
+그대가 남기고 간 시든 꽃
+다시 필 때까지</p>
+        <p><label for="age">Your age:</label> <input id="age" title="We ask for your age only for statistical purposes."></p>
+        <p>Hover the field to see the tooltip.</p>
+      </div>
+             <div class="bs-example"> 
+    <button type="button" class="btn btn-default" rel="txtTooltip" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+<button type="button" class="btn btn-primary" rel="txtTooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+<button type="button" class="btn btn-info" rel="txtTooltip" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+<button type="button" class="btn btn-danger" rel="txtTooltip" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+</div>
+ </div>
+</div>
+</div>
+</div>
+
+<!-- dialog -->
+<div id="dialog" class="aaa" style="display:none;> /*title="부서사원"*/
+  <p style="font-size: 12px;">아무 것도 하지 않을 것입니다. 동의하십니까?</p>
+  <div class="well">
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>코드</th>
+        <th>회사명</th>
+        <th>사용여부</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>1001</td>
+        <td>(주)kimrim</td>
+        <td>사용</td>
+      </tr>
+      <tr class="warning">
+        <td>1002</td>
+        <td>박후영</td>
+        <td>사용</td>
+      </tr>
+      <tr class="danger">
+        <td>1003</td>
+        <td>김배현</td>
+        <td>사용</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- dialog_item -->
+<div id="dialog_item" class="bbb" style="display:none;> 
+  <p style="font-size: 12px;">무엇 이든 할것입니다. 동의하십니까?</p>
+  <div class="well">
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>코드</th>
+        <th>품명</th>
+        <th>사용여부</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>100011</td>
+        <td>컴퓨터</td>
+        <td>사용</td>
+      </tr>
+      <tr class="warning">
+        <td>100202</td>
+        <td>키보드</td>
+        <td>사용</td>
+      </tr>
+      <tr class="danger">
+        <td>100303</td>
+        <td>하드디스크</td>
+        <td>사용</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                    </button>
+                     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Email:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                    </button>
+                     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>코드</th>
+        <th>회사명</th>
+        <th>사용여부</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>1001</td>
+        <td>(주)kimrim</td>
+        <td>사용</td>
+      </tr>
+      <tr class="warning">
+        <td>1002</td>
+        <td>박후영</td>
+        <td>미사용</td>
+      </tr>
+      <tr class="danger">
+        <td>1003</td>
+        <td>김배현</td>
+        <td>사용</td>
+      </tr>
+    </tbody>
+  </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../jquery-ui-1.11.4.custom/jquery-ui.js"></script> 
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../../js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="../../../js/header-content.js"></script>
+
+    <script type="text/javascript" src="../../../js/jssor/jssor.slider.mini.js"></script>
+    <script type="text/javascript" src="../../../js/jssor.js"></script>
+  
+    <script src="../../../js/main.js"></script>
+    <script type="text/javascript" src="../../../js/datepicker2.js"></script> 
+
+    <!-- dialog로딩 시 autofocus없애기 -->
+    <script>$.ui.dialog.prototype._focusTabbable = function(){};</script>
+
+    <script type="text/javascript">
+     
+    </script> 
+  </body>
+</html>

@@ -1,0 +1,2318 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../asset/favicon.ico">
+    <title>Jumbotron Template for Bootstrap</title>
+    <!-- <link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../../../asset/css/nanumgothic.css" />
+    <!-- Bootstrap core CSS -->
+    <link href="../../../asset/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../../asset/css/jumbotron-navbar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../asset/css/header-content.css" />
+    <link rel="stylesheet" href="../../../asset/jquery-ui-1.11.4.custom/jquery-ui.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../../asset/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../../asset/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <!--<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../asset/js/html5shiv.min.js"></script>')</script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../asset/js/respond.min.js"></script>')</script> -->
+      <script src="../../../asset/js/html5shiv.min.js"></script>
+      <script src="../../../asset/js/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="../../../asset/css/jssor.css" rel="stylesheet">
+    <link href="../../../asset/css/style.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/media/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/media/css/dataTables.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/extensions/Scroller/css/scroller.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/extensions/Buttons/css/buttons.jqueryui.css">
+    <style type="text/css" class="init">
+
+    </style>
+</head>
+<body>    
+  <!-- Static navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"> Kimrim Project</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">사용자정보 <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+              <li><a href="#">김영식</a></li>
+              <li></li>
+              <li><a href="#">경기도</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">(주)삼성전자 회장</li>
+              <li><a href="#">Se@dd.com</a></li>
+              <li><a href="#">나는 누구인가?</a></li>
+            </ul>       
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="./">Logoout <span class="sr-only">(current)</span></a></li>
+          <li><a href="../navbar-static-top/">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">        
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사용회사 <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li>       
+                <table class="table table-bordered table-condensed" style="width: 250px;margin:10px;">
+                  <thead>
+                    <tr>
+                      <th>코드</th>
+                      <th>회사명</th>
+                      <th>사용여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="success">
+                      <td>1001</td>
+                      <td>(주)kimrim</td>
+                      <td>사용</td>
+                    </tr>
+                    <tr class="warning">
+                      <td>1002</td>
+                      <td>박후영</td>
+                      <td>미사용</td>
+                    </tr>
+                    <tr class="danger">
+                      <td>1003</td>
+                      <td>김배현</td>
+                      <td>사용</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="nav navbar-nav navbar-right">
+                  <div class="btn-group btn-group-sm" style="padding-right: 30px; margin-bottom: 10px;">
+                    <button type="button" class="btn btn-info">확인</button>
+                    <button type="button" class="btn btn-success">닫기</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3 logo">
+          <div class="well well-sm">
+            <h5>Logo</h5>
+            <img src="../../../asset/img/logo_2.jpg" class="img-responsive img-thumbnail" id="logo" alt="Responsive image">
+            <p>안녕하세요 박후영님</p>
+          </div>
+        </div>
+        <div class="col-md-9 menu-open">
+          <div class="navbar navbar-default" role="navigation">
+              <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav h-c">
+                  <li class="dropdown">
+                    <a href="../../../acc/tradeInsert/trade_insert/revenue.html" class="dropdown-toggle" role="button">회계관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../vat/report/report01/report.html" class="dropdown-toggle" role="button">부가가치세 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                     <a href="../../../stk/sales/sales_trade/sales.html" class="dropdown-toggle" role="button">물류관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown open">
+                    <a href="../../../pay/salary/earned_income/salary_insert.html" class="dropdown-toggle" role="button">급여관리 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li role="presentation"><a href="../../basic_registration/basicInfo/bussiness_place_register.html" role="menuitem">기초정보등록</a></li>
+                      <li role="presentation"><a href="../../salary/earned_income/salary_insert.html" role="menuitem">근로소득</a></li>
+                      <li role="presentation"><a href="../../earnings/bussiness_earnings/bussiness_earnings_person_register.html" role="menuitem">사업.기타소득</a></li>
+                      <li role="presentation"><a href="../../withholding/tax_report/yearend_performance.html" role="menuitem">원천징수</a></li>
+                      <li class="open2" role="presentation"><a href="../../yearEndSettlement/yearend/yearend_additional_insert.html" role="menuitem">연말정산</a></li>
+                      <li role="presentation"><a href="#" role="menuitem">세무신고서류</a></li>
+                      <li role="presentation"><a href="../../data_management/data/data_01.html" role="menuitem">데이타관리</a></li>
+                      <li role="presentation"><a href="../../elecDeclaration/e_report/withholding_e_report.html" role="menuitem">전자신고</a></li>
+                      <li role="presentation"><a href="../../socialinsurance/social_insurance/bussiness_place_register.html" role="menuitem">사회보험</a></li>                      
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../cor/base/base_establishment/a010107.html" class="dropdown-toggle">법인조정 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../per/base/base_establishment/a010107.html" class="dropdown-toggle">개인조정 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">환경설정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="#">시스템 구성</a></li>
+                      <li><a href="#">화면셋팅</a></li>
+                    </ul>
+                  </li>
+                </ul>                
+              </div><!--/.nav-collapse -->                                    
+          </div>
+          <div class="container" id="page">
+            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden; visibility: hidden;">
+              <!-- Loading Screen -->
+              <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position:absolute;display:block;background:url('../../../asset/img/jssor/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+              </div>
+              <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden;">
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/005.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/006.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/011.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/013.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/014.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/019.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/020.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/021.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/022.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/024.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/025.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/027.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/029.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/031.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/034.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/038.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/039.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/043.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/044.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/047.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/050.jpg" />
+               </div>
+             </div>
+             <!-- Bullet Navigator -->
+             <div data-u="navigator" class="jssorb03" style="bottom:10px;right:10px;">
+               <!-- bullet navigator item prototype -->
+               <div data-u="prototype" style="width:21px;height:21px;">
+                <div data-u="numbertemplate"></div>
+               </div>
+             </div>
+             <!-- Arrow Navigator -->
+             <span data-u="arrowleft" class="jssora03l" style="top:123px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <span data-u="arrowright" class="jssora03r" style="top:123px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
+           </div>
+           <!-- #endregion Jssor Slider End -->
+        </div><!-- div class="container" id="page" end -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="well well-sm">      
+        <div class="panel-group">
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse11">연말정산</a></h4>
+            </div>
+            <div id="collapse11" class="panel-collapse collapse in">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+		<a href="../yearend/earned_income_deduction.html" class="list-group-item">근로소득공제신고서 <span class="badge">50</span></a>
+		<a href="../yearend/contribution.html" class="list-group-item">기부금명세서 <span class="badge">145</span></a>
+                <a href="../yearend/yearend_additional_insert.html" class="list-group-item active">연말정산추가자료입력 <span class="badge">8</span></a>
+                <a href="../yearend/withholding_tax_receipt.html" class="list-group-item">근로소득원천징수영수증 <span class="badge">8</span></a>
+                <a href="../yearend/earned_income_sum_table.html" class="list-group-item">근로소득자료제출집계표 <span class="badge">8</span></a>
+		<a href="../yearend/credit_card_deduction.html" class="list-group-item">신용카드소득공제신청서 <span class="badge">30</span></a>   
+		<a href="../yearend/yearend_hh.html" class="list-group-item">연말정산현황 <span class="badge">65</span></a>		               
+                <a href="../yearend/medical_payment.html" class="list-group-item">의료비지급명세서 <span class="badge">65</span></a>
+		<a href="../yearend/foregin_worker.html" class="list-group-item">외국인근로자단일세율적용신청서 <span class="badge">8</span></a>
+	      </div>
+            </div>
+	  </div>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div id="buttons" class="btn-toolbar mar_b3" role="group">
+           <button type="button" class="btn btn-xs btn-success toolbar_dialog" id="esc" title="실행하고있는 메뉴를 종료합니다">종료(ESC)</button>                                     
+           <button type="button" class="btn btn-xs btn-primary toolbar_dialog" id="help" title="사용방법이 조회됩니다">도움(F1)</button> 
+           <button type="button" class="btn btn-xs btn-danger toolbar_dialog" id="code" title="커서위치의 코드도움박스가 나타납니다">코드(F2)</button>  
+           <button type="button" class="btn btn-xs btn-info">전체사원(F3)</button> 
+           <button type="button" class="btn btn-xs btn-default">세로확대(SF5)</button> 
+           <button type="button" class="btn btn-xs btn-warning">가로확대(SF5)</button>  
+           <button type="button" class="btn btn-xs btn-success">삭제(F5)</button>
+           <button type="button" class="btn btn-xs btn-primary">자료갱신(F6)</button> 
+           <button type="button" class="btn btn-xs btn-danger">불러오기(F8) <span class="caret"></span></button> 
+           <button type="button" class="btn btn-xs btn-info">작업완료(CF1)</button>
+           <button type="button" class="btn btn-xs btn-default">완료취소(CF2)</button> 
+           <button type="button" class="btn btn-xs btn-warning">세액단수처리(CF3)</button>               
+           <button type="button" class="btn btn-xs btn-success toolbar_dialog" id="lookup_3_610" data-toggle="tooltip" title="필요한 조회조건이 입력된 상태에서 검색하여 조회됩니다.">조회(F12)</button> 
+        </div>
+        <ol class="breadcrumb mar_b3">
+          <li><a href="#">급여관리</a></li>
+          <li><a href="#">연말정산</a></li>
+          <li class="active">연말정산추가자료입력</li>
+        </ol>
+        <div class="row">
+         <div class="col-md-12">
+           <div class="panel with-nav-tabs panel-default">
+              <div class="panel-heading"> 
+                <ul class="nav nav-tabs mar_b5" id="" role="tablist">
+                  <li role="presentation" class="active"><a href="#tab-tax11" role="tab" data-toggle="tab">계속</a></li>  
+                  <li role="presentation"><a href="#tab-tax21" role="tab" data-toggle="tab">중도</a></li>
+                  <li role="presentation"><a href="#tab-tax31" role="tab" data-toggle="tab">총괄</a></li>        
+                </ul>
+              </div>
+              <div class="panel-body">
+                <div class="tab-content">
+            <div class="tab-pane active" id="tab-tax11"> <!-- fade in -->          
+         <div class="row">       
+          <div class="col-md-3">
+            <table id="example_90" class="display nowrap" cellspacing="0" width="100%">
+	       <thead>
+                <tr class="success">
+                  <th class="width-8"></th>
+                  <th class="">사번</th>
+                  <th class="">사원명</th> 
+                  <th class="">완료</th>    
+                </tr>
+              </thead>
+            </table>
+            <table class="table table-bordered table-hover table-condensed" style="margin-top: 7px;">
+              <tbody>
+                <tr class="success">
+                  <td>총급여액</td>
+                  <td><input type="text" class="form-control"></td>             
+                </tr>
+                <tr class="warning">
+                  <td>비과세총액</td>
+                  <td><input type="text" class="form-control"></td>              
+                </tr> 
+                <tr class="success">
+                  <td>지급명세작성대상<br>비과세</td>
+                  <td><input type="text" class="form-control"></td>             
+                </tr>
+                <tr class="warning">
+                  <td>결정세액</td>
+                  <td><input type="text" class="form-control"></td>              
+                </tr>
+                <tr class="success">
+                  <td>기납부세액(현)</td>
+                  <td><input type="text" class="form-control"></td>             
+                </tr>
+                <tr class="warning">
+                  <td>기납부세액(종전)</td>
+                  <td><input type="text" class="form-control"></td>              
+                </tr> 
+                <tr class="success">
+                  <td>납부세액</td>
+                  <td><input type="text" class="form-control"></td>             
+                </tr>
+                <tr class="warning">
+                  <td>연말(계속근무자)</td>
+                  <td><input type="text" class="form-control"></td>              
+                </tr>
+                <tr class="warning">
+                  <td>연말(중도퇴사자)</td>
+                  <td><input type="text" class="form-control"></td>              
+                </tr>           
+              </tbody>
+            </table>
+          </div>
+        <div class="col-md-9">
+          <div class="panel with-nav-tabs panel-info">
+            <div class="panel-heading"> 
+              <ul class="nav nav-tabs mar_b5" id="" role="tablist">
+                <li role="presentation" class="active"><a href="#tab-tax1" role="tab" data-toggle="tab">소득명세</a></li>  
+                <li role="presentation"><a href="#tab-tax2" role="tab" data-toggle="tab">부양가족</a></li>
+                <li role="presentation"><a href="#tab-tax3" role="tab" data-toggle="tab">연금저축등</a></li>
+                <li role="presentation"><a href="#tab-tax4" role="tab" data-toggle="tab">월세액등소득공제</a></li>
+                <li role="presentation"><a href="#tab-tax5" role="tab" data-toggle="tab">정산입력</a></li>
+                <li role="presentation"><a href="#tab-tax6" role="tab" data-toggle="tab">정산내역조회</a></li>         
+              </ul>
+            </div>
+            <div class="panel-body">
+              <div class="tab-content">
+          <div class="tab-pane active" id="tab-tax1"> 
+             <div class="well well-sm">Ⅰ근무처별소득명세</div> 
+             <div class="table-responsive mar_tm18">            
+               <table class="table table-bordered table-hover table-condensed" style="min-width: 900px;"> 
+                 <thead>
+                    <tr class="warning">
+                      <th>구분</th>
+                      <th colspan=3>주(현)</th>                      
+                      <th colspan=3>종(전)</th>
+                      <th colspan=3>종(전)</th>
+                      <th colspan=3>16-1 납세조합</th>
+                      <th colspan=3>합계</th>                      
+                    </tr>
+                  </thead>          
+                 <tbody>
+                   <tr class="warning">
+                     <td>⑨ 근  무  처  명</td>
+                     <td colspan=3><input type="text" class="form-control"></td>
+                     <td colspan=3><input type="text" class="form-control"></td> 
+                     <td colspan=3><input type="text" class="form-control"></td>
+                     <td colspan=3><input type="text" class="form-control"></td> 
+                     <td colspan=3><input type="text" class="form-control"></td>       
+                   </tr> 
+                   <tr class="success">
+                     <td>⑩ 사업자등록번호</td>
+                     <td colspan=3><input type="text" class="form-control"></td>
+                     <td colspan=3><input type="text" class="form-control"></td> 
+                     <td colspan=3><input type="text" class="form-control"></td>
+                     <td colspan=3><input type="text" class="form-control"></td> 
+                     <td colspan=3><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="warning">
+                     <td>⑪ 근무기간</td>
+                     <td><input type="text" class="form-control datepicker next120" placeholder="2016-01-01" readonly="readonly"></td>
+                     <td>~</td> 
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-12-31" readonly="readonly"></td>
+                     <td><input type="text" class="form-control datepicker next120" placeholder="2016-01-01" readonly="readonly"></td>
+                     <td>~</td> 
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-12-31" readonly="readonly"></td>  
+                     <td><input type="text" class="form-control datepicker next120" placeholder="2016-01-01" readonly="readonly"></td>
+                     <td>~</td> 
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-12-31" readonly="readonly"></td>
+                     <td><input type="text" class="form-control datepicker next120" placeholder="2016-01-01" readonly="readonly"></td>
+                     <td>~</td> 
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-12-31" readonly="readonly"></td>  
+                     <td colspan=3></td>         
+                   </tr> 
+                   <tr class="success">
+                     <td>⑫ 감면기간</td>
+                     <td><input type="text" class="form-control datepicker next120" placeholder="2016-01-01" readonly="readonly"></td>
+                     <td>~</td> 
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-12-31" readonly="readonly"></td>
+                     <td><input type="text" class="form-control datepicker next120" placeholder="2016-01-01" readonly="readonly"></td>
+                     <td>~</td> 
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-12-31" readonly="readonly"></td>  
+                     <td><input type="text" class="form-control datepicker next120" placeholder="2016-01-01" readonly="readonly"></td>
+                     <td>~</td> 
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-12-31" readonly="readonly"></td>
+                     <td><input type="text" class="form-control datepicker next120" placeholder="2016-01-01" readonly="readonly"></td>
+                     <td>~</td> 
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-12-31" readonly="readonly"></td>  
+                     <td colspan=3></td>    
+                   </tr> 
+                   <tr class="warning">
+                     <td>⑬ 급          여</td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 0_4_x_0_4"></td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 1_4_x_1_4"></td> 
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 2_4_x_2_4"></td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 3_4_x_3_4"></td> 
+                     <td colspan=3><input type="text" class="form-control" readonly="readonly"></td>             
+                   </tr> 
+                   <tr class="success">
+                     <td>⑭ 상          여</td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 0_4_x_0_4"></td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 1_4_x_1_4"></td> 
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 2_4_x_2_4"></td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 3_4_x_3_4"></td> 
+                     <td colspan=3><input type="text" class="form-control" readonly="readonly"></td>         
+                   </tr>
+                   <tr class="warning">
+                     <td>⑮ 인  정  상  여</td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 0_4_x_0_4"></td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 1_4_x_1_4"></td> 
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 2_4_x_2_4"></td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 3_4_x_3_4"></td> 
+                     <td colspan=3><input type="text" class="form-control" readonly="readonly"></td>            
+                   </tr> 
+                   <tr class="success">
+                     <td>⑮-1 주식매수선택권 행사이익</td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 0_4_x_0_4"></td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 1_4_x_1_4"></td> 
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 2_4_x_2_4"></td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 3_4_x_3_4"></td> 
+                     <td colspan=3><input type="text" class="form-control" readonly="readonly"></td>      
+                   </tr>
+                   <tr class="warning">
+                     <td>⑮-2 우리사주조합인출금</td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 0_4_x_0_4"></td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 1_4_x_1_4"></td> 
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 2_4_x_2_4"></td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 3_4_x_3_4"></td> 
+                     <td colspan=3><input type="text" class="form-control" readonly="readonly"></td>            
+                   </tr> 
+                   <tr class="success">
+                     <td>⑮-3 임원 퇴직소득금액 한도초과액</td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 0_4_x_0_4"></td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 1_4_x_1_4"></td> 
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 2_4_x_2_4"></td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 3_4_x_3_4"></td> 
+                     <td colspan=3><input type="text" class="form-control" readonly="readonly"></td>       
+                   </tr>
+                   <tr class="warning">
+                     <td>⑮-4</td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 0_4_x_0_4"></td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 1_4_x_1_4"></td> 
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 2_4_x_2_4"></td>
+                     <td colspan=3><input type="text" class="form-control cacE T_10_001 AarrAarr next110 3_4_x_3_4"></td> 
+                     <td colspan=3><input type="text" class="form-control" readonly="readonly"></td>             
+                   </tr> 
+                   <tr class="success nodel">
+                     <td>16. 계</td>
+                     <td colspan=3><input type="text" class="form-control" readonly="readonly"></td>
+                     <td colspan=3><input type="text" class="form-control" readonly="readonly"></td> 
+                     <td colspan=3><input type="text" class="form-control" readonly="readonly"></td>
+                     <td colspan=3><input type="text" class="form-control" readonly="readonly"></td> 
+                     <td colspan=3><input type="text" class="form-control" readonly="readonly"></td>        
+                   </tr> 
+                   <tr class="danger">
+                     <td colspan=16>&nbsp;</td>    
+                   </tr>                
+                 </tbody>
+               </table>
+              </div><!-- end responsive -->  
+              <div class="well well-sm mar_tm18">Ⅱ비과세및 감면소득명세</div> 
+               <table class="table table-bordered table-hover table-condensed mar_tm18"> 
+                 <thead>
+                    <tr class="warning">
+                      <th colspan=2 class="wid25">구분</th>                     
+                      <th>주(현)</th>                      
+                      <th>종(전)</th>
+                      <th>종(전)</th>
+                      <th>16-1 납세조합</th>
+                      <th>합계</th> 
+                    </tr>
+                  </thead>          
+                 <tbody>                   
+                   <tr class="success">
+                     <td>18.국외근로</td>
+                     <td>M0X</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>      
+                   </tr> 
+                   <tr class="warning">
+                     <td>18-1 야간근로수당</td>
+                     <td>O0X</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>            
+                   </tr>
+                   <tr class="success">
+                     <td>18-2 출산˙보육수당</td>
+                     <td>Q0X</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>     
+                   </tr> 
+                   <tr class="warning">
+                     <td>18-4.연구보조비</td>
+                     <td>H0X</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>            
+                   </tr> 
+                   <tr class="success">
+                     <td>18-5</td>
+                     <td></td>
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>     
+                   </tr> 
+                   <tr class="warning">
+                     <td>18-6</td>
+                     <td></td>
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>            
+                   </tr> 
+                   <tr class="success">
+                     <td>~</td>
+                     <td></td>
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>    
+                   </tr> 
+                   <tr class="warning">
+                     <td>18-25</td>
+                     <td></td>
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>          
+                   </tr> 
+                   <tr class="success">
+                     <td>19 수련보조수당</td>
+                     <td>Y22</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>    
+                   </tr> 
+                   <tr class="warning">
+                     <td colspan=2>20 비과세소득 계</td>
+                     <td><input type="text" class="form-control" readonly="readonly"></td>
+                     <td><input type="text" class="form-control" readonly="readonly"></td> 
+                     <td><input type="text" class="form-control" readonly="readonly"></td>
+                     <td><input type="text" class="form-control" readonly="readonly"></td> 
+                     <td><input type="text" class="form-control" readonly="readonly"></td>           
+                   </tr>
+                   <tr class="success">
+                     <td colspan=2>20-1 감면소득 계</td>
+                     <td><input type="text" class="form-control" readonly="readonly"></td>
+                     <td><input type="text" class="form-control" readonly="readonly"></td> 
+                     <td><input type="text" class="form-control" readonly="readonly"></td>
+                     <td><input type="text" class="form-control" readonly="readonly"></td> 
+                     <td><input type="text" class="form-control" readonly="readonly"></td>    
+                   </tr>  
+                            
+                 </tbody>
+               </table>
+
+               <table class="table table-bordered table-hover table-condensed mar_tm18"> 
+                 <thead>
+                    <tr class="success">
+                      <th colspan=4>구분</th>
+                      <th>79.소  득  세</th>                      
+                      <th>80.지방소득세</th>
+                      <th>81.농어촌특별세</th>                  
+                    </tr>
+                  </thead>          
+                 <tbody>
+                   <tr class="warning">
+                     <td rowspan=4 class="tacvam">기납부<br>세  액</td>
+                     <td rowspan=3 class="tacvam">74.종(전)근무지<br>(결정세액란의<br> 세액을 적습니다)</td>
+                     <td rowspan=3 class="tacvam">사업자<br>등록<br>번호</td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td>       
+                   </tr> 
+                   <tr class="success">
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td>      
+                   </tr>
+                   <tr class="warning">
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td>          
+                   </tr> 
+                   <tr class="success">
+                     <td colspan=3>75. 주(현)근무지</td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td>      
+                   </tr> 
+                   <tr class="warning">
+                     <td colspan=4>76.납부특례세액</td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td>           
+                   </tr> 
+                   <tr class="success">
+                     <td colspan=4>77.차 감 징 수 세 액(73-74-75-76)</td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td>       
+                   </tr>                  
+                 </tbody>
+               </table>       
+           </div> <!-- end tab-pane -->
+           <div class="tab-pane" id="tab-tax2"> <!-- fade in class-->       
+            <div class="well well-sm">1.인적공제항목(유의사항: 부양가족 삭제시 각 소득공제액탭에 입력된 지출액을 재집계 해야합니다)</div>   
+              <div class="table-responsive mar_tm18">       
+               <table class="table table-bordered table-hover table-condensed">
+                <thead>
+                 <tr class="success">
+                  <th class="wid3">No</th>
+                  <th>연말관계</th>
+                  <th>성명</th>
+                  <th>내/외국인</th>
+                  <th>국적</th>
+                  <th>거주구분</th>
+                  <th>주민(외국인)<br>번호</th>
+                  <th>나이</th>
+                  <th>기본공제</th>
+                  <th>세대주<br>구분</th>
+                  <th>부녀<br>자</th>
+                  <th>한부<br>모</th>
+                  <th>경로<br>우대</th>
+                  <th>장애<br>인</th>
+                  <th>자녀</th>
+                  <th>6세<br>이하</th>
+                  <th>출산<br>입양</th>
+                  <th class="wid1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></th>
+                  <th class="wid1"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="warning">
+                  <td><input type="text" class="form-control foc" readonly="readonly"></td> 
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td> 
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td> 
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next212"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control minus"></td>    
+                </tr>
+                <tr class="warning">
+                  <td><input type="text" class="form-control foc" readonly="readonly"></td> 
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td> 
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td> 
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next212"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control minus"></td>    
+                </tr>
+                <tr class="warning">
+                  <td><input type="text" class="form-control foc" readonly="readonly"></td> 
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td> 
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td> 
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next212"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control minus"></td>    
+                </tr>
+                <tr class="warning">
+                  <td><input type="text" class="form-control foc" readonly="readonly"></td> 
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td> 
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td> 
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next212"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control minus"></td>    
+                </tr>
+              </tbody>
+            </table>
+            </div>  
+            <div class="well well-sm mar_tm18"">2.각종소득공제항목</div>
+             <div class="table-responsive mar_tm18">           
+              <table class="table table-bordered table-hover table-condensed">
+               <thead>
+                <tr class="success">
+                  <th rowspan=2 colspan=2>자료구분</th>
+                  <th colspan=3>보험료</th>
+                  <th rowspan=2>의료비</th>
+                  <th rowspan=2>교육비</th>
+                  <th colspan=5>신용카드등 사용액공제</th>
+                  <th rowspan=2>기부금</th>
+                </tr>
+                <tr class="success">
+                  <th>건강ㆍ<br>고용 등</th>
+                  <th>보장성</th>
+                  <th>장애인<br>전용<br>보장성</th>
+                  <th>신용카드</th>
+                  <th>직불카드등</th>
+                  <th>현금영수증</th>
+                  <th>전통시장</th>
+                  <th>대중교통</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="success">
+                  <td colspan=2>국세청</td>        
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>           
+                </tr>
+                <tr class="warning">
+                  <td colspan=2>기타</td>        
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td>
+                  <td><input type="text" class="form-control"></td> 
+                </tr>
+                <tr class="success">
+                  <td rowspan=2 class="tacvam">합<br>계</td>
+                  <td>국세청</td>         
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td> 
+                </tr>
+                <tr class="warning">
+                  <td>기타</td>         
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td>
+                  <td><input type="text" class="form-control" readonly="readonly"></td> 
+                </tr>
+                <tr class="success">
+                  <td colspan=13>&nbsp;</td>         
+                </tr>
+              </tbody>
+            </table>
+           </div>
+           <table class="table table-bordered table-hover table-condensed"> 
+              <tbody>
+                   <tr class="danger">
+                     <td>의료비 최소금액(총 급여의 3%)</td>
+                     <td><input type="text" class="form-control" readonly="readonly"></td>             
+                     <td>신용카드 등 최소금액(총급여의 25%)</td>
+                     <td><input type="text" class="form-control" readonly="readonly"></td>           
+                   </tr>
+             </tbody>
+            </table>
+           </div>  <!-- end tab-pane tab-tax2 -->
+           <div class="tab-pane" id="tab-tax3">
+             <div class="well well-sm">1. 퇴직연금공제</div>        
+            <table class="table table-bordered table-hover table-condensed mar_tm18"> 
+                 <thead>
+                   <tr class="warning">
+                     <th>No</th>
+                     <th>퇴직연금 구분</th>
+                     <th>코드</th>
+                     <th>금융기관</th>
+                     <th>계좌번호<br>(또는 증권번호)</th>
+                     <th>납입금액</th>
+                     <th>공제대상금액</th>
+                     <th>공제율</th>
+                     <th>세액공제액</th> 
+                     <th class="wid1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></th>
+                     <th class="wid1"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></th>         
+                   </tr>
+                 </thead>          
+                 <tbody>
+                   <tr class="warning">
+                     <td>1</td>
+                     <td class="tacvam">
+                       <div class="dropdown">
+                         <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">확정기여형(DC) <span class="caret"></span></a>
+                         <ul class="dropdown-menu next220 foc">
+                           <li><a href="#">확정기여형(DC)</a></li>
+                           <li><a href="#">개인형(IRP)</a></li>
+                           <li><a href="#">과학기술인공제회</a></li>
+                         </ul>
+                       </div>
+                     </td>
+                     <td><input type="text" class="form-control code" readonly="readonly"></td>
+                     <td><input type="text" class="form-control pop bank next120 t" readonly="readonly"></td>
+                     <td><input type="text" class="form-control foc" readonly="readonly"></td>
+                     <td><input type="text" class="form-control cac a a next110"></td>
+                     <td><input type="text" class="form-control cac X_1_a Mp next110 6"></td>
+                     <td><input type="text" class="form-control cac X_1_a Mp next210b 6"></td>
+                     <td><input type="text" class="form-control cac" readonly="readonly"></td>  
+                     <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>            
+                   </tr> 
+                   <tr class="warning">
+                     <td>1</td>
+                     <td class="tacvam">
+                       <div class="dropdown">
+                         <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">확정기여형(DC) <span class="caret"></span></a>
+                         <ul class="dropdown-menu next220 foc">
+                           <li><a href="#">확정기여형(DC)</a></li>
+                           <li><a href="#">개인형(IRP)</a></li>
+                           <li><a href="#">과학기술인공제회</a></li>
+                         </ul>
+                       </div>
+                     </td>
+                     <td><input type="text" class="form-control code" readonly="readonly"></td>
+                     <td><input type="text" class="form-control pop bank next120 t" readonly="readonly"></td>
+                     <td><input type="text" class="form-control foc" readonly="readonly"></td>
+                     <td><input type="text" class="form-control cac a a next110"></td>
+                     <td><input type="text" class="form-control cac X_1_a Mp next110 6"></td>
+                     <td><input type="text" class="form-control cac X_1_a Mp next210b 6"></td>
+                     <td><input type="text" class="form-control cac" readonly="readonly"></td>  
+                     <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>             
+                   </tr> 
+                   <tr class="warning">
+                     <td>1</td>
+                     <td class="tacvam">
+                       <div class="dropdown">
+                         <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">확정기여형(DC) <span class="caret"></span></a>
+                         <ul class="dropdown-menu next220 foc">
+                           <li><a href="#">확정기여형(DC)</a></li>
+                           <li><a href="#">개인형(IRP)</a></li>
+                           <li><a href="#">과학기술인공제회</a></li>
+                         </ul>
+                       </div>
+                     </td>
+                     <td><input type="text" class="form-control code" readonly="readonly"></td>
+                     <td><input type="text" class="form-control pop bank next120 t" readonly="readonly"></td>
+                     <td><input type="text" class="form-control foc" readonly="readonly"></td>
+                     <td><input type="text" class="form-control cac a a next110"></td>
+                     <td><input type="text" class="form-control cac X_1_a Mp next110 6"></td>
+                     <td><input type="text" class="form-control cac X_1_a Mp next210b 6"></td>
+                     <td><input type="text" class="form-control cac" readonly="readonly"></td>  
+                     <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>             
+                   </tr>              
+                 </tbody>
+               </table>
+            <div class="well well-sm mar_tm18">2.연금저축공제</div>        
+            <table class="table table-bordered table-hover table-condensed mar_tm18"> 
+                 <thead>
+                   <tr class="warning">
+                     <th></th>
+                     <th>연금저축 구분</th>
+                     <th>코드</th>
+                     <th>금융기관</th>
+                     <th>계좌번호</th>
+                     <th>납입금액</th>
+                     <th>공제대상금액</th>
+                     <th>공제율</th>
+                     <th>소득세액공제액</th>  
+                     <th class="wid1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></th>
+                     <th class="wid1"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></th>        
+                   </tr>
+                 </thead>          
+                 <tbody>
+                   <tr class="warning">
+                     <td>1</td>
+                     <td class="tacvam">
+                       <div class="dropdown">
+                         <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">개인연금저축 <span class="caret"></span></a>
+                         <ul class="dropdown-menu next220 foc">
+                           <li><a href="#">개인연금저축</a></li>
+                           <li><a href="#">연금저축</a></li>
+                         </ul>
+                       </div>
+                     </td>
+                     <td><input type="text" class="form-control code" readonly="readonly"></td>
+                     <td><input type="text" class="form-control pop bank next120 t" readonly="readonly"></td>
+                     <td><input type="text" class="form-control foc" readonly="readonly"></td>
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control cac X_1_a Mp next110 6"></td>
+                     <td><input type="text" class="form-control cac X_1_a Mp next210b 6"></td>
+                     <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>            
+                   </tr> 
+                   <tr class="warning">
+                     <td>1</td>
+                     <td class="tacvam">
+                       <div class="dropdown">
+                         <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">개인연금저축 <span class="caret"></span></a>
+                         <ul class="dropdown-menu next220 foc">
+                           <li><a href="#">개인연금저축</a></li>
+                           <li><a href="#">연금저축</a></li>
+                         </ul>
+                       </div>
+                     </td>
+                     <td><input type="text" class="form-control code" readonly="readonly"></td>
+                     <td><input type="text" class="form-control pop bank next120 t" readonly="readonly"></td>
+                     <td><input type="text" class="form-control foc" readonly="readonly"></td>
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control cac X_1_a Mp next110 6"></td>
+                     <td><input type="text" class="form-control cac X_1_a Mp next210b 6"></td>
+                     <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>             
+                   </tr>
+                   <tr class="warning">
+                     <td>1</td>
+                     <td class="tacvam">
+                       <div class="dropdown">
+                         <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">개인연금저축 <span class="caret"></span></a>
+                         <ul class="dropdown-menu next220 foc">
+                           <li><a href="#">개인연금저축</a></li>
+                           <li><a href="#">연금저축</a></li>
+                         </ul>
+                       </div>
+                     </td>
+                     <td><input type="text" class="form-control code" readonly="readonly"></td>
+                     <td><input type="text" class="form-control pop bank next120 t" readonly="readonly"></td>
+                     <td><input type="text" class="form-control foc" readonly="readonly"></td>
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control cac X_1_a Mp next110 6"></td>
+                     <td><input type="text" class="form-control cac X_1_a Mp next210b 6"></td>
+                     <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>             
+                   </tr>              
+                 </tbody>
+               </table>  
+            <div class="well well-sm mar_tm18">3.주택마련저축공제</div>        
+            <table class="table table-bordered table-hover table-condensed mar_tm18"> 
+                 <thead>
+                   <tr class="warning">
+                     <th></th>
+                     <th>저축 구분</th>
+                     <th>코드</th>
+                     <th>금융기관</th>
+                     <th>계좌번호</th>
+                     <th>불입금액</th>
+                     <th>소득공제금액</th>  
+                     <th class="wid1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></th>
+                     <th class="wid1"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></th>        
+                   </tr>
+                 </thead>          
+                 <tbody>
+                   <tr class="warning">
+                     <td>1</td>
+                     <td class="tacvam">
+                       <div class="dropdown">
+                         <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">주택청약종합저축(2015년 이후 가입) <span class="caret"></span></a>
+                         <ul class="dropdown-menu next220 foc">
+                           <li><a href="#">저축</a></li>
+                           <li><a href="#">청약저축</a></li>
+                           <li><a href="#">주택청약종합저축(2014년 이전 가입)</a></li>
+                           <li><a href="#">주택청약종합저축(2015년 이후 가입)</a></li>
+                         </ul>
+                       </div>
+                     </td>
+                     <td><input type="text" class="form-control code" readonly="readonly"></td>
+                     <td><input type="text" class="form-control pop bank next120 t" readonly="readonly"></td>
+                     <td><input type="text" class="form-control foc" readonly="readonly"></td>
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control cac a next210b"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>           
+                   </tr> 
+                   <tr class="warning">
+                     <td>1</td>
+                     <td class="tacvam">
+                       <div class="dropdown">
+                         <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">주택청약종합저축(2015년 이후 가입) <span class="caret"></span></a>
+                         <ul class="dropdown-menu next220 foc">
+                           <li><a href="#">저축</a></li>
+                           <li><a href="#">청약저축</a></li>
+                           <li><a href="#">주택청약종합저축(2014년 이전 가입)</a></li>
+                           <li><a href="#">주택청약종합저축(2015년 이후 가입)</a></li>
+                         </ul>
+                       </div>
+                     </td>
+                     <td><input type="text" class="form-control code" readonly="readonly"></td>
+                     <td><input type="text" class="form-control pop bank next120 t" readonly="readonly"></td>
+                     <td><input type="text" class="form-control foc" readonly="readonly"></td>
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control cac a next210b"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>           
+                   </tr>
+                   <tr class="warning">
+                     <td>1</td>
+                     <td class="tacvam">
+                       <div class="dropdown">
+                         <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">주택청약종합저축(2015년 이후 가입) <span class="caret"></span></a>
+                         <ul class="dropdown-menu next220 foc">
+                           <li><a href="#">저축</a></li>
+                           <li><a href="#">청약저축</a></li>
+                           <li><a href="#">주택청약종합저축(2014년 이전 가입)</a></li>
+                           <li><a href="#">주택청약종합저축(2015년 이후 가입)</a></li>
+                         </ul>
+                       </div>
+                     </td>
+                     <td><input type="text" class="form-control code" readonly="readonly"></td>
+                     <td><input type="text" class="form-control pop bank next120 t" readonly="readonly"></td>
+                     <td><input type="text" class="form-control foc" readonly="readonly"></td>
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control cac a next210b"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>                                 
+                   </tr>             
+                 </tbody>
+               </table>
+             <div class="well well-sm mar_tm18">4.장기집합투자증권저축 소득공제</div>        
+            <table class="table table-bordered table-hover table-condensed mar_tm18"> 
+                 <thead>
+                   <tr class="warning">
+                     <th></th>
+                     <th>코드</th>
+                     <th>금융기관</th>
+                     <th>계좌번호</th>
+                     <th>납입금액</th>
+                     <th>소득공제금액</th> 
+                     <th class="wid1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></th>
+                     <th class="wid1"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></th>      
+                   </tr>
+                 </thead>          
+                 <tbody>
+                   <tr class="warning">
+                     <td>1</td>
+                     <td><input type="text" class="form-control code" readonly="readonly"></td>
+                     <td><input type="text" class="form-control pop bank next120 t" readonly="readonly"></td>
+                     <td><input type="text" class="form-control foc" readonly="readonly"></td>
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control cac a next211"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>            
+                   </tr> 
+                   <tr class="warning">
+                     <td>2</td>
+                     <td><input type="text" class="form-control code" readonly="readonly"></td>
+                     <td><input type="text" class="form-control pop bank next120 t" readonly="readonly"></td>
+                     <td><input type="text" class="form-control foc" readonly="readonly"></td>
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control cac a next211"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>           
+                   </tr>
+                   <tr class="warning">
+                     <td>3</td>
+                     <td><input type="text" class="form-control code" readonly="readonly"></td>
+                     <td><input type="text" class="form-control pop bank next120 t" readonly="readonly"></td>
+                     <td><input type="text" class="form-control foc" readonly="readonly"></td>
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control cac a next213"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>            
+                   </tr>             
+                 </tbody>
+               </table>   
+           </div>  <!-- end tab-pane tab-tax3 -->
+           <div class="tab-pane" id="tab-tax4">
+            <div class="well well-sm">2. 월세액 세액공제 명세</div>        
+              <table class="table table-bordered table-hover table-condensed mar_tm18"> 
+                 <thead>
+                   <tr class="warning">
+                     <th rowspan=2>⑦ 임대인<br> 성  명<br> (상 호)</th>
+                     <th rowspan=2>⑧ 주민등록번호<br>(사업자번호)</th>
+                     <th rowspan=2>⑨ 주택<br>유형</th>
+                     <th rowspan=2>⑩주택<br>계약<br>면적(m2)</th>
+                     <th rowspan=2>⑪ 임대차계약서 상<br>주소지 </th>
+                     <th colspan=2>⑫ 계약서 상<br> 임대차 계약기간</th> 
+                     <th rowspan=2>⑬ 연간<br> 월세액(원)</th>
+                     <th rowspan=2>⑭ 세액공제금액<br />(원)</th>  
+                     <th rowspan=2 class="wid1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></th>
+                     <th rowspan=2 class="wid1"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></th>        
+                   </tr>
+                   <tr class="success">
+                     <th>개시일</th>
+                     <th>종료일</th>        
+                   </tr>
+                 </thead>       
+                 <tbody>
+                    <tr class="warning">
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control foc a next110a"></td>
+                     <td class="tacvam">
+                       <div class="dropdown">
+                         <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">3.다세대주택 <span class="caret"></span></a>
+                         <ul class="dropdown-menu next210 foc">
+                           <li><a href="#">1.단독주택</a></li>
+                           <li><a href="#">2.다가구</a></li>
+                           <li><a href="#">3.다세대주택</a></li>
+                           <li><a href="#">4.연립주택</a></li>
+                           <li><a href="#">5.아파트</a></li>
+                           <li><a href="#">6.오피스텔</a></li>
+                           <li><a href="#">7.기타</a></li>
+                         </ul>
+                       </div>
+                     </td>
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-01-01" readonly="readonly"></td> 
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-01-01" readonly="readonly"></td>  
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control cac a next210"></td>  
+                     <td class="maxwidth-22"><input type="text" class="form-control plusdate"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>
+                   </tr>
+                   <tr class="warning">
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control foc a next110a"></td>
+                     <td class="tacvam">
+                       <div class="dropdown">
+                         <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">3.다세대주택 <span class="caret"></span></a>
+                         <ul class="dropdown-menu next210 foc">
+                           <li><a href="#">1.단독주택</a></li>
+                           <li><a href="#">2.다가구</a></li>
+                           <li><a href="#">3.다세대주택</a></li>
+                           <li><a href="#">4.연립주택</a></li>
+                           <li><a href="#">5.아파트</a></li>
+                           <li><a href="#">6.오피스텔</a></li>
+                           <li><a href="#">7.기타</a></li>
+                         </ul>
+                       </div>
+                     </td>
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-01-01" readonly="readonly"></td> 
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-01-01" readonly="readonly"></td>  
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control cac a next210"></td>  
+                     <td class="maxwidth-22"><input type="text" class="form-control plusdate"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>
+                   </tr> 
+                   <tr class="warning">
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control foc a next110a"></td>
+                     <td class="tacvam">
+                       <div class="dropdown">
+                         <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">3.다세대주택 <span class="caret"></span></a>
+                         <ul class="dropdown-menu next210 foc">
+                           <li><a href="#">1.단독주택</a></li>
+                           <li><a href="#">2.다가구</a></li>
+                           <li><a href="#">3.다세대주택</a></li>
+                           <li><a href="#">4.연립주택</a></li>
+                           <li><a href="#">5.아파트</a></li>
+                           <li><a href="#">6.오피스텔</a></li>
+                           <li><a href="#">7.기타</a></li>
+                         </ul>
+                       </div>
+                     </td>
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-01-01" readonly="readonly"></td> 
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-01-01" readonly="readonly"></td>  
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control cac a next210"></td>  
+                     <td class="maxwidth-22"><input type="text" class="form-control plusdate"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>
+                   </tr>                
+                 </tbody>
+               </table>
+               <div class="well well-sm mar_tm18">3. 거주자 간 주택임차차입금 원리금 상환액 소득공제 명세<br>1) 금전소비대차 계약내용</div>        
+              <table class="table table-bordered table-hover table-condensed mar_tm18"> 
+                 <thead>
+                   <tr class="warning">
+                     <th rowspan=2>⑮ 대주(貸主)</th>
+                     <th rowspan=2>16.주민등록번호</th>
+                     <th rowspan=2>17.금전소비대차<br />계약기간</th>
+                     <th rowspan=2>18.차입금<br />이자율</th>
+                     <th colspan=3>원리금 상환액</th> 
+                     <th rowspan=2>22.공제금액</th>   
+                     <th rowspan=2 class="wid1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></th>
+                     <th rowspan=2 class="wid1"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></th>                           
+                   </tr>
+                   <tr class="success">
+                     <th>19.계</th>
+                     <th>20.원금</th>
+                     <th>21.이자</th>          
+                   </tr>
+                 </thead>       
+                 <tbody>
+                   <tr class="success">
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control foc a next120"></td> 
+                     <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                     <td><input type="text" class="form-control cac a next110"></td> 
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control cac a next210"></td>  
+                     <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>          
+                   </tr>  
+                   <tr class="success">
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control foc a next120"></td> 
+                     <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                     <td><input type="text" class="form-control cac a next110"></td> 
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control cac a next210"></td>  
+                     <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>          
+                   </tr> 
+                   <tr class="success">
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control foc a next120"></td> 
+                     <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                     <td><input type="text" class="form-control cac a next110"></td> 
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control cac a next210"></td>  
+                     <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>          
+                   </tr>                
+                 </tbody>
+               </table>
+               <div class="well well-sm mar_tm18">2) 임대차 계약내용</div>        
+              <table class="table table-bordered table-hover table-condensed mar_tm18"> 
+                 <thead>
+                   <tr class="warning">
+                     <th rowspan=2>23.임대인<br> 성  명<br>(상 호)</th>
+                     <th rowspan=2>24.주민등록번호<br>(사업자번호)</th>
+                     <th rowspan=2>25.주택<br> 유형</th>
+                     <th rowspan=2>26. 주택<br>계약<br>면적(m2)</th>
+                     <th rowspan=2>27.임대차계약서상<br>주소지</th> 
+                     <th colspan=2>28.계약서상<br> 임대차 계약기간</th>
+                     <th rowspan=2>29.전세보증금<br>(원)</th>  
+                     <th rowspan=2 class="wid1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></th>
+                     <th rowspan=2 class="wid1"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></th>         
+                   </tr>
+                   <tr class="success">
+                     <th>개시일</th>
+                     <th>종료일</th>         
+                   </tr>
+                 </thead>       
+                 <tbody>
+                    <tr class="warning">
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control foc a next110a"></td>
+                     <td class="tacvam">
+                       <div class="dropdown">
+                         <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">3.다세대주택 <span class="caret"></span></a>
+                         <ul class="dropdown-menu next210 foc">
+                           <li><a href="#">1.단독주택</a></li>
+                           <li><a href="#">2.다가구</a></li>
+                           <li><a href="#">3.다세대주택</a></li>
+                           <li><a href="#">4.연립주택</a></li>
+                           <li><a href="#">5.아파트</a></li>
+                           <li><a href="#">6.오피스텔</a></li>
+                           <li><a href="#">7.기타</a></li>
+                         </ul>
+                       </div>
+                     </td>
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-01-01" readonly="readonly"></td> 
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-01-01" readonly="readonly"></td>  
+                     <td><input type="text" class="form-control cac a next210"></td>  
+                     <td class="maxwidth-22"><input type="text" class="form-control plusdate"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>
+                  </tr>
+                  <tr class="warning">
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control foc a next110a"></td>
+                     <td class="tacvam">
+                       <div class="dropdown">
+                         <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">3.다세대주택 <span class="caret"></span></a>
+                         <ul class="dropdown-menu next210 foc">
+                           <li><a href="#">1.단독주택</a></li>
+                           <li><a href="#">2.다가구</a></li>
+                           <li><a href="#">3.다세대주택</a></li>
+                           <li><a href="#">4.연립주택</a></li>
+                           <li><a href="#">5.아파트</a></li>
+                           <li><a href="#">6.오피스텔</a></li>
+                           <li><a href="#">7.기타</a></li>
+                         </ul>
+                       </div>
+                     </td>
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-01-01" readonly="readonly"></td> 
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-01-01" readonly="readonly"></td>  
+                     <td><input type="text" class="form-control cac a next210"></td>  
+                     <td class="maxwidth-22"><input type="text" class="form-control plusdate"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>
+                  </tr>  
+                  <tr class="warning">
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control foc a next110a"></td>
+                     <td class="tacvam">
+                       <div class="dropdown">
+                         <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">3.다세대주택 <span class="caret"></span></a>
+                         <ul class="dropdown-menu next210 foc">
+                           <li><a href="#">1.단독주택</a></li>
+                           <li><a href="#">2.다가구</a></li>
+                           <li><a href="#">3.다세대주택</a></li>
+                           <li><a href="#">4.연립주택</a></li>
+                           <li><a href="#">5.아파트</a></li>
+                           <li><a href="#">6.오피스텔</a></li>
+                           <li><a href="#">7.기타</a></li>
+                         </ul>
+                       </div>
+                     </td>
+                     <td><input type="text" class="form-control cac a next110"></td>
+                     <td><input type="text" class="form-control foc a next110"></td>
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-01-01" readonly="readonly"></td> 
+                     <td><input type="text" class="form-control datepicker next110" placeholder="2016-01-01" readonly="readonly"></td>  
+                     <td><input type="text" class="form-control cac a next210"></td>  
+                     <td class="maxwidth-22"><input type="text" class="form-control plusdate"></td>
+                     <td class="maxwidth-22"><input type="text" class="form-control minus"></td>
+                  </tr>                    
+                 </tbody>
+               </table>
+          </div>  <!-- end tab-pane tab-tax3 -->  
+           
+           <div class="tab-pane" id="tab-tax5">
+              <div class="table-responsive">
+               <table class="table table-bordered table-hover table-condensed" style="min-width: 800px;">           
+                 <tbody>
+                   <tr class="success">                     
+                     <td colspan=7>21.총급여(16, 다만 외국인단일세율<br> 적용 시에는 연간 근로소득)</td>
+                     <td class="wid15"><input type="text" class="form-control"></td>
+                     <td colspan=7>49.종합소득 과세표준</td>
+                     <td class="wid15"><input type="text" class="form-control"></td>          
+                   </tr> 
+                   <tr class="success">
+                     <td colspan=7>22.근로소득공제</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td rowspan=2 colspan=7>50.산출세액</td>
+                     <td rowspan=2><input type="text" class="form-control"></td>     
+                   </tr>
+                  <tr class="success">
+                     <td colspan=7>23.근로소득금액</td>
+                     <td><input type="text" class="form-control"></td>          
+                   </tr> 
+                   <tr class="success">
+                     <td rowspan=33 class="tacvam">종<br>합<br>소<br>득<br>공<br>제</td>
+                     <td rowspan=3 class="tacvam">기<br>본<br>공<br>제</td>
+                     <td colspan=5>24.본     인</td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td rowspan=9 class="tacvam">세<br>액<br>감<br>면</td>
+                     <td rowspan=2 colspan=6 class="talvam">51.「소득세법」</td>
+                     <td rowspan=2><input type="text" class="form-control"></td>    
+                   </tr>
+                   <tr class="success">
+                     <td colspan=5> 25.배  우  자</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr> 
+                   <tr class="success">                     
+                     <td colspan=5 class="">
+                        <table class="table table-bordered table-hover table-condensed">           
+                           <tbody>
+                              <tr class="success">
+                                 <td class="wid20">26.부 양 가 족(</td>
+                                 <td class="wid8"><input type="text" class="form-control"></td>
+                                 <td> 명)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>     
+                     <td><input type="text" class="form-control"></td>
+                     <td rowspan=2 colspan=6 class="talvam">52.「조세특례제한법」(53 제외)</td>
+                     <td rowspan=2><input type="text" class="form-control"></td>    
+                   </tr> 
+                   <tr class="success">
+                     <td rowspan=4 class="tacvam">추<br>가<br>공<br>제</td>
+                     <td colspan=5 rowspan=2 class="">
+                        <table class="table table-bordered table-hover table-condensed">           
+                           <tbody>
+                              <tr class="success">
+                                 <td class="wid20">27.경 로 우 대(</td>
+                                 <td class="wid8"><input type="text" class="form-control"></td>
+                                 <td> 명)</td>
+                              </tr>
+                              <tr class="success">
+                                 <td>28.장  애  인(</td>
+                                 <td class="wid8"><input type="text" class="form-control"></td>
+                                 <td> 명)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>      
+                     <td><input type="text" class="form-control"></td>          
+                   </tr>
+                   <tr class="success">      
+                     <td><input type="text" class="form-control"></td>
+                     <td rowspan=2 colspan=6 class="talvam"> 53「조세특례제한법」제30조</td>
+                     <td rowspan=2><input type="text" class="form-control"></td>    
+                   </tr>
+                   <tr class="success">
+                     <td colspan=5>29.부  녀  자</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="success">
+                     <td colspan=5>30.한 부 모 가 족</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td rowspan=2 colspan=6 class="talvam">54.조세조약</td>
+                     <td rowspan=2><input type="text" class="form-control"></td>    
+                   </tr>
+                   <tr class="success">
+                     <td rowspan=5 class="tacvam">연<br>금<br>보<br>험<br>료<br>공<br>제</td>
+                     <td colspan=5>31.국민연금보험료</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="success">
+                     <td class="" rowspan=4 class="tacvam">32.<br>공 적<br> 연 금<br> 보험료<br>공 제</td>
+                     <td colspan=4>㉮ 공무원연금</td>
+                     <td><input type="text" class="form-control"></td>   
+                     <td colspan=6 class="talvam">55.세 액 감 면  계</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr> 
+                   <tr class="success">
+                     <td colspan=4>㉯ 군인연금</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td rowspan=38 class="tacvam">세<br>액<br />공<br>제</td>
+                     <td colspan=6 class="talvam">56.근로소득</td>
+                     <td><input type="text" class="form-control"></td>          
+                   </tr>
+                   <tr class="success">
+                     <td colspan=4>㉰ 사립학교교직원연금</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td rowspan=3 colspan=3 class="tacvam">57.자녀</td>
+                     <td colspan=3 rowspan=3 class="">
+                        <table class="table table-bordered table-hover table-condensed">           
+                           <tbody>
+                              <tr class="success">
+                                 <td class="">공제대상자녀  (</td>
+                                 <td class="wid15"><input type="text" class="form-control"></td>
+                                 <td> 명)</td>
+                              </tr>
+                              <tr class="success">
+                                 <td>6세 이하      (</td>
+                                 <td class=""><input type="text" class="form-control"></td>
+                                 <td> 명)</td>
+                              </tr>
+                              <tr class="success">
+                                 <td>출산ㆍ입양자  (</td>
+                                 <td class=""><input type="text" class="form-control"></td>
+                                 <td> 명)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                     <td><input type="text" class="form-control"></td>    
+                   </tr> 
+                   <tr class="success">
+                     <td colspan=4>㉱ 별정우체국연금</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td><input type="text" class="form-control"></td>    
+                   </tr>
+                   <tr class="success">
+                     <td rowspan=22 class="tacvam">특<br>별<br>소<br>득<br>공<br>제</td>
+                     <td rowspan=3 class="tacvam">33<br>보험료</td>
+                     <td colspan=4 rowspan=2>㉮ 건강보험료(노인장기요<br>양보험료포함)</td>
+                     <td rowspan=2><input type="text" class="form-control"></td> 
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="success">
+                     <td rowspan=6 class="tacvam">연<br>금<br>계<br>좌</td>
+                     <td colspan=3 rowspan=2>58.과학기술인공제</td>
+                     <td colspan=2>공제대상</td>
+                     <td><input type="text" class="form-control"></td>    
+                   </tr>
+                   <tr class="success">
+                     <td colspan=4>㉯ 고용보험료</td>
+                     <td><input type="text" class="form-control"></td>   
+                     <td colspan=2>세액공제</td>
+                     <td><input type="text" class="form-control"></td>   
+                   </tr>
+                   <tr class="success">
+                     <td rowspan=16 class="tacvam">34.<br>주택<br>자금</td>
+                     <td colspan=2 rowspan=2>㉮ 주택임차<br>차입금원리<br>금상환액</td>
+                     <td colspan=2>대출기관</td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=3 rowspan=2 class="tacvam">59.「근로자퇴직급여 보장<br>법」에  따른 퇴직연금</td> 
+                     <td colspan=2>공제대상</td>
+                     <td><input type="text" class="form-control"></td>   
+                   </tr>
+                   <tr class="success">
+                     <td colspan=2>거주자</td>
+                     <td><input type="text" class="form-control"></td>   
+                     <td colspan=2>세액공제</td>
+                     <td><input type="text" class="form-control"></td>   
+                   </tr>
+                   <tr class="success">
+                     <td rowspan=14 class="tacvam">㉯ 장기<br>주택저<br>당차입<br>금이자<br>상환액</td>
+                     <td rowspan=3 class="tacvam">2011년<br> 이전<br>차입분</td>
+                     <td colspan=2>15년 미만</td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=3 rowspan=2>60.연금저축</td> 
+                     <td colspan=2>공제대상</td>
+                     <td><input type="text" class="form-control"></td>   
+                   </tr>
+                   <tr class="success">
+                     <td colspan=2>15년~29년</td>
+                     <td><input type="text" class="form-control"></td>   
+                     <td colspan=2>세액공제</td>
+                     <td><input type="text" class="form-control"></td>   
+                   </tr>
+                   <tr class="success">
+                     <td colspan=2>30년 이상</td>
+                     <td><input type="text" class="form-control"></td>   
+                     <td rowspan=22 class="tacvam">특<br>별<br>세<br>액<br>공<br>제</td>
+                     <td colspan=2 rowspan=4>61.보험료</td>
+                     <td rowspan=2>보장성</td>
+                     <td colspan=2>공제대상</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td rowspan=4 class="tacvam">2012년<br> 이후<br>차입분<br>(15년<br> 이상)</td> 
+                     <td colspan=2 rowspan=2 class="tacvam">고정금리이거나,<br>비거치상환 대출</td>
+                     <td rowspan=2><input type="text" class="form-control"></td>  
+                     <td colspan=2>세액공제</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td rowspan=2 class="tacvam">장애인전용<br>보장성</td>
+                     <td colspan=2>공제대상</td>
+                     <td><input type="text" class="form-control"></td>   
+                   </tr>
+                   <tr class="success">
+                     <td colspan=2 rowspan=2 class="tacvam">그 밖의 대출</td>
+                     <td rowspan=2><input type="text" class="form-control"></td>  
+                     <td colspan=2>세액공제</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=3 rowspan=2>62.의료비</td>
+                     <td colspan=2>공제대상</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td rowspan=7 class="tacvam">2015년<br> 이후<br>차입분</td> 
+                     <td rowspan=5 class="tacvam">15년<br>이상</td> 
+                     <td rowspan=2 class="tacvam">고정금리이면서,<br>비거치상환 대출</td>
+                     <td rowspan=2><input type="text" class="form-control"></td>  
+                     <td colspan=2>세액공제</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=3 rowspan=2>63.교육비</td>
+                     <td colspan=2>공제대상</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td rowspan=2 class="tacvam">고정금리이거나,<br>비거치상환 대출</td>
+                     <td rowspan=2><input type="text" class="form-control"></td>  
+                     <td colspan=2>세액공제</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td rowspan=12 class="tacvam">64.<br>기<br>부<br>금</td>
+                     <td rowspan=4 class="tacvam">㉮ 정치<br>자금<br> 기부금</td>   
+                     <td rowspan=2 class="tacvam">10만원<br> 이하</td>
+                     <td colspan=2>공제대상</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td>그 밖의 대출</td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=2>세액공제</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td rowspan=2 class="tacvam">10년<br> ~15년</td>
+                     <td rowspan=2 class="tacvam">고정금리이거나,<br>비거치상환 대출</td>
+                     <td rowspan=2><input type="text" class="form-control"></td>  
+                     <td rowspan=2 class="tacvam">10만원<br> 초과</td>
+                     <td colspan=2>공제대상</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=2>세액공제</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=5>35.기부금(이월분)</td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=2 rowspan=2>㉯ 법정기부금</td>
+                     <td colspan=2>공제대상</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=5>36.계</td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=2>세액공제</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=7>37.차 감 소 득 금 액</td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=2 rowspan=2>㉰ 우리사주조합<br> 기부금</td>
+                     <td colspan=2>공제대상</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td rowspan=13>a</td>
+                     <td colspan=6>38.개인연금저축 </td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=2>세액공제</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=6>39.소기업ㆍ소상공인 공제부금 </td>
+                     <td><input type="text" class="form-control" /></td>  
+                     <td colspan=2 rowspan=2>㉱ 지정기부금<br>(종교단체외)</td>
+                     <td colspan=2>공제대상</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=2 rowspan=4>40.주택<br>마련저축<br>소득공제</td>
+                     <td colspan=4>㉮ 청약저축</td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=2>세액공제</td>
+                     <td><input type="text" class="form-control"></td> 
+                   </tr>
+                   <tr class="success">
+                     <td colspan=4 rowspan=2 class="tacvam">㉯ 주택청약종합저축</td>
+                     <td rowspan=2><input type="text" class="form-control"></td>  
+                     <td colspan=2 rowspan=2>㉲ 지정기부금<br>(종교단체)</td>
+                     <td colspan=2>공제대상</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=2>세액공제</td>
+                     <td><input type="text" class="form-control"></td> 
+                   </tr>
+                   <tr class="success">
+                     <td colspan=4>㉰ 근로자주택마련저축</td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=5>65.계</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=6>41.투자조합출자 등 </td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=5>66.표준세액공제</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=6>42.신용카드등 사용액 </td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=6>67.납세조합공제</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=6>43.우리사주조합 출연금 </td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=6>68.주택차입금</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=6>44.고용유지 중소기업 근로자 </td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=6>69.외국납부</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=6>45.목돈 안드는 전세 이자상환액 </td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=4 rowspan=2>70.월세액</td>
+                     <td colspan=2>공제대상</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=6>46.장기집합투자증권저축 </td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td colspan=2>세액공제</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=6>47.그 밖의 소득공제 계</td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=6>71.세 액 공 제  계</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=7>48.소득공제 종합한도 초과액</td>
+                     <td><input type="text" class="form-control"></td>  
+                     <td colspan=7>72.결 정 세 액(51-56-71)</td>
+                     <td><input type="text" class="form-control"></td>  
+                   </tr>
+                   <tr class="success">
+                     <td colspan=16>4&nbsp;</td>
+                   </tr>
+                 </tbody>
+               </table>
+              </div>
+           </div>  <!-- end tab-pane tab-tax5 -->
+           <div class="tab-pane" id="tab-tax6">
+             <div class="well well-sm">
+              <div class="table-responsive">
+               <table class="table table-bordered table-hover table-condensed">           
+                 <tbody>
+                   <tr class="warning">
+                     <td rowspan=46>Ⅳ<br>정<br>산<br>명<br>세</td>
+                     <td colspan=5> 총급여(, 다만 외국인단일세율<br> 적용 시에는 연간 근로소득)</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td colspan=6> 소득공제 종합한도 초과액</td>
+                     <td><input type="text" class="form-control"></td>          
+                   </tr> 
+                   <tr class="success">
+                     <td colspan=5> 근로소득공제</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td rowspan=2 colspan=6> 종합소득 과세표준</td>
+                     <td><input type="text" class="form-control"></td>     
+                   </tr>
+                  <tr class="warning">
+                     <td colspan=5> 근로소득금액</td>
+                     <td><input type="text" class="form-control"></td>          
+                   </tr> 
+                   <tr class="success">
+                     <td rowspan=26>종<br>합<br>소<br>득<br>공<br>제</td>
+                     <td rowspan=3>기<br>본<br>공<br>제</td>
+                     <td colspan=3> 본     인</td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td rowspan=2 colspan=6> 산출세액</td>
+                     <td><input type="text" class="form-control"></td>    
+                   </tr>
+                   <tr class="warning">
+                     <td colspan=3>  배  우  자</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr> 
+                   <tr class="success">
+                     <td colspan=3>
+                         <table class="table table-bordered table-hover">           
+                              <tbody>
+                                  <tr class="warning">
+                                     <td> 부 양 가 족(</td>
+                                     <td class="w_16"><input type="text" class="form-control"></td>
+                                     <td> 명)</td>      
+                                  </tr>
+                              </tbody>
+                          </table>
+                     </td>
+                     <td><input type="text" class="form-control"></td>
+                     <td rowspan=8>세<br />액<br>감<br />면</td>
+                     <td class="w_25" rowspan=2 colspan=5> 「소득세법」</td>
+                     <td><input type="text" class="form-control"></td>    
+                   </tr> 
+                   <tr class="warning">
+                     <td rowspan=4>추<br>가<br>공<br>제</td>
+                     <td colspan=3>
+                         <table class="table table-bordered table-hover">           
+                              <tbody>
+                                  <tr class="warning">
+                                     <td>경 로 우 대(</td>
+                                     <td class="w_16"><input type="text" class="form-control"></td>
+                                     <td> 명)</td>      
+                                  </tr>
+                              </tbody>
+                          </table>
+                     </td>
+                     <td><input type="text" class="form-control"></td>          
+                   </tr>
+                   <tr class="success">
+                     <td colspan=3>
+                         <table class="table table-bordered table-hover">           
+                              <tbody>
+                                  <tr class="warning">
+                                     <td>장  애  인 &nbsp;&nbsp;&nbsp;( </td>
+                                     <td class="w_16"><input type="text" class="form-control"></td>
+                                     <td> 명)</td>      
+                                  </tr>
+                              </tbody>
+                          </table>
+                     </td>
+                     <td><input type="text" class="form-control"></td>
+                     <td colspan=5> 「조세특례제한법」( 제외)</td>
+                     <td><input type="text" class="form-control"></td>    
+                   </tr>
+                   <tr class="warning">
+                     <td colspan=3> 부  녀  자</td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td rowspan=2 colspan=5> 「조세특례제한법」제30조</td>
+                     <td><input type="text" class="form-control"></td>          
+                   </tr>
+                   <tr class="success">
+                     <td colspan=3> 한 부 모 가 족</td>
+                     <td><input type="text" class="form-control"></td>
+                        
+                   </tr>
+                   <tr class="warning">
+                     <td rowspan=5>연<br>금<br>보<br>험<br>료<br>공<br>제</td>
+                     <td colspan=3> 국민연금보험료</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td rowspan=2 colspan=5> 조세조약</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="success">
+                     <td class="w_7" rowspan=4>공 적<br> 연 금<br> 보험료<br>공 제</td>
+                     <td colspan=2>㉮ 공무원연금</td>
+                     <td><input type="text" class="form-control"></td>   
+                   </tr> 
+                   <tr class="warning">
+                     <td colspan=2>㉯ 군인연금</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td colspan=5> 세 액 감 면  계</td>
+                     <td><input type="text" class="form-control"></td>          
+                   </tr>
+                   <tr class="success">
+                     <td colspan=2>㉰ 사립학교교직원연금</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td rowspan=32>세<br>액<br>공<br> 제</td>
+                     <td colspan=5> 근로소득</td>
+                     <td><input type="text" class="form-control"></td>    
+                   </tr> 
+                   <tr class="success">
+                     <td colspan=2>㉱ 별정우체국연금</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td colspan=5> 자녀</td>
+                     <td><input type="text" class="form-control"></td>    
+                   </tr>
+                   <tr class="warning">
+                     <td rowspan=14>특<br>별<br>소<br>득<br>공<br>제</td>
+                     <td rowspan=2>보험료</td>
+                     <td colspan=2>㉮ 건강보험료(노인장<br>기요양보험료포함)</td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td rowspan=6>연<br>금<br>계<br>좌</td>
+                     <td class="w_16" rowspan=2 colspan=3> 과학기술인공제</td>
+                     <td class="w_13">공제대상금액</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="success">
+                     <td colspan=2>㉯ 고용보험료</td>
+                     <td><input type="text" class="form-control"></td>
+                     <td>세액공제액</td>
+                     <td><input type="text" class="form-control"></td>           
+                   </tr>
+                  <tr class="warning">
+                     <td rowspan=10>주택<br>자금</td>
+                     <td rowspan=4>㉮ 주택임<br>차차입금원<br>리금상환액</td>
+                     <td class="" rowspan=2>대출기관</td> 
+                     <td rowspan=2><input type="text" class="form-control"></td> 
+                     <td rowspan=2 colspan=3> 「근로자퇴직급여<br> 보장법」에 따른 퇴<br>직연금</td>
+                     <td>공제대상금액</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="success">
+                     <td>세액공제액</td>
+                     <td><input type="text" class="form-control"></td>           
+                   </tr>
+                   <tr class="warning">
+                     <td rowspan=2>거주자</td> 
+                     <td rowspan=2><input type="text" class="form-control"></td> 
+                     <td rowspan=2 colspan=3> 연금저축</td>
+                     <td>공제대상금액</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>  
+                   <tr class="success">
+                     <td>세액공제액</td>
+                     <td><input type="text" class="form-control"></td>           
+                   </tr>
+                   <tr class="warning">
+                     <td class="" rowspan=6 colspan=2>
+                          <table class="table table-bordered table-hover">           
+                              <tbody>
+                                  <tr class="warning">
+                                     <td class="" rowspan=6>㉯ 장<br>기주택<br>저당차<br>입금이<br>자상환<br>액</td> 
+                                     <td class="" rowspan=3>2011년 이전<br>차입분</td> 
+                                     <td>15년 미만</td>      
+                                  </tr>
+                                  <tr class="warning">
+                                     <td>15년~29년</td>      
+                                  </tr>
+                                   <tr class="warning">
+                                     <td>30년 이상</td>      
+                                  </tr>
+                                  <tr class="warning">
+                                     <td rowspan=3>2012년 이후<br>차입분<br>(15년 이상)</td> 
+                                     <td>고정금리ㆍ비거치<br>상환 대출</td>      
+                                  </tr> 
+                                  <tr class="warning">
+                                     <td>그 밖의 대출</td>      
+                                  </tr>
+                              </tbody>
+                          </table>
+                     </td> 
+                     <td><input type="text" class="form-control" value="1"></td> 
+                     <td rowspan=17>특<br>별<br>세<br>액<br>공<br>제</td>
+                     <td rowspan=2 colspan=3> 보장성보험료</td>
+                     <td>공제대상금액</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr> 
+                   <tr class="success">
+                     <td><input type="text" class="form-control" value="2"></td> 
+                     <td>세액공제액</td>
+                     <td><input type="text" class="form-control"></td>           
+                   </tr>
+                   <tr class="warning">
+                     <td><input type="text" class="form-control" value="3"></td> 
+                     <td rowspan=2 colspan=3> 의료비</td>
+                     <td>공제대상금액</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr> 
+                   <tr class="danger">
+                     <td rowspan=2><input type="text" class="form-control" value="4"></td>                             
+                     <td>세액공제액</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="success">                    
+                     <td rowspan=2 colspan=3>교육비</td>  
+                     <td>공제대상금액</td>
+                     <td><input type="text" class="form-control"></td>           
+                   </tr>
+                   <tr class="success">
+                     <td><input type="text" class="form-control" value="5"></td> 
+                     <td>세액공제액</td>
+                     <td><input type="text" class="form-control"></td>           
+                   </tr>
+                   <tr class="success">
+                     <td colspan=3> 기부금(이월분)</td> 
+                     <td><input type="text" class="form-control"></td> 
+                     <td rowspan=8>기<br>부<br>금</td>
+                     <td rowspan=4>㉮ 정치<br>자금<br>기부금</td>
+                     <td rowspan=2>10만원<br> 이하</td>
+                     <td>공제대상금액</td>
+                     <td><input type="text" class="form-control"></td>           
+                   </tr>
+                   <tr class="success">
+                     <td colspan=3>계</td> 
+                     <td><input type="text" class="form-control"></td> 
+                     <td>세액공제액</td> 
+                     <td><input type="text" class="form-control"></td>           
+                   </tr>
+                   <tr class="success">
+                     <td colspan=5 rowspan=2>차 감 소 득 금 액</td> 
+                     <td rowspan=2><input type="text" class="form-control"></td> 
+                     <td rowspan=2>10만원<br>초과</td>
+                     <td>공제대상금액</td>
+                     <td><input type="text" class="form-control"></td>           
+                   </tr>
+                   <tr class="warning">
+                     <td>세액공제액</td>
+                     <td><input type="text" class="form-control"></td>           
+                   </tr>
+                    <tr class="success">
+                     <td rowspan=15>그<br>밖<br>의<br>소<br>득<br>공<br>제</td>
+                     <td class="warning" colspan=4 rowspan=2> 개인연금저축 </td>
+                     <td rowspan=2><input type="text" class="form-control"></td> 
+                     <td rowspan=2 colspan=2>㉯ 법정기부금</td>
+                     <td>세액공제액</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr> 
+                   <tr class="warning">
+                     <td>공제대상금액</td>
+                     <td><input type="text" class="form-control"></td>           
+                   </tr>
+                   <tr class="success">
+                     <td class="warning" colspan=4 rowspan=2> 소기업ㆍ소상공인 공제부금</td>
+                     <td rowspan=2><input type="text" class="form-control"></td> 
+                     <td rowspan=2 colspan=2>㉰ 지정기부금</td>
+                     <td>세액공제액</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="warning">
+                     <td>공제대상금액</td>
+                     <td><input type="text" class="form-control"></td>           
+                   </tr>
+                   <tr class="success">
+                     <td rowspan=3 colspan=2> 주택<br>마련저축<br>소득공제</td>
+                     <td class="warning" colspan=2>㉮ 청약저축</td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td colspan=4 rowspan=2> 계</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="success">
+                     <td class="warning" colspan=2>㉯ 주택청약종합저축</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="success">
+                     <td class="warning" colspan=2>㉰ 근로자주택마련저축</td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td colspan=4> 표준세액공제</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr> 
+                   <tr class="success">
+                     <td class="warning" colspan=4> 투자조합출자 등 </td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td colspan=5> 납세조합공제</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="success">
+                     <td class="warning" colspan=4> 신용카드 등 사용액</td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td rowspan=2 colspan=5> 주택차입금</td>
+                     <td rowspan=2><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="success">
+                     <td class="warning" colspan=4> 우리사주조합 출연금</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr> 
+                  <tr class="success">
+                     <td class="warning" colspan=4> 우리사주조합 기부금</td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td colspan=5> 외국납부</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="success">
+                     <td class="warning" colspan=4> 고용유지 중소기업 근로자</td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td rowspan=2 colspan=4> 월세액</td>
+                     <td>공제대상금액</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="success">
+                     <td class="warning" colspan=4> 목돈 안 드는 전세 이자상환액</td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td>세액공제액</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>
+                   <tr class="success">
+                     <td class="warning" colspan=4> 장기집합투자증권저축</td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td colspan=5> 세 액 공 제  계</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr> 
+                   <tr class="success">
+                     <td class="warning" colspan=4> 그 밖의 소득공제 계</td>
+                     <td><input type="text" class="form-control"></td> 
+                     <td colspan=6> 결 정 세 액(--)</td>
+                     <td><input type="text" class="form-control"></td>         
+                   </tr>           
+                 </tbody>
+               </table>
+              </div>
+             </div>
+           </div>  <!-- end tab-pane tab-tax6 -->          
+
+           <div class="nav navbar-nav navbar-right">
+               <div class="btn-group btn-group-xs mtm10mb10pr30">
+                <button type="button" class="btn btn-info tableinput-toggle" name="tab-tax1">수정취소</button>
+                <button type="button" class="btn btn-success table-toggle">재수정</button>
+               </div>
+             </div>
+         </div> <!-- end tab-content -->    
+        </div> <!-- end panel-body --> 
+        </div> <!-- end panel with-nav-tabs panel-info -->                          
+    </div> <!-- end col-md-9 -->   
+  </div> <!-- end row -->
+
+     </div>  <!-- end tab-pane tab-tax11 --> 
+     <div class="tab-pane" id="tab-tax21"> tab21</div>  <!-- end tab-pane tab-tax21 -->
+     <div class="tab-pane" id="tab-tax31"> tab31</div>  <!-- end tab-pane tab-tax31 -->  
+     </div> <!-- end tab-content -->    
+         </div> <!-- end panel-body --> 
+        </div> <!-- end panel with-nav-tabs panel-default -->  
+     </div> <!-- end col-md-12 -->
+     </div> <!-- end row --> 
+
+  </div> <!-- end col-md-9 -->
+  </div> <!-- end row -->
+  </div> <!-- end container -->
+
+<div class="container"> 
+<div class="row">
+<div class="col-md-12">    
+<div class="footer well">
+<div class="">
+        <p><a href="#" title="당신&apos;s 이름은">Tooltips</a> 무엇인가요?. 자세히 보아야 예쁘다
+오래 보아야 사랑스럽다
+너도 그렇다</p>
+        <p>But as it's not a native tooltip, it can be styled. Any themes built with<a href="http://jqueryui.com/themeroller/" title="당신은 나의 동반자">ThemeRoller</a>will also style tooltips accordingly.</p>
+        <p>그대가 꺾어준 꽃
+시들 때 까지 들여다 보았네
+그대가 남기고 간 시든 꽃
+다시 필 때까지</p>
+        <p><label for="age">Your age:</label> <input id="age" title="We ask for your age only for statistical purposes."></p>
+        <p>Hover the field to see the tooltip.</p>
+      </div>
+             <div class="bs-example"> 
+    <button type="button" class="btn btn-default" rel="txtTooltip" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+<button type="button" class="btn btn-primary" rel="txtTooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+<button type="button" class="btn btn-info" rel="txtTooltip" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+<button type="button" class="btn btn-danger" rel="txtTooltip" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+</div>
+ </div>
+</div>
+</div>
+</div>
+
+<!-- toolbar_dialog -->
+<!-- dialog_lookup -->
+<div id="dialog_lookup" class="lookup_popup" style="display:none; padding: 7px;"> 
+    <p style="font-size: 12px;">아무 것도 하지 않을 것입니다. 동의하십니까?</p>
+    <table id="" class="display nowrap" cellspacing="0" width="100%">
+        <thead>
+            <tr class="danger">
+                <th>월/일</th>
+                <th>유형</th>
+                <th>품목</th>
+                <th>수량</th>
+                <th>단가</th>
+                <th>매수</th>
+                <th>공급가액</th>
+                <th>부가세</th>
+                <th>분개</th>
+                <th>예정누락분</th>
+                <th>전자여부</th>
+            </tr>
+        </thead>
+        <tbody>
+      
+        </tbody>
+   </table>
+</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!--<script>window.jQuery || document.write('<script src="../../../js/jquery.min.js"></script>')</script> -->
+    <script src="../../../asset/js/jquery.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.12.3.min.js"></script> -->
+
+    <script src="../../../asset/js/bootstrap.min.js"></script>
+    <script src="../../../asset/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../../asset/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="../../../asset/js/header-content.js"></script>
+
+    <script src="../../../asset/js/jssor/jssor.slider.mini.js"></script>
+    <script src="../../../asset/js/jssor.js"></script>
+  
+    <script src="../../../asset/js/main.js"></script> 
+    <script src="../../../asset/js/main_popup.js"></script> 
+    <script src="../../../asset/js/main_popup_item.js"></script> 
+    <script src="../../../asset/js/datepicker.js"></script>
+    <script src="../../../asset/js/lan_ko.js"></script>
+    <script src="../../../asset/js/con_tab.js"></script>
+    <script src="../../../asset/js/con_topmenu.js"></script>
+    <script src="../../../asset/js/toolbar_popup.js"></script>
+    <script src="../../../asset/js/con_mainmenu.js"></script> 
+        
+    <!-- dialog로딩 시 autofocus없애기 -->
+    <script>$.ui.dialog.prototype._focusTabbable = function(){};</script>
+   
+    <script src="../../../asset/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="../../../asset/DataTables/media/js/dataTables.jqueryui.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/dataTables.buttons.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.jqueryui.js"></script>
+    <script src="../../../asset/DataTables/extensions/Scroller/js/dataTables.scroller.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.html5.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.print.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.colVis.js"></script>
+    <script class="init">
+	$(document).ready(function() {
+           $("body").con_tab2({exam: "#example_90", url: "../../data/2500_04.txt", searching:false, info:false, paging:false});	   
+        });
+    </script>
+    <script src="../../../asset/js/common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1024 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../asset/favicon.ico">
+    <title>Jumbotron Template for Bootstrap</title>
+    <!-- <link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../../../asset/css/nanumgothic.css" />
+    <!-- Bootstrap core CSS -->
+    <link href="../../../asset/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../../asset/css/jumbotron-navbar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../asset/css/header-content.css" />
+    <link rel="stylesheet" href="../../../asset/jquery-ui-1.11.4.custom/jquery-ui.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../../asset/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../../asset/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <!--<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../asset/js/html5shiv.min.js"></script>')</script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../asset/js/respond.min.js"></script>')</script> -->
+      <script src="../../../asset/js/html5shiv.min.js"></script>
+      <script src="../../../asset/js/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="../../../asset/css/jssor.css" rel="stylesheet">
+    <link href="../../../asset/css/style.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/media/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/media/css/dataTables.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/extensions/Scroller/css/scroller.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/extensions/Buttons/css/buttons.jqueryui.css">
+    <style type="text/css" class="init">
+	
+    </style>
+</head>
+<body>    
+  <!-- Static navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"> Kimrim Project</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">사용자정보 <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+              <li><a href="#">김영식</a></li>
+              <li></li>
+              <li><a href="#">경기도</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">(주)삼성전자 회장</li>
+              <li><a href="#">Se@dd.com</a></li>
+              <li><a href="#">나는 누구인가?</a></li>
+            </ul>       
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="./">Logoout <span class="sr-only">(current)</span></a></li>
+          <li><a href="../navbar-static-top/">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">        
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사용회사 <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li>       
+                <table class="table table-bordered table-condensed" style="width: 250px;margin:10px;">
+                  <thead>
+                    <tr>
+                      <th>코드</th>
+                      <th>회사명</th>
+                      <th>사용여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="success">
+                      <td>1001</td>
+                      <td>(주)kimrim</td>
+                      <td>사용</td>
+                    </tr>
+                    <tr class="warning">
+                      <td>1002</td>
+                      <td>박후영</td>
+                      <td>미사용</td>
+                    </tr>
+                    <tr class="danger">
+                      <td>1003</td>
+                      <td>김배현</td>
+                      <td>사용</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="nav navbar-nav navbar-right">
+                  <div class="btn-group btn-group-sm" style="padding-right: 30px; margin-bottom: 10px;">
+                    <button type="button" class="btn btn-info">확인</button>
+                    <button type="button" class="btn btn-success">닫기</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="row">
+       <div class="col-md-3 logo">
+          <div class="well well-sm">
+            <h5>Logo</h5>
+            <img src="../../../asset/img/logo_small.jpg" class="img-responsive img-thumbnail" id="logo" alt="Responsive image">
+            <p>안녕하세요 박후영님</p>
+          </div>
+        </div>
+        <div class="col-md-9 menu-open">
+          <div class="navbar navbar-default" role="navigation">
+              <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav h-c">
+                  <li class="dropdown">
+                    <a href="../../../acc/tradeInsert/trade_insert/revenue.html" class="dropdown-toggle" role="button">회계관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../vat/report/report01/report.html" class="dropdown-toggle" role="button">부가가치세 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                     <a href="../../../stk/sales/sales_trade/sales.html" class="dropdown-toggle" role="button">물류관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../pay/salary/earned_income/salary_insert.html" class="dropdown-toggle" role="button">급여관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown open">
+                    <a href="../../base/base_establishment/totalCorTable.html" class="dropdown-toggle">법인조정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li><a href="../../base/base_establishment/totalCorTable.html">기초사항</a></li>
+                      <li><a href="../../incomeTaxStandard/subject_01/taxDuesDetails.html">소득금액/특별/감가</a></li>
+                      <li><a href="../../taxCalc/tax_confirmation/cor_tax_standard_report.html">세액계산신고</a></li>
+                      <li><a href="../../otherDeclaration/transper/transfer_plan.html">기타신고</a></li>
+                      <li><a href="../../declarationAttachment/report_attachment/smaller_enterprises_standard_review.html">신고부속/기타서식</a></li>
+                      <li><a href="../../nonprofit/basic/common_benefit_revenue_bussiness.html">비영리</a></li>
+                      <li><a href="../../commonBenefit/common_benefit_01/contribution_property_report.html">공익</a></li>
+                      <li><a href="../../business_inpartnership/basic/tax_special_application.html">동업</a></li>
+                      <li><a href="../../sincerity/basic/deductionTaxCalc.html">성실</a></li>
+                      <li><a href="../../elecDeclaration/elec/elecCor.html">전자신고</a></li>
+                      <li class="open2"><a href="../../connection/relate/tax_payment_way_apply.html">연결납세</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../per/base/base_establishment/totalPerTable.html" class="dropdown-toggle">개인조정 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">환경설정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="#">시스템 구성</a></li>
+                      <li><a href="#">화면셋팅</a></li>
+                    </ul>
+                  </li>
+                </ul> 
+             </div><!--/.nav-collapse -->                                    
+          </div> 
+          <div class="container" id="page">
+            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden; visibility: hidden;">
+              <!-- Loading Screen -->
+              <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position:absolute;display:block;background:url('../../../asset/img/jssor/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+              </div>
+              <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden;">
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/005.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/006.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/011.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/013.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/014.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/019.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/020.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/021.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/022.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/024.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/025.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/027.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/029.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/031.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/034.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/038.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/039.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/043.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/044.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/047.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/050.jpg" />
+               </div>
+             </div>
+             <!-- Bullet Navigator -->
+             <div data-u="navigator" class="jssorb03" style="bottom:10px;right:10px;">
+               <!-- bullet navigator item prototype -->
+               <div data-u="prototype" style="width:21px;height:21px;">
+                <div data-u="numbertemplate"></div>
+               </div>
+             </div>
+             <!-- Arrow Navigator -->
+             <span data-u="arrowleft" class="jssora03l" style="top:123px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <span data-u="arrowright" class="jssora03r" style="top:123px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
+           </div>
+           <!-- #endregion Jssor Slider End -->
+        </div><!-- div class="container" id="page" end -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="well well-sm">      
+        <div class="panel-group">          
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse23">관련서식</a></h4>
+            </div>
+            <div id="collapse23" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>여기는 세액확정</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../../connection/relate/tax_payment_way_apply.html" class="list-group-item">연결납세방식 적용신청서 <span class="badge">50</span></a>		
+		<a href="../../connection/relate/tax_payment_way_renounce.html" class="list-group-item">연결납세방식 포기신고서 <span class="badge">145</span></a>
+                <a href="../../connection/relate/cor_change.html" class="list-group-item">연결법인 변경신고서 <span class="badge">8</span></a>             
+	      </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse24">신고서식</a></h4>
+            </div>
+            <div id="collapse24" class="panel-collapse collapse in">
+	      <div class="panel-body">
+		<p>여기는 세액확정</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../../connection/report/connection_cor_tax_standard_report.html" class="list-group-item">각 연결사업연도의 소득에 대한 법인세 과세표준 및 세액신고서 <span class="badge">50</span></a>		
+		<a href="../../connection/report/connection_group_tax_standard_control.html" class="list-group-item">연결집단 법인세 과세표준 및 세액조정계산서 <span class="badge">145</span></a>
+                <a href="../../connection/report/connection_earnings_amount_control.html" class="list-group-item">연결소득금액 조정명세서 <span class="badge">8</span></a>
+                <a href="../../connection/report/connection_asset_transfer_control.html" class="list-group-item">연결법인간 이연대상 자산양도소득 조정명세서 <span class="badge">65</span></a>
+                <a href="../../connection/report/connection_asset_transfer_loss_control.html" class="list-group-item">연결법인간 이연대상 자산양도손실 조정명세서 <span class="badge">50</span></a>		
+		<a href="../../connection/report/connection_bad_debt_appropriation_control.html" class="list-group-item">연결법인 채권에 대한 대손충당금상당액 조정명세서 <span class="badge">145</span></a>
+                <a href="../../connection/report/combination_asset_loss_control.html" class="list-group-item">피합병법인으로부터 양도받은 자산 및 연결취득자법인의 자산 처분손실 조정명세서 <span class="badge">8</span></a>
+                <a href="../../connection/report/connection_transfer_deficit.html" class="list-group-item">연결법인 이월결손금 등 명세서 <span class="badge">8</span></a>
+		<a href="../../connection/report/connection_invest_hh.html" class="list-group-item active">연결법인간 출자현황 및 연결법인간 거래명세서 <span class="badge">30</span></a> 
+                <a href="../../connection/report/connection_share_control_01.html" class="list-group-item">연결법인 수입배당금 조정명세서(갑) <span class="badge">8</span></a> 
+                <a href="../../connection/report/connection_share_control_02.html" class="list-group-item">연결법인 수입배당금 조정명세서(을) <span class="badge">8</span></a>  
+		<a href="../../connection/report/connection_reception_control_01.html" class="list-group-item">연결법인 접대비조정명세서(갑) <span class="badge">65</span></a>
+                <a href="../../connection/report/connection_reception_control_02.html" class="list-group-item">연결법인 접대비조정명세서(을) <span class="badge">65</span></a>	               
+                <a href="../../connection/report/connection_contribution_01.html" class="list-group-item">연결법인 기부금조정명세서(갑) <span class="badge">65</span></a>
+                <a href="../../connection/report/connection_contribution_02.html" class="list-group-item">연결법인 기부금조정명세서(을) <span class="badge">65</span></a>
+		<a href="../../connection/report/connection_addition_tax_01.html" class="list-group-item">연결법인 가산세액계산서(갑) <span class="badge">8</span></a>
+                <a href="../../connection/report/connection_addition_tax_02.html" class="list-group-item">연결법인 가산세액계산서(을) <span class="badge">8</span></a>
+                <a href="../../connection/report/connection_smaller_enterprises_standard_review.html" class="list-group-item">연결법인 중소기업기준검토표(연결집단용) <span class="badge">8</span></a>
+                <a href="../../connection/report/connection_agriculture_special_tax_standard_report.html" class="list-group-item">연결법인 농어촌특별세 과세표준 및 세액신고서 <span class="badge">65</span></a>
+                <a href="../../connection/report/connection_agriculture_special_tax_standard_control_group.html" class="list-group-item">연결법인 농어촌특별세 과세표준 및 세액조정계산서(연결집단) <span class="badge">50</span></a>
+                <a href="../../connection/report/connection_agriculture_special_tax_standard_control_cor.html" class="list-group-item">연결법인 농어촌특별세 과세표준 및 세액조정계산서(연결법인별) <span class="badge">50</span></a>
+                <a href="../../connection/report/connection_base_tax_report.html" class="list-group-item">연결(모자)법인별 기본사항 및 법인세 신고서 <span class="badge">50</span></a>
+                <a href="../../connection/report/connection_cor_tax_standard_control.html" class="list-group-item">연결법인별 법인세 과세표준 및 세액조정계산서 <span class="badge">65</span></a>
+                <a href="../../connection/report/connection_minimum_tax_control.html" class="list-group-item">연결법인 최저한세조정계산서 <span class="badge">65</span></a>
+                <a href="../../connection/report/connection_earnings_separation.html" class="list-group-item">연결법인 소득구분계산서 <span class="badge">145</span></a>
+                <a href="../../connection/report/connection_cor_tax_middle_prepayment.html" class="list-group-item">연결법인 법인세 중간예납 신고납부계산서 <span class="badge">8</span></a>                           
+	      </div>
+            </div>
+	  </div>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="btn-toolbar mar_b3">         
+          <button type="button" class="btn btn-xs btn-success">종료(ESC)</button>                                     
+          <button type="button" class="btn btn-xs btn-primary">도움(F1)</button> 
+          <button type="button" class="btn btn-xs btn-danger">인쇄(F9)</button> 
+        </div>
+        <ol class="breadcrumb mar_b3">
+          <li><a href="#">연결납세제도</a></li>
+          <li><a href="#">신고서식</a></li>
+          <li class="active">연결법인간 출자현황 및 연결법인간 거래명세서</li>
+        </ol>
+        <div class="well well-sm"> 1. 연결법인간 출자현황<br>&nbsp;&nbsp; 가. 직접소유(모법인이 자법인을 완전지배)</div> 
+        <div class="table-responsive mar_tm18">                      
+         <table class="table table-bordered table-hover table-condensed">
+           <thead>
+            <tr class="success">
+             <th rowspan=2>1.연결자법인명</th>
+             <th rowspan=2>2.사업자등록번호</th>
+             <th rowspan=2>3.발행주식총수</th>
+             <th rowspan=2>4.자본금<br>(출자총액)</th>
+             <th colspan=2>우리사주조합 등 보유 주식</th>
+             <th colspan=5>출자법인(모법인) 현황</th>
+           </tr>
+           <tr class="success">
+             <th>5.출자주식수</th>
+             <th>6.출자금액</th>
+             <th>7.법인명</th>
+             <th>8.사업자등록번호</th>
+             <th>9.출자주식수</th>
+             <th>10.출자금액</th>
+             <th>11.출자비율</th>
+           </tr>
+         </thead>
+         <tbody>
+            <tr class="danger">                                                                                              
+             <td><input type="text" class="form-control"></td>                          
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td rowspan=5 class="mh114"><input type="text" class="form-control"></td>
+             <td rowspan=5 class="mh114"><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>                                                                                                                                         
+           </tr>
+           <tr class="success">
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+           </tr>
+           <tr class="danger">                              
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+           </tr>
+          <tr class="success">        
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+           </tr>
+           <tr class="danger">                              
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+           </tr> 
+           <tr class="warning">                              
+             <td colspan=11>&nbsp;</td>                                                                                                                                                                                    
+           </tr>       
+         </tbody>
+      </table> 
+      </div>          
+      <div class="well well-sm mar_tm18">나. 합동소유(2개 이상의 연결법인이 합동으로 출자하여 다른 연결법인을 완전지배)</div> 
+        <div class="table-responsive mar_tm18">                      
+         <table class="table table-bordered table-hover table-condensed">
+           <thead>
+            <tr class="success">
+             <th rowspan=2>12.연결자법인명</th>
+             <th rowspan=2>13.사업자등록번호</th>
+             <th rowspan=2>14.발행주식총수</th>
+             <th rowspan=2>15.자본금<br>(출자총액)</th>
+             <th colspan=2>우리사주조합 등 보유 주식</th>
+             <th colspan=5>출자법인(모법인 및 다른 자법인) 현황</th>
+           </tr>
+           <tr class="success">
+             <th>16.출자주식수</th>
+             <th>17.출자금액</th>
+             <th>18.법인명</th>
+             <th>19.사업자등록번호</th>
+             <th>20.출자주식수</th>
+             <th>21.출자금액</th>
+             <th>22.출자비율</th>
+           </tr>
+         </thead>
+         <tbody>
+            <tr class="danger">                                                                                              
+             <td><input type="text" class="form-control"></td>                          
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td rowspan=5 class="mh114"><input type="text" class="form-control"></td>
+             <td rowspan=5 class="mh114"><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>                                                                                                                                         
+           </tr>
+           <tr class="success">        
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+           </tr>
+           <tr class="danger">                              
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+           </tr>
+          <tr class="success">        
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+           </tr>
+           <tr class="danger">                              
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+           </tr> 
+           <tr class="warning">                              
+             <td colspan=11>&nbsp;</td>                                                                                                                                                                                    
+           </tr>        
+         </tbody>
+      </table> 
+      </div>          
+      <div class="well well-sm mar_tm18">다. 연쇄소유(자법인이 다른 연결법인을 완전지배)</div> 
+        <div class="table-responsive mar_tm18">                      
+         <table class="table table-bordered table-hover table-condensed">
+           <thead>
+            <tr class="success">
+             <th rowspan=2>23.연결자법인명</th>
+             <th rowspan=2>24.사업자등록번호</th>
+             <th rowspan=2>25.발행주식총수</th>
+             <th rowspan=2>26.자본금<br>(출자총액)</th>
+             <th colspan=2>우리사주조합 등 보유 주식</th>
+             <th colspan=5>출자법인(모법인 및 다른 자법인) 현황</th>
+           </tr>
+           <tr class="success">
+             <th>27.출자주식수</th>
+             <th>28.출자금액</th>
+             <th>29.법인명</th>
+             <th>30.사업자등록번호</th>
+             <th>31.출자주식수</th>
+             <th>32.출자금액</th>
+             <th>33.출자비율</th>
+           </tr>
+         </thead>
+         <tbody>
+            <tr class="success">                                                                                              
+             <td><input type="text" class="form-control"></td>                          
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td rowspan=5 class="mh114"><input type="text" class="form-control"></td>
+             <td rowspan=5 class="mh114"><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>                                                                                                                                         
+           </tr>
+           <tr class="success">        
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+           </tr>
+           <tr class="danger">                              
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+           </tr>
+          <tr class="success">        
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+           </tr>
+           <tr class="danger">                              
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+             <td><input type="text" class="form-control"></td>
+           </tr> 
+           <tr class="warning">                              
+             <td colspan=11>&nbsp;</td>                                                                                                                                                                                    
+           </tr>        
+         </tbody>
+      </table> 
+     </div>     
+     <div class="well well-sm mar_tm18">2. 연결법인간 거래명세서<br>&nbsp;&nbsp;가. 연결법인에 대한 접대비 지출내역</div> 
+     <div class="table-responsive mar_tm18">                      
+         <table class="table table-bordered table-hover table-condensed">
+           <thead>
+            <tr class="success">
+             <th colspan=2>접대비지출 법인</th>
+             <th colspan=2>접대 받은 연결법인</th>
+             <th rowspan=2>38.접대비 지출액<br>계(39+40)</th>
+             <th rowspan=2>39.사적 사용 경비 등<br>손금 불산입액</th>
+             <th rowspan=2>40.<br>접대비 해당액</th>
+             <th rowspan=2>41.접대비 해당액 중<br>신용카드 등 미사용액</th>
+           </tr>
+           <tr class="success">
+             <th>34.법인명</th>
+             <th>35.사업자등록번호</th>
+             <th>36.법인명</th>
+             <th>37.사업자등록번호</th>
+           </tr>
+         </thead>
+         <tbody>
+            <tr class="success">
+             <td class="mh68"><input type="text" class="form-control foc a next110"></td>
+             <td class="mh68"><input type="text" class="form-control foc a next114"></td>
+             <td colspan=6>
+                 <table class="table table-bordered table-hover table-condensed">
+                     <tbody>
+                         <tr class="danger nodel">
+                              <td colspan=2 class="tacvam wid292">계</td>
+                              <td class="wid169"><input type="text" class="form-control" readonly="readonly"></td>
+                              <td class="wid201"><input type="text" class="form-control" readonly="readonly"></td>
+                              <td class="wid14"><input type="text" class="form-control" readonly="readonly"></td>
+                              <td><input type="text" class="form-control" readonly="readonly"></td>
+                          </tr>
+                          <tr class="danger">
+                              <td><input type="text" class="form-control foc a next110"></td>
+                              <td><input type="text" class="form-control foc a next120"></td>
+                              <td><input type="text" class="form-control" readonly="readonly"></td>
+                              <td><input type="text" class="form-control cacE T_10_001 A next110 3_2_x_1_0"></td>
+                              <td><input type="text" class="form-control cacE T_10_001 A next110 4_2_x_2_0"></td>
+                              <td><input type="text" class="form-control cacN2 T_00_008 Aarr next210 5_x_3"></td>
+                          </tr>
+                          <tr class="danger">
+                              <td><input type="text" class="form-control foc a next110"></td>
+                              <td><input type="text" class="form-control foc a next120"></td>
+                              <td><input type="text" class="form-control" readonly="readonly"></td>
+                              <td><input type="text" class="form-control cacE T_10_001 A next110 3_2_x_1_0"></td>
+                              <td><input type="text" class="form-control cacE T_10_001 A next110 4_2_x_2_0"></td>
+                              <td><input type="text" class="form-control cacN2 T_00_008 Aarr next210 5_x_3"></td>
+                          </tr>
+                      </tbody>
+                 </table> 
+             </td>
+           </tr>
+           <tr class="success">
+             <td class="mh68"><input type="text" class="form-control foc a next110"></td>
+             <td class="mh68"><input type="text" class="form-control foc a next114"></td>
+             <td colspan=6>
+                 <table class="table table-bordered table-hover table-condensed">
+                     <tbody>
+                         <tr class="danger nodel">
+                              <td colspan=2 class="tacvam wid292">계</td>
+                              <td class="wid169"><input type="text" class="form-control" readonly="readonly"></td>
+                              <td class="wid201"><input type="text" class="form-control" readonly="readonly"></td>
+                              <td class="wid14"><input type="text" class="form-control" readonly="readonly"></td>
+                              <td><input type="text" class="form-control" readonly="readonly"></td>
+                          </tr>
+                          <tr class="danger">
+                              <td><input type="text" class="form-control foc a next110"></td>
+                              <td><input type="text" class="form-control foc a next120"></td>
+                              <td><input type="text" class="form-control" readonly="readonly"></td>
+                              <td><input type="text" class="form-control cacE T_10_001 A next110 3_2_x_1_0"></td>
+                              <td><input type="text" class="form-control cacE T_10_001 A next110 4_2_x_2_0"></td>
+                              <td><input type="text" class="form-control cacN2 T_00_008 Aarr next210 5_x_3"></td>
+                          </tr>
+                          <tr class="danger">
+                              <td><input type="text" class="form-control foc a next110"></td>
+                              <td><input type="text" class="form-control foc a next120"></td>
+                              <td><input type="text" class="form-control" readonly="readonly"></td>
+                              <td><input type="text" class="form-control cacE T_10_001 A next110 3_2_x_1_0"></td>
+                              <td><input type="text" class="form-control cacE T_10_001 A next110 4_2_x_2_0"></td>
+                              <td><input type="text" class="form-control cacN2 T_00_008 Aarr next210 5_x_3"></td>
+                          </tr>
+                      </tbody>
+                 </table> 
+             </td>
+           </tr>
+           <tr class="warning">                              
+             <td colspan=8>&nbsp;</td>                                                                                                                                                                                    
+           </tr>       
+         </tbody>
+        </table> 
+      </div>  
+      <div class="well well-sm mar_tm18">나. 사업연도말 현재 연결법인에 대한 채권액 및 대손충당금 설정 내역</div> 
+      <div class="table-responsive mar_tm18">                      
+         <table class="table table-bordered table-hover table-condensed">
+           <thead>
+            <tr class="success">
+             <th colspan=2>채 권 자</th>
+             <th colspan=2>채 무 자</th>
+             <th rowspan=2>46.<br>채권 총액</th>
+             <th rowspan=2>47.<br>대손충당금 설정대상<br> 채권</th>
+             <th colspan=3>연결법인 채권에 대한 대손충당금 상당액</th>
+           </tr>
+           <tr class="success">
+             <th>42.<br>법인명</th>
+             <th>43.<br>사업자등록번호</th>
+             <th>44.<br>법인명</th>
+             <th>45.<br>사업자등록번호</th>
+             <th>48.손금산입액</th>
+             <th>49.한도초과액 상당액</th>
+             <th>50.<br>차감액<br>(48-49)</th>
+           </tr>
+         </thead>
+         <tbody>
+            <tr class="danger">
+             <td class="mh68"><input type="text" class="form-control foc a next110"></td>
+             <td class="mh68"><input type="text" class="form-control foc a next115"></td>
+             <td colspan=7>
+                 <table class="table table-bordered table-hover table-condensed">
+                     <tbody>
+                         <tr class="danger nodel">
+                             <td colspan=2 class="tacvam wid237">채권자별 계</td>
+                             <td class="wid104"><input type="text" class="form-control" readonly="readonly"></td>
+                             <td class="wid203"><input type="text" class="form-control" readonly="readonly"></td>
+                             <td class="wid15"><input type="text" class="form-control" readonly="readonly"></td>
+                             <td class="wid217"><input type="text" class="form-control" readonly="readonly"></td>  
+                             <td><input type="text" class="form-control" readonly="readonly"></td>
+                         </tr>
+                         <tr class="danger">
+                             <td><input type="text" class="form-control foc a next110"></td>
+                             <td><input type="text" class="form-control foc a next110"></td>
+                             <td><input type="text" class="form-control cacN2 T_00_008 Aarr next110 2_x_0"></td>
+                             <td><input type="text" class="form-control cacN2 T_00_008 Aarr next110 3_x_1"></td>
+                             <td><input type="text" class="form-control cacE T_10_001 S next110 4_6_x_2_4"></td>
+                             <td><input type="text" class="form-control cacE T_10_001 Sm next210 5_6_x_3_4"></td> 
+                             <td><input type="text" class="form-control sum" readonly="readonly"></td>
+                         </tr>
+                         <tr class="danger">
+                             <td><input type="text" class="form-control foc a next110"></td>
+                             <td><input type="text" class="form-control foc a next110"></td>
+                             <td><input type="text" class="form-control cacN2 T_00_008 Aarr next110 2_x_0"></td>
+                             <td><input type="text" class="form-control cacN2 T_00_008 Aarr next110 3_x_1"></td>
+                             <td><input type="text" class="form-control cacE T_10_001 S next110 4_6_x_2_4"></td>
+                             <td><input type="text" class="form-control cacE T_10_001 Sm next210 5_6_x_3_4"></td> 
+                             <td><input type="text" class="form-control sum" readonly="readonly"></td>
+                         </tr>
+                      </tbody>
+                  </table>
+              </td>
+           </tr>
+           <tr class="danger">
+             <td class="mh68"><input type="text" class="form-control foc a next110"></td>
+             <td class="mh68"><input type="text" class="form-control foc a next115"></td>
+             <td colspan=7>
+                 <table class="table table-bordered table-hover table-condensed">
+                     <tbody>
+                         <tr class="danger nodel">
+                             <td colspan=2 class="tacvam wid237">채권자별 계</td>
+                             <td class="wid104"><input type="text" class="form-control" readonly="readonly"></td>
+                             <td class="wid203"><input type="text" class="form-control" readonly="readonly"></td>
+                             <td class="wid15"><input type="text" class="form-control" readonly="readonly"></td>
+                             <td class="wid217"><input type="text" class="form-control" readonly="readonly"></td>  
+                             <td><input type="text" class="form-control" readonly="readonly"></td>
+                         </tr>
+                         <tr class="danger">
+                             <td><input type="text" class="form-control foc a next110"></td>
+                             <td><input type="text" class="form-control foc a next110"></td>
+                             <td><input type="text" class="form-control cacN2 T_00_008 Aarr next110 2_x_0"></td>
+                             <td><input type="text" class="form-control cacN2 T_00_008 Aarr next110 3_x_1"></td>
+                             <td><input type="text" class="form-control cacE T_10_001 S next110 4_6_x_2_4"></td>
+                             <td><input type="text" class="form-control cacE T_10_001 Sm next210 5_6_x_3_4"></td> 
+                             <td><input type="text" class="form-control sum" readonly="readonly"></td>
+                         </tr>
+                         <tr class="danger">
+                             <td><input type="text" class="form-control foc a next110"></td>
+                             <td><input type="text" class="form-control foc a next110"></td>
+                             <td><input type="text" class="form-control cacN2 T_00_008 Aarr next110 2_x_0"></td>
+                             <td><input type="text" class="form-control cacN2 T_00_008 Aarr next110 3_x_1"></td>
+                             <td><input type="text" class="form-control cacE T_10_001 S next110 4_6_x_2_4"></td>
+                             <td><input type="text" class="form-control cacE T_10_001 Sm next210 5_6_x_3_4"></td> 
+                             <td><input type="text" class="form-control sum" readonly="readonly"></td>
+                         </tr>
+                      </tbody>
+                  </table>
+              </td>
+           </tr>
+           <tr class="warning">                              
+             <td colspan=9>&nbsp;</td>                                                                                                                                                                                    
+           </tr>       
+         </tbody>
+      </table> 
+      </div>  
+      <div class="well well-sm mar_tm18">다. 연결법인간 이연대상 자산 양도거래 및 양도손익 조정내역</div> 
+     <div class="table-responsive mar_tm18">                      
+         <table class="table table-bordered table-hover table-condensed">
+           <thead>
+            <tr class="success">
+             <th colspan=2>양도법인</th>
+             <th colspan=2>양수법인</th>
+             <th colspan=3>자산종류</th>
+             <th rowspan=2>58.<br>양도가액</th>
+             <th rowspan=2>59.<br>장부가액</th>
+             <th rowspan=2>60.<br>양도소득</th>
+             <th rowspan=2>61.<br>양도손실</th>
+             <th colspan=2>해당사업연도<br>실현이익(손실)</th>
+             <th colspan=2>이연대상 자산<br>양도손익 조정액</th>
+           </tr>
+           <tr class="success">
+             <th>51.법인명</th>
+             <th>52.사업자<br>등록번호</th>
+             <th>53.법인명</th>
+             <th>54.사업자<br>등록번호</th>
+             <th>55.구분</th>
+             <th>56.<br>코드</th>
+             <th>57.과목<br>(항목)</th>
+             <th>62.익금<br>산입</th>
+             <th>63.손금<br>산입</th>
+             <th>64.양도소득<br>(60-62)</th>
+             <th>65.양도손실<br>(61-63)</th>
+           </tr>
+         </thead>
+         <tbody>
+            <tr class="danger">
+             <td class="mh68"><input type="text" class="form-control foc a next110"></td>
+             <td class="mh68"><input type="text" class="form-control foc a next118"></td>
+             <td colspan=13>
+                 <table class="table table-bordered table-hover table-condensed">
+                     <tbody>
+                         <tr class="danger nodel">
+                             <td colspan=5 class="tacvam">양도법인별 계</td>
+                             <td><input type="text" class="form-control" readonly="readonly"></td>
+                             <td><input type="text" class="form-control" readonly="readonly"></td>
+                             <td><input type="text" class="form-control" readonly="readonly"></td>
+                             <td><input type="text" class="form-control" readonly="readonly"></td>  
+                             <td><input type="text" class="form-control" readonly="readonly"></td>
+                             <td><input type="text" class="form-control" readonly="readonly"></td>
+                             <td><input type="text" class="form-control" readonly="readonly"></td>
+                             <td><input type="text" class="form-control" readonly="readonly"></td>  
+                          </tr>
+                          <tr class="danger">
+                             <td class="wid85"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid86"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid7"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid045"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid71"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid76"><input type="text" class="form-control cacN2 T_00_008 Aarr next110 5_x_0"></td> 
+                             <td class="wid76"><input type="text" class="form-control cacN2 T_00_008 Aarr next130 6_x_1"></td>  
+                             <td class="wid76"><input type="text" class="form-control S" readonly="readonly"></td>
+                             <td class="wid76"><input type="text" class="form-control S2" readonly="readonly"></td>
+                             <td class="wid7"><input type="text" class="form-control cacE T_10_001 Sm next110 9_11_X_4_6"></td>
+                             <td class="wid7"><input type="text" class="form-control cacE T_10_001 Sm2 next610 10_12_X_5_7"></td>
+                             <td><input type="text" class="form-control sum" readonly="readonly"></td> 
+                             <td><input type="text" class="form-control sum" readonly="readonly"></td>
+                         </tr> 
+                         <tr class="danger">
+                             <td class="wid85"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid86"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid7"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid045"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid71"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid76"><input type="text" class="form-control cacN2 T_00_008 Aarr next110 5_x_0"></td> 
+                             <td class="wid76"><input type="text" class="form-control cacN2 T_00_008 Aarr next130 6_x_1"></td>  
+                             <td class="wid76"><input type="text" class="form-control S" readonly="readonly"></td>
+                             <td class="wid76"><input type="text" class="form-control S2" readonly="readonly"></td>
+                             <td class="wid7"><input type="text" class="form-control cacE T_10_001 Sm next110 9_11_X_4_6"></td>
+                             <td class="wid7"><input type="text" class="form-control cacE T_10_001 Sm2 next610 10_12_X_5_7"></td>
+                             <td><input type="text" class="form-control sum" readonly="readonly"></td> 
+                             <td><input type="text" class="form-control sum" readonly="readonly"></td>
+                         </tr> 
+                     </tbody>
+                  </table> 
+               </td>
+           </tr>
+           <tr class="danger">
+             <td class="mh68"><input type="text" class="form-control foc a next110"></td>
+             <td class="mh68"><input type="text" class="form-control foc a next118"></td>
+             <td colspan=13>
+                 <table class="table table-bordered table-hover table-condensed">
+                     <tbody>
+                         <tr class="danger nodel">
+                             <td colspan=5 class="tacvam">양도법인별 계</td>
+                             <td><input type="text" class="form-control" readonly="readonly"></td>
+                             <td><input type="text" class="form-control" readonly="readonly"></td>
+                             <td><input type="text" class="form-control" readonly="readonly"></td>
+                             <td><input type="text" class="form-control" readonly="readonly"></td>  
+                             <td><input type="text" class="form-control" readonly="readonly"></td>
+                             <td><input type="text" class="form-control" readonly="readonly"></td>
+                             <td><input type="text" class="form-control" readonly="readonly"></td>
+                             <td><input type="text" class="form-control" readonly="readonly"></td>  
+                          </tr>
+                          <tr class="danger">
+                             <td class="wid85"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid86"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid7"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid045"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid71"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid76"><input type="text" class="form-control cacN2 T_00_008 Aarr next110 5_x_0"></td> 
+                             <td class="wid76"><input type="text" class="form-control cacN2 T_00_008 Aarr next130 6_x_1"></td>  
+                             <td class="wid76"><input type="text" class="form-control S" readonly="readonly"></td>
+                             <td class="wid76"><input type="text" class="form-control S2" readonly="readonly"></td>
+                             <td class="wid7"><input type="text" class="form-control cacE T_10_001 Sm next110 9_11_X_4_6"></td>
+                             <td class="wid7"><input type="text" class="form-control cacE T_10_001 Sm2 next610 10_12_X_5_7"></td>
+                             <td><input type="text" class="form-control sum" readonly="readonly"></td> 
+                             <td><input type="text" class="form-control sum" readonly="readonly"></td>
+                         </tr> 
+                         <tr class="danger">
+                             <td class="wid85"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid86"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid7"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid045"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid71"><input type="text" class="form-control foc a next110"></td>
+                             <td class="wid76"><input type="text" class="form-control cacN2 T_00_008 Aarr next110 5_x_0"></td> 
+                             <td class="wid76"><input type="text" class="form-control cacN2 T_00_008 Aarr next130 6_x_1"></td>  
+                             <td class="wid76"><input type="text" class="form-control S" readonly="readonly"></td>
+                             <td class="wid76"><input type="text" class="form-control S2" readonly="readonly"></td>
+                             <td class="wid7"><input type="text" class="form-control cacE T_10_001 Sm next110 9_11_X_4_6"></td>
+                             <td class="wid7"><input type="text" class="form-control cacE T_10_001 Sm2 next610 10_12_X_5_7"></td>
+                             <td><input type="text" class="form-control sum" readonly="readonly"></td> 
+                             <td><input type="text" class="form-control sum" readonly="readonly"></td>
+                         </tr>  
+                     </tbody>
+                  </table> 
+               </td>
+           </tr>
+           <tr class="warning">                              
+             <td colspan=15>&nbsp;</td>                                                                                                                                                                                    
+           </tr>       
+         </tbody>
+      </table> 
+      </div>                                                               
+      <div class="nav navbar-nav navbar-right">
+               <div class="btn-group btn-group-xs mtm10mb10pr30">
+                <button type="button" class="btn btn-info tableinput-toggle" name="tab-tax1">수정취소</button>
+                <button type="button" class="btn btn-success table-toggle">재수정</button>
+               </div>
+             </div>               
+  </div> <!-- end col-md-9 -->
+  </div> <!-- end row -->
+  </div> <!-- end container -->
+
+<div class="container"> 
+<div class="row">
+<div class="col-md-12">    
+<div class="footer well">
+<div class="">
+        <p><a href="#" title="당신&apos;s 이름은">Tooltips</a> 무엇인가요?. 자세히 보아야 예쁘다
+오래 보아야 사랑스럽다
+너도 그렇다</p>
+        <p>But as it's not a native tooltip, it can be styled. Any themes built with<a href="http://jqueryui.com/themeroller/" title="당신은 나의 동반자">ThemeRoller</a>will also style tooltips accordingly.</p>
+        <p>그대가 꺾어준 꽃
+시들 때 까지 들여다 보았네
+그대가 남기고 간 시든 꽃
+다시 필 때까지</p>
+        <p><label for="age">Your age:</label> <input id="age" title="We ask for your age only for statistical purposes."></p>
+        <p>Hover the field to see the tooltip.</p>
+      </div>
+             <div class="bs-example"> 
+    <button type="button" class="btn btn-default" rel="txtTooltip" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+<button type="button" class="btn btn-primary" rel="txtTooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+<button type="button" class="btn btn-info" rel="txtTooltip" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+<button type="button" class="btn btn-danger" rel="txtTooltip" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+</div>
+ </div>
+</div>
+</div>
+</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!--<script>window.jQuery || document.write('<script src="../../../js/jquery.min.js"></script>')</script> -->
+    <script src="../../../asset/js/jquery.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.12.3.min.js"></script> -->
+
+    <script src="../../../asset/js/bootstrap.min.js"></script>
+    <script src="../../../asset/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../../asset/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="../../../asset/js/header-content.js"></script>
+
+    <script src="../../../asset/js/jssor/jssor.slider.mini.js"></script>
+    <script src="../../../asset/js/jssor.js"></script>
+  
+    <script src="../../../asset/js/main.js"></script> 
+    <script src="../../../asset/js/main_popup.js"></script> 
+    <script src="../../../asset/js/main_popup_item.js"></script> 
+    <script src="../../../asset/js/datepicker.js"></script>
+    <script src="../../../asset/js/lan_ko.js"></script>
+    <script src="../../../asset/js/con_tab.js"></script>
+    <script src="../../../asset/js/con_topmenu.js"></script>
+    <script src="../../../asset/js/toolbar_popup.js"></script>
+    <script src="../../../asset/js/con_mainmenu.js"></script>
+        
+    <!-- dialog로딩 시 autofocus없애기 -->
+    <script>$.ui.dialog.prototype._focusTabbable = function(){};</script>
+   
+    <script src="../../../asset/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="../../../asset/DataTables/media/js/dataTables.jqueryui.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/dataTables.buttons.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.jqueryui.js"></script>
+    <script src="../../../asset/DataTables/extensions/Scroller/js/dataTables.scroller.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.html5.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.print.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.colVis.js"></script>
+    <script class="init">
+ 
+    </script>
+  </body>
+</html>

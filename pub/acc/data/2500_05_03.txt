@@ -1,0 +1,21 @@
+﻿{ "aaData": [
+	[ "1.원재료비", "Armand", "Warren", "56045", "Taiwan, Province of China" ],
+	[ "원재료비", "Xenos", "Salas", "71090", "Liberia"],
+	[ "기초원재료재고액", "Virginia", "Whitaker", "62723", "Nicaragua"  ],
+	[ "당기원재료매입액", "Kato", "Patrick", "97662", "Palau" ],
+	[ "기말원재료재고액", "Penelope", "Hensley", "76634", "Greenland" ],
+	[ "2.노무비", "Georgia", "Erickson", "81358", "Bolivia"  ],
+	[ "임금", "Shad", "Pena", "20600", "Palestinian Territory, Occupied"],
+	[ "상여금", "Tanisha", "Humphrey", "93371", "Kenya"  ],
+	[ "퇴직급여", "Claire", "Espinoza", "I8S 2S8", "Panama" ],
+	[ "3.경비", "Raya", "Tucker", "O8D 8W7", "Botswana"  ],
+	[ "복리후생비", "Otto", "Briggs", "57590", "Anguilla"  ],
+	[ "접대비", "Logan", "Burt", "53041", "Venezuela" ],
+	[ "통신비", "Cooper", "Pennington", "36994", "France"  ],
+	[ "여비교통비", "Kristen", "Peterson", "52917", "Sao Tome and Principe"  ],
+	[ "전력비", "Jordan", "Velasquez", "08884", "Switzerland" ],
+	[ "수도광열비", "Zelda", "Freeman", "F9H 1J9", "Holy See (Vatican City State)"  ],
+	[ "4.당기총제조비용", "Mary", "Pacheco", "A7Y 6X9", "Niger" ],
+	[ "5.기초재공품재고액", "Tiger", "Robles", "44533", "Malaysia"  ],
+	[ "6.합계", "Zelenia", "Buckner", "Q8N 6E5", "Malawi"  ]
+] }

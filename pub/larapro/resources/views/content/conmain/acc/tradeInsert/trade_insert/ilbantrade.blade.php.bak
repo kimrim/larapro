@@ -1,0 +1,640 @@
+﻿@include('content.conbutton.acc.tradeInsert.trade_insert.revenue')
+@include('content.conbreadcrumb.acc.tradeInsert.trade_insert.ilbantrade')
+        <ul class="nav nav-tabs mar_tm18" id="" role="tablist">
+          <li role="presentation" class="active"><a href="#tab-tax1" role="tab">일반</a></li>  
+          <li role="presentation"><a href="#tab-tax2">영수증</a></li>
+          <li role="presentation"><a href="#tab-tax3">가수/가지급</a></li>
+          <li role="presentation"><a href="#tab-tax4">접대비</a></li>
+          <li role="presentation"><a href="#tab-tax5">기부금</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active pad_t5" id="tab-tax1"> 
+            <form class="form-horizontal" id="form1">  
+          <div class="row">
+            <div class="col-md-12"> 
+              <div class="well well-sm" style="padding-bottom: 0px;">            
+                <div class="form-group">
+                  <label class="control-label col-md-1">일자</label>
+                  <div class="col-md-2">
+                    <input type="text" class="form-control input-sm datepicker" readonly="readonly">
+                  </div> 
+                  <label class="control-label col-md-2">전표번호</label>
+                  <div class="col-md-2">
+                    <input type="text" class="form-control input-sm" readonly="readonly">
+                  </div> 
+                  <label class="control-label col-md-2">차액</label>
+                  <div class="col-md-2">
+                    <input type="text" class="form-control input-sm" readonly="readonly" style="background: purple;">
+                  </div>                          
+                </div>
+                <div class="table-responsive" style="margin-bottom: 3px; overflow:visible;">        
+                  <table class="table table-bordered table-hover table-condensed" id="">
+                    <thead>
+                      <tr class="success">
+                        <th class="">일자</th>
+                        <th class="">전표번호</th>
+                        <th class="">구분</th>
+                        <th class="">코드</th>
+                        <th class="">거래처</th>
+                        <th class="">코드</th>
+                        <th class="">계정과목</th>
+                        <th class="">차변</th>
+                        <th class="">대변</th>
+                        <th class="">코드</th>
+                        <th class="">적요</th>
+                        <th class="wid1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></th>
+                        <th class="wid1"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="success">
+                        <td><input type="text" class="form-control datepicker next121a" readonly="readonly"></td>
+                        <td><input type="text" class="form-control" readonly="readonly"></td>
+                        <td style="text-align: center;">
+                         <div class="dropdown">
+                          <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">입금 <span class="caret"></span></a>
+                          <ul class="dropdown-menu next220 focilban">
+                             <li><a href="#">입금</li>
+                             <li><a href="#">출금</a></li>
+                             <li><a href="#">차변</a></li>
+                             <li><a href="#">대변</a></li>
+                          </ul>
+                         </div>
+                        </td>
+                        <td><input type="text" class="form-control cac code" readonly="readonly"></td>
+                        <td><input type="text" class="form-control pop client next120 t" readonly="readonly"></td>
+                        <td><input type="text" class="form-control cac code2" readonly="readonly"></td>
+                        <td><input type="text" class="form-control pop account next110sel t" readonly="readonly"></td>
+                        <td><input type="text" class="form-control cac cor next131" disabled=true></td>
+                        <td><input type="text" class="form-control cac dor next121"></td>
+                        <td><input type="text" class="form-control cac code3" readonly="readonly"></td>
+                        <td><input type="text" class="form-control foc summary next210"></td>
+                        <td><input type="text" class="form-control plus"></td>
+                        <td><input type="text" class="form-control minus"></td>
+                      </tr>
+                      <tr class="success">
+                        <td><input type="text" class="form-control datepicker next121a" readonly="readonly"></td>
+                        <td><input type="text" class="form-control" readonly="readonly"></td>
+                        <td style="text-align: center;">
+                         <div class="dropdown">
+                          <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">입금 <span class="caret"></span></a>
+                          <ul class="dropdown-menu next220 focilban">
+                             <li><a href="#">입금</li>
+                             <li><a href="#">출금</a></li>
+                             <li><a href="#">차변</a></li>
+                             <li><a href="#">대변</a></li>
+                          </ul>
+                         </div>
+                        </td>
+                        <td><input type="text" class="form-control cac code" readonly="readonly"></td>
+                        <td><input type="text" class="form-control pop client next120 t" readonly="readonly"></td>
+                        <td><input type="text" class="form-control cac code2" readonly="readonly"></td>
+                        <td><input type="text" class="form-control pop account next110sel t" readonly="readonly"></td>
+                        <td><input type="text" class="form-control cac cor next131" disabled=true></td>
+                        <td><input type="text" class="form-control cac dor next121"></td>
+                        <td><input type="text" class="form-control cac code3" readonly="readonly"></td>
+                        <td><input type="text" class="form-control foc summary next210"></td>
+                        <td><input type="text" class="form-control plus"></td>
+                        <td><input type="text" class="form-control minus"></td>
+                      </tr>
+                      <tr class="success">
+                        <td><input type="text" class="form-control datepicker next121a" readonly="readonly"></td>
+                        <td><input type="text" class="form-control" readonly="readonly"></td>
+                        <td style="text-align: center;">
+                         <div class="dropdown">
+                          <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">입금 <span class="caret"></span></a>
+                          <ul class="dropdown-menu next220 focilban">
+                             <li><a href="#">입금</li>
+                             <li><a href="#">출금</a></li>
+                             <li><a href="#">차변</a></li>
+                             <li><a href="#">대변</a></li>
+                          </ul>
+                         </div>
+                        </td>
+                        <td><input type="text" class="form-control cac code" readonly="readonly"></td>
+                        <td><input type="text" class="form-control pop client next120 t" readonly="readonly"></td>
+                        <td><input type="text" class="form-control cac code2" readonly="readonly"></td>
+                        <td><input type="text" class="form-control pop account next110sel t" readonly="readonly"></td>
+                        <td><input type="text" class="form-control cac cor next131" disabled=true></td>
+                        <td><input type="text" class="form-control cac dor next121"></td>
+                        <td><input type="text" class="form-control cac code3" readonly="readonly"></td>
+                        <td><input type="text" class="form-control foc summary next210"></td>
+                        <td><input type="text" class="form-control plus"></td>
+                        <td><input type="text" class="form-control minus"></td>
+                      </tr>
+                      <tr class="success">
+                        <td><input type="text" class="form-control datepicker next121a" readonly="readonly"></td>
+                        <td><input type="text" class="form-control" readonly="readonly"></td>
+                        <td style="text-align: center;">
+                         <div class="dropdown">
+                          <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">입금 <span class="caret"></span></a>
+                          <ul class="dropdown-menu next220 focilban">
+                             <li><a href="#">입금</li>
+                             <li><a href="#">출금</a></li>
+                             <li><a href="#">차변</a></li>
+                             <li><a href="#">대변</a></li>
+                          </ul>
+                         </div>
+                        </td>
+                        <td><input type="text" class="form-control cac code" readonly="readonly"></td>
+                        <td><input type="text" class="form-control pop client next120 t" readonly="readonly"></td>
+                        <td><input type="text" class="form-control cac code2" readonly="readonly"></td>
+                        <td><input type="text" class="form-control pop account next110sel t" readonly="readonly"></td>
+                        <td><input type="text" class="form-control cac cor next131" disabled=true></td>
+                        <td><input type="text" class="form-control cac dor next121"></td>
+                        <td><input type="text" class="form-control cac code3" readonly="readonly"></td>
+                        <td><input type="text" class="form-control foc summary next210"></td>
+                        <td><input type="text" class="form-control plus"></td>
+                        <td><input type="text" class="form-control minus"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>               
+                </div><!-- end well -->
+          </div> <!-- end col-md-8 --> 
+          <div class="col-md-12">
+            <div class="well well-sm mar_tm18">
+              <div class="form-group">
+                <label class="control-label col-md-2">적요</label>
+                <div class="col-md-8">
+                  <div class="input-group">
+                    <span class="input-group-addon">02</span>
+                    <input type="text" class="form-control pop summary next310 n" style="z-index: 0;" readonly="readonly">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-2">부서사원</label>
+                <div class="col-md-3">
+                  <div class="input-group">
+                    <span class="input-group-addon">123</span>
+                    <input type="text" class="form-control pop busa next220 n" readonly="readonly">
+                  </div>
+                </div>
+                <label class="control-label col-md-2">현&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;장</label>
+                <div class="col-md-3">
+                  <div class="input-group">
+                    <span class="input-group-addon">003</span>
+                    <input type="text" class="form-control pop hh next310 n" readonly="readonly">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-2">프로젝트</label>
+                <div class="col-md-3">
+                  <div class="input-group">
+                    <span class="input-group-addon">023</span>
+                    <input type="text" class="form-control pop project next100" readonly="readonly">
+                  </div>
+                </div>
+              </div>
+          </div> <!-- end well -->
+            </div> <!-- end col-md-4 -->         
+           </div> <!-- end row --> 
+      <div class="row">
+      <div class="col-md-12"> 
+      <div class="well well-sm mar_tm18">
+	@include('content.conbuttonmid.one')  
+        </div> <!-- end well --> 
+      </div><!-- end col-md-12 --> 
+      </div> <!-- end row -->                             
+          </form>
+        </div>  <!-- end tab-pane tax1 -->
+        <div class="tab-pane pad_t5" id="tab-tax2"> 
+          <form class="form-horizontal" id="form2"> 
+           <div class="row">
+            <div class="col-md-8"> 
+              <div class="well well-sm">             
+                <div class="form-group">
+                  <label class="control-label col-md-2">일자</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm next210b datepicker" readonly="readonly">
+                  </div>
+                  <label class="control-label col-md-2">전표번호</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm g-modal" readonly="readonly">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">사유</label>
+                  <div class="col-md-4">
+                    <div class="btn-toolbar">         
+                      <div class="btn-group btn-group-xs">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">2.명세서제출대상 <span class="caret"></span></button>
+                        <ul class="dropdown-menu settlement2" role="menu">
+                          <li><a href="#">1.해당사항없음</a></li>
+                          <li><a href="#">2.명세서제출대상</a></li>
+                          <li><a href="#">3.명세서제출제외대상</a></li>
+                          <li><a href="#">4.증빙불비</a></li>
+                        </ul>
+                      </div>                  
+                    </div>
+                  </div>
+                  <label class="control-label col-md-2 hide">제외내역</label>
+                  <div class="col-md-4 hide">
+                    <div class="input-group">
+                      <span class="input-group-addon">00</span>       
+                      <input type="text" class="form-control pop except next310 n" style="z-index: 0;" readonly="readonly">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">거래처</label>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">12345</span>       
+                      <input type="text" class="form-control pop client next310 n" style="z-index: 0;" readonly="readonly">
+                    </div>
+                  </div>
+                  <label class="control-label col-md-2">사업자번호</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm g-modal-2" readonly="readonly">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">계정과목</label>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">00045</span>
+                      <input type="text" class="form-control pop account next310b n" style="z-index: 0;" readonly="readonly">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">결제</label>
+                  <div class="col-md-2">
+                    <div class="btn-group btn-group-xs">
+                      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">외상 <span class="caret"></span></button>
+                      <ul class="dropdown-menu settlement" role="menu">
+                        <li><a href="#">외상</a></li>
+                        <li><a href="#">현금</a></li>
+                        <li><a href="#">예금</a></li>
+                        <li><a href="#">카드</a></li>
+                        <li><a href="#">어음</a></li>
+                        <li><a href="#">선수</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <label class="control-label col-md-2 col-md-offset-2 hide">통장</label>
+                  <div class="col-md-4 hide">
+                    <div class="input-group">
+                      <span class="input-group-addon">52045</span>
+                      <input type="text" class="form-control pop bank next310 n" style="z-index: 0;" readonly="readonly">
+                    </div>
+                  </div>
+               </div>
+               <div class="form-group">
+                 <label class="control-label col-md-2">금액</label>
+                 <div class="col-md-4">
+                   <input type="text" class="form-control input-sm amount_form next210 foc" />
+                 </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-2">적요</label>
+                <div class="col-md-10">
+                  <div class="input-group">
+                    <span class="input-group-addon">02</span>
+                    <input type="text" class="form-control pop summary next510 n" style="z-index: 0;" readonly="readonly">
+                  </div>
+                </div>
+              </div>
+          </div><!-- end well -->
+          </div> <!-- end col-md-8 --> 
+          <div class="col-md-4">
+            <div class="well well-sm">
+	@include('content.conright.acc.tradeInsert.trade_insert.revenue')
+          </div> <!-- end well -->
+            </div> <!-- end col-md-4 -->         
+            <div class="col-md-4 mar_tm19">
+              <div class="well well-sm">
+	@include('rightbar.acc.tradeInsert.revenue')
+            </div>
+            </div> 
+           </div> <!-- end row --> 
+      <div class="row">
+      <div class="col-md-12"> 
+      <div class="well well-sm mar_tm18">
+	@include('content.conbuttonmid.one')  
+        </div> <!-- end well --> 
+      </div><!-- end col-md-12 --> 
+      </div> <!-- end row --> 
+          </form>
+        </div>  <!-- end tab-pane tax2 -->
+      <div class="tab-pane pad_t5" id="tab-tax3">
+         <form class="form-horizontal" id="form3"> 
+           <div class="row">
+            <div class="col-md-8"> 
+              <div class="well well-sm">             
+                <div class="form-group">
+                  <label class="control-label col-md-2">일자</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm next210b datepicker" readonly="readonly">
+                  </div>
+                  <label class="control-label col-md-2">전표번호</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm g-modal" readonly="readonly">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">구분</label>
+                  <div class="col-md-4">
+                    <div class="btn-toolbar">         
+                      <div class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">1.가수 <span class="caret"></span></button>
+                        <ul class="dropdown-menu next410 foc" role="menu">
+                          <li><a href="#">1.가수</a></li>
+                          <li><a href="#">2.가지급</a></li>
+                        </ul>
+                      </div>                  
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">대상자</label>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">12345</span>       
+                      <input type="text" class="form-control pop customer next220 n" style="z-index: 0;" readonly="readonly">
+                    </div>
+                  </div>
+                  <label class="control-label col-md-2">관계</label>
+                  <div class="col-md-4"> 
+                    <div class="input-group">                   
+                      <span class="input-group-addon">02</span>
+                      <input type="text" class="form-control pop relation next310b n" readonly="readonly">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">결제</label>
+                  <div class="col-md-2">
+                    <div class="btn-group btn-group-xs">
+                      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">현금 <span class="caret"></span></button>
+                      <ul class="dropdown-menu settlement" role="menu">
+                        <li><a href="#">외상</a></li>
+                        <li><a href="#">현금</a></li>
+                        <li><a href="#">예금</a></li>
+                        <li><a href="#">카드</a></li>
+                        <li><a href="#">어음</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <label class="control-label col-md-2 col-md-offset-2 hide">통장</label>
+                  <div class="col-md-4 hide">
+                    <div class="input-group">
+                      <span class="input-group-addon">52045</span>
+                      <input type="text" class="form-control pop bank next310 n" style="z-index: 0;" readonly="readonly">
+                    </div>
+                  </div>
+               </div>
+               <div class="form-group">
+                 <label class="control-label col-md-2">금액</label>
+                 <div class="col-md-4">
+                   <input type="text" class="form-control input-sm amount_form next210 foc">
+                 </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-2">적요</label>
+                <div class="col-md-10">
+                  <div class="input-group">
+                    <span class="input-group-addon">02</span>
+                    <input type="text" class="form-control pop summary next510 n" style="z-index: 0;" readonly="readonly">
+                  </div>
+                </div>
+              </div>
+          </div><!-- end well -->
+          </div> <!-- end col-md-8 --> 
+          <div class="col-md-4">
+            <div class="well well-sm">
+	@include('content.conright.acc.tradeInsert.trade_insert.revenue')
+          </div> <!-- end well -->
+            </div> <!-- end col-md-4 -->         
+            <div class="col-md-4 mar_tm19">
+              <div class="well well-sm">
+	@include('rightbar.acc.tradeInsert.revenue')
+            </div>
+            </div> 
+           </div> <!-- end row --> 
+      <div class="row">
+      <div class="col-md-12"> 
+      <div class="well well-sm mar_tm18">
+	@include('content.conbuttonmid.one')  
+        </div> <!-- end well --> 
+      </div><!-- end col-md-12 --> 
+      </div> <!-- end row --> 
+          </form>
+      </div>
+      <div class="tab-pane pad_t5" id="tab-tax4">
+         <form class="form-horizontal" id="form416"> 
+           <div class="row">
+            <div class="col-md-8"> 
+              <div class="well well-sm">             
+                <div class="form-group">
+                  <label class="control-label col-md-2">일자</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm next210 datepicker" readonly="readonly">
+                  </div>
+                  <label class="control-label col-md-2">전표번호</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm g-modal" readonly="readonly">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">거래처</label>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">12345</span>       
+                      <input type="text" class="form-control pop client next310b n" style="z-index: 0;" readonly="readonly">
+                    </div>
+                  </div>
+                  <label class="control-label col-md-2">사업자번호</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm g-modal-2" readonly="readonly">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">결제</label>
+                  <div class="col-md-2">
+                    <div class="btn-group btn-group-xs">
+                      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">현금 <span class="caret"></span></button>
+                      <ul class="dropdown-menu settlement next310" role="menu">
+                        <li><a href="#">외상</a></li>
+                        <li><a href="#">현금</a></li>
+                        <li><a href="#">예금</a></li>
+                        <li><a href="#">카드</a></li>
+                        <li><a href="#">어음</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <label class="control-label col-md-2 col-md-offset-2 hide">통장</label>
+                  <div class="col-md-4 hide">
+                    <div class="input-group">
+                      <span class="input-group-addon">52045</span>
+                      <input type="text" class="form-control pop bank next310 n" style="z-index: 0;" readonly="readonly">
+                    </div>
+                  </div>
+               </div>
+               <div class="form-group">
+                 <label class="control-label col-md-2">금액</label>
+                 <div class="col-md-4">
+                   <input type="text" class="form-control input-sm amount_form next210 foc">
+                 </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-2">적요</label>
+                <div class="col-md-10">
+                  <div class="input-group">
+                    <span class="input-group-addon">02</span>
+                    <input type="text" class="form-control pop summary next510 n" style="z-index: 0;" readonly="readonly">
+                  </div>
+                </div>
+              </div>
+          </div><!-- end well -->
+          </div> <!-- end col-md-8 --> 
+          <div class="col-md-4">
+            <div class="well well-sm">
+	@include('content.conright.acc.tradeInsert.trade_insert.revenue')
+          </div> <!-- end well -->
+            </div> <!-- end col-md-4 -->         
+            <div class="col-md-4 mar_tm19">
+              <div class="well well-sm">
+	@include('rightbar.acc.tradeInsert.revenue')
+            </div>
+            </div> 
+           </div> <!-- end row --> 
+      <div class="row">
+      <div class="col-md-12"> 
+      <div class="well well-sm mar_tm18">
+	@include('content.conbuttonmid.one')  
+        </div> <!-- end well --> 
+      </div><!-- end col-md-12 --> 
+      </div> <!-- end row --> 
+          </form>
+      </div>
+       <div class="tab-pane pad_t5" id="tab-tax5">
+            <form class="form-horizontal" id="form516"> 
+           <div class="row">
+            <div class="col-md-8"> 
+              <div class="well well-sm">             
+                <div class="form-group">
+                  <label class="control-label col-md-2">일자</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm next210b datepicker" readonly="readonly">
+                  </div>
+                  <label class="control-label col-md-2">전표번호</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm g-modal" readonly="readonly">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">유형</label>
+                  <div class="col-md-4">
+                    <div class="btn-toolbar">         
+                      <div class="btn-group btn-group-xs">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">법정기부금 <span class="caret"></span></button>
+                        <ul class="dropdown-menu kind" role="menu">
+                          <li><a href="#">법정기부금</a></li>
+                          <li><a href="#">지정기부금</a></li>
+                          <li><a href="#">기타</a></li>
+                        </ul>
+                      </div>
+                      <div class="btn-group btn-group-xs">
+                        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">10 <span class="caret"></span></button>
+                        <ul class="dropdown-menu kind" role="menu">
+                          <li><a href="#">10</a></li>
+                          <li><a href="#">40</a></li>
+                          <li><a href="#">50</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <label class="control-label col-md-2">계정과목</label>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">00045</span>
+                      <input type="text" class="form-control input-sm" value="기부금" readonly="readonly">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">기부처</label>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">12345</span>       
+                      <input type="text" class="form-control pop client next310b n" style="z-index: 0;" readonly="readonly">
+                    </div>
+                  </div>
+                  <label class="control-label col-md-2">사업(주민)번호</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm g-modal-2" readonly="readonly">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">결제</label>
+                  <div class="col-md-2">
+                    <div class="btn-group btn-group-xs">
+                      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">외상 <span class="caret"></span></button>
+                      <ul class="dropdown-menu settlement" role="menu">
+                        <li><a href="#">외상</a></li>
+                        <li><a href="#">현금</a></li>
+                        <li><a href="#">예금</a></li>
+                        <li><a href="#">카드</a></li>
+                        <li><a href="#">어음</a></li>
+                        <li><a href="#">선수</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <label class="control-label col-md-2 col-md-offset-2 hide">통장</label>
+                  <div class="col-md-4 hide">
+                    <div class="input-group">
+                      <span class="input-group-addon">52045</span>
+                      <input type="text" class="form-control pop bank next310 n" style="z-index: 0;" readonly="readonly">
+                    </div>
+                  </div>
+               </div>
+               <div class="form-group">
+                 <label class="control-label col-md-2">금액</label>
+                 <div class="col-md-4">
+                   <input type="text" class="form-control input-sm amount_form next210 cac">
+                 </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-2">적요</label>
+                <div class="col-md-10">
+                  <div class="input-group">
+                    <span class="input-group-addon">02</span>
+                    <input type="text" class="form-control pop summary next310 n" style="z-index: 0;" readonly="readonly">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-md-2">비고</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control pop bigo next510 n" style="z-index: 0;" readonly="readonly">
+                </div>
+              </div>
+          </div><!-- end well -->
+          </div> <!-- end col-md-8 --> 
+          <div class="col-md-4">
+            <div class="well well-sm">
+	@include('content.conright.acc.tradeInsert.trade_insert.revenue')
+          </div> <!-- end well -->
+            </div> <!-- end col-md-4 -->         
+            <div class="col-md-4 mar_tm19">
+              <div class="well well-sm">
+	@include('rightbar.acc.tradeInsert.revenue')
+            </div>
+            </div> 
+           </div> <!-- end row --> 
+      <div class="row">
+      <div class="col-md-12"> 
+      <div class="well well-sm mar_tm18">
+	@include('content.conbuttonmid.one')  
+        </div> <!-- end well --> 
+      </div><!-- end col-md-12 --> 
+      </div> <!-- end row --> 
+          </form>
+       </div><!-- end tab 5 --> 
+      </div> <!-- end tab-content -->
+@include('content.conbuttonbot.acc.tradeInsert.trade_insert.revenue')
+@include('content.conbot.acc.tradeInsert.trade_insert.revenue')

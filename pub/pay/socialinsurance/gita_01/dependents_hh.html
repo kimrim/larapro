@@ -1,0 +1,702 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../asset/favicon.ico">
+    <title>Jumbotron Template for Bootstrap</title>
+    <!-- <link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../../../asset/css/nanumgothic.css" />
+    <!-- Bootstrap core CSS -->
+    <link href="../../../asset/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../../asset/css/jumbotron-navbar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../asset/css/header-content.css" />
+    <link rel="stylesheet" href="../../../asset/jquery-ui-1.11.4.custom/jquery-ui.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../../asset/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../../asset/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <!--<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../asset/js/html5shiv.min.js"></script>')</script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../asset/js/respond.min.js"></script>')</script> -->
+      <script src="../../../asset/js/html5shiv.min.js"></script>
+      <script src="../../../asset/js/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="../../../asset/css/jssor.css" rel="stylesheet">
+    <link href="../../../asset/css/style.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/media/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/media/css/dataTables.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/extensions/Scroller/css/scroller.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/extensions/Buttons/css/buttons.jqueryui.css">
+    <style type="text/css" class="init">
+        ul#ajaxtab {
+    color: #FFFFFF;
+    background-color: #DDD;
+}
+
+    </style>
+</head>
+<body>    
+  <!-- Static navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"> Kimrim Project</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">사용자정보 <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+              <li><a href="#">김영식</a></li>
+              <li></li>
+              <li><a href="#">경기도</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">(주)삼성전자 회장</li>
+              <li><a href="#">Se@dd.com</a></li>
+              <li><a href="#">나는 누구인가?</a></li>
+            </ul>       
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="./">Logoout <span class="sr-only">(current)</span></a></li>
+          <li><a href="../navbar-static-top/">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">        
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사용회사 <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li>       
+                <table class="table table-bordered table-condensed" style="width: 250px;margin:10px;">
+                  <thead>
+                    <tr>
+                      <th>코드</th>
+                      <th>회사명</th>
+                      <th>사용여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="success">
+                      <td>1001</td>
+                      <td>(주)kimrim</td>
+                      <td>사용</td>
+                    </tr>
+                    <tr class="warning">
+                      <td>1002</td>
+                      <td>박후영</td>
+                      <td>미사용</td>
+                    </tr>
+                    <tr class="danger">
+                      <td>1003</td>
+                      <td>김배현</td>
+                      <td>사용</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="nav navbar-nav navbar-right">
+                  <div class="btn-group btn-group-sm" style="padding-right: 30px; margin-bottom: 10px;">
+                    <button type="button" class="btn btn-info">확인</button>
+                    <button type="button" class="btn btn-success">닫기</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3 logo">
+          <div class="well well-sm">
+            <h5>Logo</h5>
+            <img src="../../../asset/img/logo_3.jpg" class="img-responsive img-thumbnail" id="logo" alt="Responsive image">
+            <p>안녕하세요 박후영님</p>
+          </div>
+        </div>
+        <div class="col-md-9 menu-open">
+          <div class="navbar navbar-default" role="navigation">
+              <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav h-c">
+                  <li class="dropdown">
+                    <a href="../../../acc/tradeInsert/trade_insert/revenue.html" class="dropdown-toggle" role="button">회계관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../vat/report/report01/report.html" class="dropdown-toggle" role="button">부가가치세 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                     <a href="../../../stk/sales/sales_trade/sales.html" class="dropdown-toggle" role="button">물류관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown open">
+                    <a href="../../../pay/salary/earned_income/salary_insert.html" class="dropdown-toggle" role="button">급여관리 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li role="presentation"><a href="../../basic_registration/basicInfo/bussiness_place_register.html" role="menuitem">기초정보등록</a></li>
+                      <li role="presentation"><a href="../../salary/earned_income/salary_insert.html" role="menuitem">근로소득</a></li>
+                      <li role="presentation"><a href="../../earnings/bussiness_earnings/bussiness_earnings_person_register.html" role="menuitem">사업.기타소득</a></li>
+                      <li role="presentation"><a href="../../withholding/tax_report/yearend_performance.html" role="menuitem">원천징수</a></li>
+                      <li role="presentation"><a href="../../yearEndSettlement/yearend/yearend_additional_insert.html" role="menuitem">연말정산</a></li>
+                      <li role="presentation"><a href="#" role="menuitem">세무신고서류</a></li>
+                      <li role="presentation"><a href="../../data_management/data/data_01.html" role="menuitem">데이타관리</a></li>
+                      <li role="presentation"><a href="../../elecDeclaration/e_report/withholding_e_report.html" role="menuitem">전자신고</a></li>
+                      <li class="open2" role="presentation"><a href="../../socialinsurance/social_insurance/bussiness_place_register.html" role="menuitem">사회보험</a></li>                      
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../cor/base/base_establishment/totalCorTable.html" class="dropdown-toggle">법인조정 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../per/base/base_establishment/totalPerTable.html" class="dropdown-toggle">개인조정 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">환경설정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="#">시스템 구성</a></li>
+                      <li><a href="#">화면셋팅</a></li>
+                    </ul>
+                  </li>
+                </ul>                
+              </div><!--/.nav-collapse -->                                    
+          </div>
+          <div class="container" id="page">
+            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden; visibility: hidden;">
+              <!-- Loading Screen -->
+              <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position:absolute;display:block;background:url('../../../asset/img/jssor/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+              </div>
+              <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden;">
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/005.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/006.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/011.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/013.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/014.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/019.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/020.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/021.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/022.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/024.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/025.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/027.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/029.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/031.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/034.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/038.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/039.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/043.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/044.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/047.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/050.jpg" />
+               </div>
+             </div>
+             <!-- Bullet Navigator -->
+             <div data-u="navigator" class="jssorb03" style="bottom:10px;right:10px;">
+               <!-- bullet navigator item prototype -->
+               <div data-u="prototype" style="width:21px;height:21px;">
+                <div data-u="numbertemplate"></div>
+               </div>
+             </div>
+             <!-- Arrow Navigator -->
+             <span data-u="arrowleft" class="jssora03l" style="top:123px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <span data-u="arrowright" class="jssora03r" style="top:123px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
+           </div>
+           <!-- #endregion Jssor Slider End -->
+        </div><!-- div class="container" id="page" end -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="well well-sm">      
+       <div class="panel-group">
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse11">기초등록</a></h4>
+            </div>
+            <div id="collapse11" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../basis_register/agencies_register.html" class="list-group-item active">보험사무대행기관등록 <span class="badge">65</span></a>
+                <a href="../basis_register/cor_register.html" class="list-group-item">회사등록 <span class="badge">50</span></a>		
+		<a href="../basis_register/consignment_place_register.html" class="list-group-item">위탁사업장등록 <span class="badge">145</span></a>
+                <a href="../basis_register/tax_office_register.html" class="list-group-item">세무회계사무소 등록 <span class="badge">8</span></a>
+                <a href="../basis_register/four_insurance_agency.html" class="list-group-item">4대보험기관 <span class="badge">8</span></a>
+		<a href="../social_insurance/cor_meno.html" class="list-group-item">회사메모 <span class="badge">30</span></a>  
+	      </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse12">위탁업무</a></h4>
+            </div>
+            <div id="collapse12" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../consignment/bussiness_joining.html" class="list-group-item">사업장가입신고서 <span class="badge">30</span></a>
+                <a href="../consignment/bussiness_contents_change.html" class="list-group-item">사업장내용변경신고서 <span class="badge">8</span></a>	
+		<a href="../consignment/bussiness_leave.html" class="list-group-item">사업장탈퇴신고서 <span class="badge">65</span></a> 
+                <a href="../consignment/capacity_obtain.html" class="list-group-item">사업장가입자자격취득신고서 <span class="badge">8</span></a>
+                <a href="../consignment/breakdown_change.html" class="list-group-item">사업장가입자내역변경신고서 <span class="badge">65</span></a>
+                <a href="../consignment/capacity_loss.html" class="list-group-item">사업장가입자자격상실신고서 <span class="badge">65</span></a>
+                <a href="../consignment/insured_person_unemployed.html" class="list-group-item">피보험자이직확인서 <span class="badge">50</span></a>
+                <a href="../consignment/work_confirm.html" class="list-group-item">근로내역확인신고서 <span class="badge">8</span></a>
+                <a href="../consignment/insurance_report.html" class="list-group-item">보험료보고서(고용산재통합) <span class="badge">8</span></a>
+                <a href="../consignment/employ_waste.html" class="list-group-item">고용.산재보험보수총액신고서 <span class="badge">145</span></a>
+	      </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse13">보험사무대행기관</a></h4>
+            </div>
+            <div id="collapse13" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../insurance_agency/insured_person_report.html" class="list-group-item">사업별 피보험자 처리장부 <span class="badge">30</span></a>
+                <a href="../insurance_agency/payments_application.html" class="list-group-item">보험사무대행지원금 지급신청서 <span class="badge">8</span></a>	
+		<a href="../insurance_agency/terminate_report.html" class="list-group-item">사업장수임해지신고서 <span class="badge">65</span></a> 
+                <a href="../insurance_agency/affairs_consignment.html" class="list-group-item">사무위탁서 <span class="badge">8</span></a>
+                <a href="../insurance_agency/consignment_affairs_cancel.html" class="list-group-item">사무위탁해지통지서 <span class="badge">65</span></a>
+                <a href="../insurance_agency/consignment_affairs_hh.html" class="list-group-item">위탁해지현황 <span class="badge">65</span></a>
+	      </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse14">기타서식 1</a></h4>
+            </div>
+            <div id="collapse14" class="panel-collapse collapse in">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../gita_01/dependents.html" class="list-group-item">피부양자 변경 <span class="badge">30</span></a>
+                <a href="../gita_01/dependents_hh.html" class="list-group-item active">피부양자 변경 현황 <span class="badge">30</span></a>
+                <a href="../gita_01/bussiness_contents_change.html" class="list-group-item">두루누리사회보험지원 신고서 <span class="badge">8</span></a>	
+		<a href="../gita_01/health_insurance_sum.html" class="list-group-item">건강보험보수총액신고서 <span class="badge">65</span></a> 
+                <a href="../gita_01/earnings_sum.html" class="list-group-item">국민연금소득총액신고서 <span class="badge">8</span></a>
+                <a href="../gita_01/agent_01.html" class="list-group-item">대리인선임해임신고서(근로복지공단) <span class="badge">65</span></a>
+                <a href="../gita_01/agent_02.html" class="list-group-item">대리인선임해임신고서(고용노동부) <span class="badge">65</span></a>
+                <a href="../gita_01/construction_work_established.html" class="list-group-item">건설공사및벌목업공사관계성립 <span class="badge">30</span></a>
+                <a href="../gita_01/construction_work_disappear.html" class="list-group-item">건설공사및벌목업공사관계소멸 <span class="badge">8</span></a>	
+		<a href="../gita_01/tatal_established.html" class="list-group-item">일괄적용승인신청(성립신고)서 <span class="badge">65</span></a> 
+                <a href="../gita_01/tatal_disappear.html" class="list-group-item">일괄적용해지신청서 <span class="badge">8</span></a>
+                <a href="../gita_01/tatal_start_end.html" class="list-group-item">일괄적용개시(종료)신고서 <span class="badge">65</span></a>
+                <a href="../gita_01/insured_person.html" class="list-group-item">피보험자원천공제대장 <span class="badge">65</span></a>
+                <a href="../gita_01/retain_confirm.html" class="list-group-item">고용보험지원 사업장확인신청서 <span class="badge">65</span></a>
+	      </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse15">기타서식 2</a></h4>
+            </div>
+            <div id="collapse15" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../gita_02/industrial_accident_insurance_join_use.html" class="list-group-item">사업주 산재보험 보험가입신청서(근로자사용) <span class="badge">30</span></a>
+                <a href="../gita_02/industrial_accident_insurance_join_unuse.html" class="list-group-item">사업주 산재보험 보험가입신청서(근로자미사용) <span class="badge">8</span></a>	
+		<a href="../gita_02/employer_industrial_accident_insurance_change_unuse.html" class="list-group-item">사업주 산재보험 변경신청서(근로자미사용) <span class="badge">65</span></a> 
+                <a href="../gita_02/self-employed_employment_insurance_join.html" class="list-group-item">자영업자 고용보험가입신청서 <span class="badge">8</span></a>
+                <a href="../gita_02/self-employed_employment_insurance_change.html" class="list-group-item">자영업자 고용보험관계 변경신청서 <span class="badge">65</span></a>
+                <a href="../gita_02/insured_person_transfer.html" class="list-group-item">피보험자전근신청서 <span class="badge">65</span></a>
+                <a href="../gita_02/foreigner_leave.html" class="list-group-item">외국인가입탈퇴신고서 <span class="badge">30</span></a>
+                <!--<a href="../gita_02/bussiness_contents_change.html" class="list-group-item">휴직자등직장가입자보험료납입고지유예신청서 <span class="badge">8</span></a>	-->
+		<a href="../gita_02/pension_premium_payment_exception.html" class="list-group-item">연금보험료납부예외(재개)신청서 <span class="badge">65</span></a> 
+                <a href="../gita_02/pension_premium_reassessment.html" class="list-group-item">연금보험료 경정고지 신청서(사업장) <span class="badge">8</span></a>
+                <a href="../gita_02/business_place_auto_transfer.html" class="list-group-item">사업장자동이체 신고서 <span class="badge">65</span></a>
+                <a href="../gita_02/insurance_error_change.html" class="list-group-item">직장가입자보험료정산착오자변경신고서 <span class="badge">65</span></a>
+                <!--<a href="../gita_02/capacity_loss.html" class="list-group-item">직장가입자(근무처,근무내역)변동신고서 <span class="badge">65</span></a>-->
+	      </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse16">사회보험관리</a></h4>
+            </div>
+            <div id="collapse16" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../social_insurance/bussiness_place_register.html" class="list-group-item">사업장등록 <span class="badge">65</span></a>
+                <a href="../social_insurance/earnings_sum.html" class="list-group-item">소득총액신고서(국민연금) <span class="badge">50</span></a>
+                <a href="../social_insurance/insured_person_change.html" class="list-group-item">피보험자변경 <span class="badge">50</span></a>
+	      </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse17">4대보험위탁신고</a></h4>
+            </div>
+            <div id="collapse17" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../consignment_service/fourConsignmentDeclaration.html" class="list-group-item">4대보험 위탁신고 <span class="badge">65</span></a>
+                <a href="../consignment_service/joinLeaveDeclaration.html" class="list-group-item">입퇴사자신고 <span class="badge">50</span></a>		
+	      </div>
+            </div>
+	  </div>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div id="buttons" class="btn-toolbar mar_b3" role="group">
+           <button type="button" class="btn btn-xs btn-success toolbar_dialog" id="esc" title="실행하고있는 메뉴를 종료합니다">종료(ESC)</button>                                     
+           <button type="button" class="btn btn-xs btn-primary toolbar_dialog" id="help" title="사용방법이 조회됩니다">도움(F1)</button> 
+           <button type="button" class="btn btn-xs btn-danger toolbar_dialog" id="code" title="커서위치의 코드도움박스가 나타납니다">코드(F2)</button>
+           <button type="button" class="btn btn-xs btn-info">자료불러오기(F4)</button>
+           <button type="button" class="btn btn-xs btn-default toolbar_dialog" id="delete">삭제(F5)</button>
+           <button type="button" class="btn btn-xs btn-warning" style="margin-right: 5px;">EDI엑셀(F6)</button>                      
+        </div> 
+        <ol class="breadcrumb mar_b3">
+          <li><a href="#">급여관리</a></li>
+          <li><a href="#">기타서식 1</a></li>
+          <li class="active">피보험자변경현황</li>
+        </ol>
+        <form class="form-inline well well-sm" style="margin-bottom: 2px;">
+          <div class="form-group">
+            <label for="from">&nbsp;&nbsp;&nbsp;사업장:</label>
+            <div class="input-group">
+               <span class="input-group-addon">023</span>
+               <input type="text" class="form-control z_i0 saup next210 pop2" id="saup01" readonly="readonly">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="from">신고일자:</label>
+            <input type="text" class="form-control input-sm next110 datepicker" placeholder="2016-01-01" readonly="readonly">
+          </div>
+          <div class="form-group">
+            <label for="from">&nbsp;&nbsp;&nbsp;사원명:</label>
+            <div class="input-group">
+               <span class="input-group-addon">023</span>
+               <input type="text" class="form-control z_i0 sa next210 pop2" id="sa01" readonly="readonly">
+            </div>
+          </div>       
+        </form>
+
+           <div class="panel with-nav-tabs panel-default">
+            <div class="panel-heading"> 
+              <ul class="nav nav-tabs mar_b5" id="ajaxtab3" role="tablist">
+                <li role="presentation" class="active"><a href="#tab1" class="pay115" role="tab" data-toggle="tab">피보험자자격취득</a></li>  
+                <li role="presentation"><a href="#tab2" class="pay110" role="tab" data-toggle="tab">건강보험변경/추가</a></li>
+                <li role="presentation"><a href="#tab3" class="pay108" role="tab" data-toggle="tab">보수월액변경(건강)</a></li>    
+              </ul>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+          <div class="col-md-9"> 
+              <div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+              <table id="tab1_table" class="display nowrap" cellspacing="0" width="100%">
+	       <thead>
+                <tr class="success">
+                  <th rowspan=2></th>
+                  <th rowspan=2></th>
+                  <th rowspan=2>신고연월일</th>
+                  <th rowspan=2>관계</th>
+                  <th rowspan=2>성명</th>
+                  <th rowspan=2>주민번호</th>
+                  <th rowspan=2>취득연월일</th>
+                  <th rowspan=2>취득상실여부</th>
+                  <th rowspan=2>부호</th>
+                  <th colspan=3>장애인국가유공자</th>  
+                  <th colspan=3>외국인</th>
+                </tr>
+                <tr class="success">
+                  <th>종별부호</th>
+                  <th>등급</th>
+                  <th>등록일</th>
+                  <th>국적</th> 
+                  <th>체류자격</th>
+                  <th>체류기간</th> 
+                </tr>
+              </thead>
+             </table>
+           </div> <!-- end tab-pane tab1 -->
+           <div class="tab-pane" id="tab2"> <!-- fade in class--> 
+            <table id="tab2_table" class="display nowrap" cellspacing="0" width="100%">
+	       <thead>
+                <tr class="success">
+                  <th class="wid1" rowspan=2></th>
+                  <th rowspan=2>성명</th>
+                  <th rowspan=2>주민등록번호</th>
+                  <th rowspan=2>신고항목선택</th>
+                  <th colspan=6>기재사항변경</th>
+                </tr>
+                <tr class="success">
+                  <th>신고연월일</th>
+                  <th>코드</th>
+                  <th>변경신청항목</th>
+                  <th>변경신청후내용</th>
+                  <th>코드</th>
+                  <th>발급사유</th> 
+                </tr>
+              </thead>               
+              </thead>
+             </table>
+          </div>  <!-- end tab-pane tab-tax2 -->
+          <div class="tab-pane" id="tab3"> <!-- fade in class-->       
+           <table id="tab3_table" class="display nowrap" cellspacing="0" width="100%">
+	       <thead>
+                <tr class="success">
+                  <th rowspan=2></th>
+                  <th rowspan=2>사원명</th>
+                  <th rowspan=2>주민번호</th>
+                  <th rowspan=2>일자</th>
+                  <th rowspan=2>변경전보수월액</th>
+                  <th rowspan=2>변경후보수월액</th>
+                  <th colspan=2>변경사유</th>
+                </tr>
+                <tr class="success">
+                  <th>변경사유코드</th>
+                  <th>변경사유</th> 
+                </tr>
+              </thead>
+             </table>
+           </div>  <!-- end tab-pane tab3 -->           
+         </div> <!-- end tab-content -->
+        </div> <!-- end col-md-9 -->
+        <div class="col-md-3">
+                 <div class="list-group">
+                  <a href="#" class="list-group-item active">
+                    <span class="glyphicon glyphicon-camera"></span> 구글 <span class="badge">25</span>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="glyphicon glyphicon-file"></span> 금융감독원 <span class="badge">145</span>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="glyphicon glyphicon-music"></span> 김영식 변호사 <span class="badge">50</span>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="glyphicon glyphicon-camera"></span> 삼성전자 <span class="badge">25</span>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="glyphicon glyphicon-camera"></span> 아마존 <span class="badge">25</span>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="glyphicon glyphicon-file"></span> 페이스북 <span class="badge">145</span>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="glyphicon glyphicon-camera"></span> 카카오 <span class="badge">25</span>
+                  </a>
+                </div>
+            </div> <!-- end col-md-3 -->  
+         </div> <!-- end row --> 
+       </div> <!-- end panel-body --> 
+      </div> <!-- end panel with-nav-tabs panel-default -->
+
+     <div class="nav navbar-nav navbar-right">
+               <div class="btn-group btn-group-xs mtm10mb10pr30">
+                <button type="button" class="btn btn-info tableinput-toggle" name="tab-tax1">수정취소</button>
+                <button type="button" class="btn btn-success table-toggle">재수정</button>
+               </div>
+             </div>
+  </div> <!-- end col-md-9 -->
+  </div> <!-- end row -->
+  </div> <!-- end container -->
+
+<div class="container"> 
+<div class="row">
+<div class="col-md-12">    
+<div class="footer well">
+<div class="">
+        <p><a href="#" title="당신&apos;s 이름은">Tooltips</a> 무엇인가요?. 자세히 보아야 예쁘다
+오래 보아야 사랑스럽다
+너도 그렇다</p>
+        <p>But as it's not a native tooltip, it can be styled. Any themes built with<a href="http://jqueryui.com/themeroller/" title="당신은 나의 동반자">ThemeRoller</a>will also style tooltips accordingly.</p>
+        <p>그대가 꺾어준 꽃
+시들 때 까지 들여다 보았네
+그대가 남기고 간 시든 꽃
+다시 필 때까지</p>
+        <p><label for="age">Your age:</label> <input id="age" title="We ask for your age only for statistical purposes."></p>
+        <p>Hover the field to see the tooltip.</p>
+      </div>
+             <div class="bs-example"> 
+    <button type="button" class="btn btn-default" rel="txtTooltip" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+<button type="button" class="btn btn-primary" rel="txtTooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+<button type="button" class="btn btn-info" rel="txtTooltip" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+<button type="button" class="btn btn-danger" rel="txtTooltip" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+</div>
+ </div>
+</div>
+</div>
+</div>
+
+<!-- dialog_saup -->
+<div id="dialog_saup" class="lookup_popup" title="사업장" style="display:none; padding: 7px;"> 
+  <p style="font-size: 12px;">아무 것도 하지 않을 것입니다. 동의하십니까?</p>
+  <table id="" class="display nowrap" cellspacing="0" width="100%">
+    <thead>
+      <tr class="success">
+        <th>코드</th>
+        <th>사업장명</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+</div>
+
+<!-- dialog_sa -->
+<div id="dialog_sa" class="lookup_popup" title="사원" style="display:none; padding: 7px;> /*title="부서사원"*/
+  <p style="font-size: 12px;">아무 것도 하지 않을 것입니다. 동의하십니까?</p>
+  <table id="" class="display nowrap" cellspacing="0" width="100%">
+    <thead>
+      <tr class="success">
+        <th>No</th>
+        <th>코드</th>
+        <th>사원명</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+</div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!--<script>window.jQuery || document.write('<script src="../../../js/jquery.min.js"></script>')</script> -->
+    <script src="../../../asset/js/jquery.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.12.3.min.js"></script> -->
+
+    <script src="../../../asset/js/bootstrap.min.js"></script>
+    <script src="../../../asset/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../../asset/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="../../../asset/js/header-content.js"></script>
+
+    <script src="../../../asset/js/jssor/jssor.slider.mini.js"></script>
+    <script src="../../../asset/js/jssor.js"></script>
+  
+    <script src="../../../asset/js/main.js"></script> 
+    <script src="../../../asset/js/main_popup.js"></script> 
+    <script src="../../../asset/js/main_popup_item.js"></script> 
+    <script src="../../../asset/js/datepicker.js"></script>
+    <script src="../../../asset/js/lan_ko.js"></script>
+    <script src="../../../asset/js/con_tab.js"></script>
+    <script src="../../../asset/js/con_topmenu.js"></script>
+    <script src="../../../asset/js/toolbar_popup.js"></script>
+    <script src="../../../asset/js/con_mainmenu.js"></script> 
+        
+    <!-- dialog로딩 시 autofocus없애기 -->
+    <script>$.ui.dialog.prototype._focusTabbable = function(){};</script>
+   
+    <script src="../../../asset/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="../../../asset/DataTables/media/js/dataTables.jqueryui.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/dataTables.buttons.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.jqueryui.js"></script>
+    <script src="../../../asset/DataTables/extensions/Scroller/js/dataTables.scroller.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.html5.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.print.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.colVis.js"></script>
+    <script class="init">
+          
+    </script>
+  </body>
+</html>

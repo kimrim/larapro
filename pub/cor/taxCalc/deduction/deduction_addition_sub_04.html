@@ -1,0 +1,879 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../asset/favicon.ico">
+    <title>Jumbotron Template for Bootstrap</title>
+    <!-- <link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../../../asset/css/nanumgothic.css" />
+    <!-- Bootstrap core CSS -->
+    <link href="../../../asset/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../../asset/css/jumbotron-navbar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../asset/css/header-content.css" />
+    <link rel="stylesheet" href="../../../asset/jquery-ui-1.11.4.custom/jquery-ui.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../../asset/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../../asset/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <!--<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../asset/js/html5shiv.min.js"></script>')</script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../asset/js/respond.min.js"></script>')</script> -->
+      <script src="../../../asset/js/html5shiv.min.js"></script>
+      <script src="../../../asset/js/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="../../../asset/css/jssor.css" rel="stylesheet">
+    <link href="../../../asset/css/style.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/media/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/media/css/dataTables.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/extensions/Scroller/css/scroller.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/extensions/Buttons/css/buttons.jqueryui.css">
+    <style type="text/css" class="init">
+	
+    </style>
+</head>
+<body>    
+  <!-- Static navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"> Kimrim Project</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">사용자정보 <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+              <li><a href="#">김영식</a></li>
+              <li></li>
+              <li><a href="#">경기도</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">(주)삼성전자 회장</li>
+              <li><a href="#">Se@dd.com</a></li>
+              <li><a href="#">나는 누구인가?</a></li>
+            </ul>       
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="./">Logoout <span class="sr-only">(current)</span></a></li>
+          <li><a href="../navbar-static-top/">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">        
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사용회사 <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li>       
+                <table class="table table-bordered table-condensed" style="width: 250px;margin:10px;">
+                  <thead>
+                    <tr>
+                      <th>코드</th>
+                      <th>회사명</th>
+                      <th>사용여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="success">
+                      <td>1001</td>
+                      <td>(주)kimrim</td>
+                      <td>사용</td>
+                    </tr>
+                    <tr class="warning">
+                      <td>1002</td>
+                      <td>박후영</td>
+                      <td>미사용</td>
+                    </tr>
+                    <tr class="danger">
+                      <td>1003</td>
+                      <td>김배현</td>
+                      <td>사용</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="nav navbar-nav navbar-right">
+                  <div class="btn-group btn-group-sm" style="padding-right: 30px; margin-bottom: 10px;">
+                    <button type="button" class="btn btn-info">확인</button>
+                    <button type="button" class="btn btn-success">닫기</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="row">
+       <div class="col-md-3 logo">
+          <div class="well well-sm">
+            <h5>Logo</h5>
+            <img src="../../../asset/img/logo_4.jpg" class="img-responsive img-thumbnail" id="logo" alt="Responsive image">
+            <p>안녕하세요 박후영님</p>
+          </div>
+        </div>
+        <div class="col-md-9 menu-open">
+          <div class="navbar navbar-default" role="navigation">
+              <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav h-c">
+                  <li class="dropdown">
+                    <a href="../../../acc/tradeInsert/trade_insert/revenue.html" class="dropdown-toggle" role="button">회계관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../vat/report/report01/report.html" class="dropdown-toggle" role="button">부가가치세 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                     <a href="../../../stk/sales/sales_trade/sales.html" class="dropdown-toggle" role="button">물류관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../pay/salary/earned_income/salary_insert.html" class="dropdown-toggle" role="button">급여관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown open">
+                    <a href="../../base/base_establishment/totalCorTable.html" class="dropdown-toggle">법인조정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li><a href="../../base/base_establishment/totalCorTable.html">기초사항</a></li>
+                      <li><a href="../../incomeTaxStandard/subject_01/taxDuesDetails.html">소득금액/특별/감가</a></li>
+                      <li class="open2"><a href="../../taxCalc/tax_confirmation/cor_tax_standard_report.html">세액계산신고</a></li>
+                      <li><a href="../../otherDeclaration/transper/transfer_plan.html">기타신고</a></li>
+                      <li><a href="../../declarationAttachment/report_attachment/smaller_enterprises_standard_review.html">신고부속/기타서식</a></li>
+                      <li><a href="../../nonprofit/basic/common_benefit_revenue_bussiness.html">비영리</a></li>
+                      <li><a href="../../commonBenefit/common_benefit_01/contribution_property_report.html">공익</a></li>
+                      <li><a href="../../business_inpartnership/basic/tax_special_application.html">동업</a></li>
+                      <li><a href="../../sincerity/basic/deductionTaxCalc.html">성실</a></li>
+                      <li><a href="../../elecDeclaration/elec/elecCor.html">전자신고</a></li>
+                      <li><a href="../../connection/relate/tax_payment_way_apply.html">연결납세</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../per/base/base_establishment/totalPerTable.html" class="dropdown-toggle">개인조정 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">환경설정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="#">시스템 구성</a></li>
+                      <li><a href="#">화면셋팅</a></li>
+                    </ul>
+                  </li>
+                </ul> 
+             </div><!--/.nav-collapse -->                                    
+          </div>
+          <div class="container" id="page">
+            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden; visibility: hidden;">
+              <!-- Loading Screen -->
+              <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position:absolute;display:block;background:url('../../../asset/img/jssor/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+              </div>
+              <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden;">
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/005.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/006.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/011.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/013.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/014.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/019.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/020.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/021.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/022.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/024.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/025.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/027.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/029.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/031.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/034.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/038.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/039.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/043.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/044.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/047.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/050.jpg" />
+               </div>
+             </div>
+             <!-- Bullet Navigator -->
+             <div data-u="navigator" class="jssorb03" style="bottom:10px;right:10px;">
+               <!-- bullet navigator item prototype -->
+               <div data-u="prototype" style="width:21px;height:21px;">
+                <div data-u="numbertemplate"></div>
+               </div>
+             </div>
+             <!-- Arrow Navigator -->
+             <span data-u="arrowleft" class="jssora03l" style="top:123px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <span data-u="arrowright" class="jssora03r" style="top:123px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
+           </div>
+           <!-- #endregion Jssor Slider End -->
+        </div><!-- div class="container" id="page" end -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+       <div class="well well-sm"> 
+         <div class="panel-group">                      
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse11">세액계산 및 신고서/납부서</a></h4>
+            </div>
+            <div id="collapse11" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>여기는 세액확정</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../tax_confirmation/cor_tax_standard_report.html" class="list-group-item">법인세과세표준 및 세액신고서 <span class="badge">50</span></a>		
+		<a href="../tax_confirmation/cor_tax_standard_control.html" class="list-group-item">법인세과세표준 및 세액조정계산서 <span class="badge">145</span></a>
+                <a href="../tax_confirmation/cor_tax_middle_prepayment.html" class="list-group-item">법인세중간예납신고납부계산서 <span class="badge">8</span></a> 
+		<a href="../tax_confirmation/addition_tax.html" class="list-group-item">가산세액계산서 <span class="badge">65</span></a>
+                <a href="../tax_confirmation/minimum_tax_control.html" class="list-group-item">최저한세조정명세서 <span class="badge">65</span></a>	
+                <a href="../tax_confirmation/origin_payment_tax_01.html" class="list-group-item">원천납부세액명세서(갑) <span class="badge">65</span></a>
+                <a href="../tax_confirmation/tax_stsndard_change.html" class="list-group-item">과세표준수정신고서 및 추가자진납부계산서 <span class="badge">8</span></a> 
+                <a href="../tax_confirmation/tax_stsndard_determine.html" class="list-group-item">과세표준 및 세액의 결정(경정)청구서 <span class="badge">50</span></a> 
+                <a href="../tax_confirmation/mulnabApply.html" class="list-group-item">법인세물납신청서 <span class="badge">65</span></a> 
+                <a href="../tax_confirmation/retroactiveDeductionRefundsApply.html" class="list-group-item">소급공제 법인세액환급신청서 <span class="badge">50</span></a> 
+                <a href="../tax_confirmation/noRefluxDeclaration.html" class="list-group-item">미환류소득에 대한 법인세 신고서 <span class="badge">50</span></a>             
+	      </div>
+            </div>
+	   </div>
+           <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse12">농어촌특별세/지방소득세</a></h4>
+            </div>
+            <div id="collapse12" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../local_income_tax/agriculture_special_tax_standard_control.html" class="list-group-item">농어촌특별세과세표준 및 세액조정계산서 <span class="badge">65</span></a>
+                <a href="../local_income_tax/agriculture_special_tax_standard_report.html" class="list-group-item">농어촌특별세과세표준 및 세액신고서 <span class="badge">50</span></a>
+                <a href="../local_income_tax/agriculture_special_tax_sum.html" class="list-group-item">농특세감면세액합계표 <span class="badge">145</span></a>
+                <a href="../local_income_tax/localIncomeStandardDeclaration.html" class="list-group-item">지방소득세과세표준및세액신고서 <span class="badge">65</span></a>
+                <a href="../local_income_tax/localIncomeStandardControlCalc.html" class="list-group-item">지방소득세과세표준및세액조정계산서 <span class="badge">50</span></a>
+                <a href="../local_income_tax/.html" class="list-group-item">공제감면세액 및 추가납부세액합계표 <span class="badge">50</span></a>		
+		<a href="../local_income_tax/.html" class="list-group-item">지방소득세가산세액계산서 <span class="badge">145</span></a>
+                <a href="../local_income_tax/localIncomeCollectionDetails.html" class="list-group-item">지방소득세특별징수세액명세서 <span class="badge">8</span></a> 
+		<a href="../local_income_tax/.html" class="list-group-item">지방소득세과세표준(조정계... <span class="badge">65</span></a>
+                <a href="../local_income_tax/corLocalIncomeProrationDeclaration.html" class="list-group-item">지방소득세안분신고서(일반법인용) <span class="badge">65</span></a>	
+                <a href="../local_income_tax/bussinessPlaceLocalIncomeProrationDeclaration.html" class="list-group-item">사업장별지방소득세안분신고서 <span class="badge">65</span></a>
+                <a href="../local_income_tax/retroactiveDeductionLocalIncomeRefundsApply.html" class="list-group-item">소급공제지방소득세환급신청서 <span class="badge">8</span></a> 
+                <a href="../local_income_tax/.html" class="list-group-item">비영리내국법인의지방소득에... <span class="badge">50</span></a> 
+                <a href="../local_income_tax/.html" class="list-group-item">과세표준및세액의결정또는결... <span class="badge">50</span></a>		
+		<a href="../local_income_tax/.html" class="list-group-item">지방소득세전자신고 <span class="badge">145</span></a>
+	      </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse13">조특법서식1</a></h4>
+            </div>
+            <div id="collapse13" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group"> 
+                <a href="../tax_special_case_01/foregin_resource_investment.html" class="list-group-item">해외자원투자개발신고서 <span class="badge">65</span></a>
+                <a href="../tax_special_case_01/debt_repayment.html" class="list-group-item">채무상환(예정)명세서<span class="badge">65</span></a>
+                <a href="../tax_special_case_01/financial_institution_debt_repayment.html" class="list-group-item">금융기관 부채상환(예정)명세서 <span class="badge">8</span></a>
+                <a href="../tax_special_case_01/tax_deduction.html" class="list-group-item">세액공제신청서 <span class="badge">65</span></a>
+                <a href="../tax_special_case_01/tax_reduce.html" class="list-group-item">세액감면신청서 <span class="badge">50</span></a>
+                <a href="../tax_special_case_01/bill.html" class="list-group-item">기업의 어음제도개선을 위한 공제세액계산서 <span class="badge">50</span></a>		
+                <a href="../tax_special_case_01/metropolitan_area_out_reduction_tax.html" class="list-group-item">수도권과밀억제권역외의지역으로이전하는중소기업감면세액계산서 <span class="badge">8</span></a> 
+		<a href="../tax_special_case_01/metropolitan_area_out_special_tax_reduction.html" class="list-group-item">공장 및 본사를 수도권 밖으로 이전하는 법인에 대한 감면세액계산서 <span class="badge">65</span></a>
+                <!--<a href="../tax_special_case_01/.html" class="list-group-item">지급조서전자제출 공제세액명세서 <span class="badge">65</span></a> -->	
+                <!--<a href="..//tax_special_case_01/.html" class="list-group-item">고용증대세액공제공제세액계산서<span class="badge">50</span></a> -->	 
+                <a href="../tax_special_case_01/middleCorEmployincreaseCalc.html" class="list-group-item">중소기업 고용증가 인원에 대한 사회보험료 세액공제 공제세액계산서 <span class="badge">50</span></a>		
+		<a href="../tax_special_case_01/employ_maintain_earnings_deduction.html" class="list-group-item">고용유지중소기업소득공제신청서 <span class="badge">145</span></a> 
+                <a href="../tax_special_case_01/high_school.html" class="list-group-item">산업수요맟춤형고등학교등졸업자복직중소기업세액공제신청서 <span class="badge">50</span></a>                             		  		                                                             		                                               				                             
+	      </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse14">조특법서식2</a></h4>
+            </div>
+            <div id="collapse14" class="panel-collapse collapse">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">                  
+                <a href="../tax_special_case_02/spots_invest.html" class="list-group-item">현물출자명세서 <span class="badge">30</span></a>
+                <a href="../tax_special_case_02/tax_divorce.html" class="list-group-item">과세이연신청서 <span class="badge">65</span></a>
+                <a href="../tax_special_case_02/tax_divorce_asset.html" class="list-group-item">과세이연신청서(자산) <span class="badge">65</span></a>
+                <a href="../tax_special_case_02/agricultureCorExemptionCalc.html" class="list-group-item">농업회사법인 면제(감면)세액계산서 <span class="badge">145</span></a> 
+                <!--<a href="../tax_special_case_02/.html" class="list-group-item">장기임대주택또는신축임대주택양도소득세액감면(면제)신청서<span class="badge">145</span></a> -->
+                <a href="../tax_special_case_02/transfer_taxation.html" class="list-group-item">이월과세적용신청서 <span class="badge">8</span></a> 
+		<!--<a href="..//tax_special_case_02/.html" class="list-group-item">주식양도차익과세이연신청서 <span class="badge">65</span></a> -->
+                <!--<a href="../tax_special_case_02/.html" class="list-group-item">인적회사소득공제신청서 <span class="badge">65</span></a> -->	
+                <!--<a href="../tax_special_case_02/.html" class="list-group-item">사업손실준비금명세서 <span class="badge">65</span></a>-->
+                <!--<a href="../tax_special_case_02/bad_debt_appropriation.html" class="list-group-item">대손충당금 및 대손금조정명세서 <span class="badge">8</span></a>-->                                                                                       		  		                                                             		                                               				                             
+	      </div>
+            </div>
+	  </div>
+          <div class="panel panel-danger">
+	    <!-- Default panel contents -->
+	    <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" href="#collapse15">공제감면추납세액</a></h4>
+            </div>
+            <div id="collapse15" class="panel-collapse collapse in">
+	      <div class="panel-body">
+		<p>여기는 빈공간</p>
+	      </div>
+	      <!-- List group -->
+	      <div class="list-group">
+                <a href="../deduction/deduction_addition_01.html" class="list-group-item">공제감면세액 및 추가납부세액합계표(갑) <span class="badge">8</span></a>
+                <a href="../deduction/deduction_addition_sub_01.html" class="list-group-item">공제감면세액계산서(01) <span class="badge">50</span></a>
+                <a href="../deduction/deduction_addition_sub_02.html" class="list-group-item">공제감면세액계산서(2) <span class="badge">65</span></a>
+                <a href="../deduction/deduction_addition_sub_03.html" class="list-group-item">세액공제조정명세서(3) <span class="badge">50</span></a>
+                <a href="../deduction/deduction_addition_sub_04.html" class="list-group-item active">공제감면세액계산서(04) <span class="badge">65</span></a>
+                <a href="../deduction/deduction_addition_sub_05.html" class="list-group-item">공제감면세액계산서(05) <span class="badge">65</span></a>
+                <a href="../deduction/deduction_addition_sub_06.html" class="list-group-item">추가납부계산서(06) <span class="badge">8</span></a>                
+                <a href="../deduction/research_develop.html" class="list-group-item">일반연구 및 인력개발비명세서 <span class="badge">145</span></a>
+                <a href="../deduction/income_deduction.html" class="list-group-item">소득공제조정명세서 <span class="badge">65</span></a>
+                <a href="../deduction/employCreationCalc.html" class="list-group-item">고용창출투자세액공제공제세액계산서 <span class="badge">50</span></a>
+                <a href="../deduction/tax_deduction_control.html" class="list-group-item">세액공제조정명세서 <span class="badge">8</span></a>
+                <a href="../deduction/grow_research_develop.html" class="list-group-item">신성장동력산업및 원천기술연구개발비명세서 <span class="badge">30</span></a>				                             
+	      </div>
+            </div>
+	  </div>          
+        </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="btn-toolbar mar_b3">         
+          <button type="button" class="btn btn-xs btn-success">종료(ESC)</button>                                     
+          <button type="button" class="btn btn-xs btn-primary">도움(F1)</button> 
+          <button type="button" class="btn btn-xs btn-danger">코드(F2)</button> 
+          <button type="button" class="btn btn-xs btn-default">삭제(F5)</button>
+          <button type="button" class="btn btn-xs btn-info">전체삭제(CF5)</button> 
+          <button type="button" class="btn btn-xs btn-warning">인쇄(F9)</button>
+          <button type="button" class="btn btn-xs btn-success">저장(F11)</button>
+          <button type="button" class="btn btn-xs btn-primary">불러오기(F12)</button>                      
+        </div>
+        <ol class="breadcrumb mar_b3">
+          <li><a href="#">세액계산신고</a></li>
+          <li><a href="#">공제감면추납세액</a></li>
+          <li class="active">공제감면세액계산서(04)(Ⅰ-44)</li>
+        </ol>
+        <div class="well well-sm">
+          1. 감면세액의 계산(「조세특례제한법」)<br>
+            &nbsp;&nbsp;외국인투자기업에 대한 조세감면(「조세특례제한법」 제121조의2제1항 및 제121조의4제1항)
+        </div>
+        <div class="table-responsive mar_tm18">
+           <table class="table table-bordered table-hover table-condensed">
+              <thead>
+                  <tr class="success">
+                    <th rowspan=2>① 증자횟수</th>
+                    <th colspan=3>과 세 표 준 금 액</th>
+                    <th rowspan=2>⑤ 산출세액</th>
+                    <th rowspan=2>⑥ 감면대상 사업<br>  소득비율<br>(②/④)</th>
+                    <th rowspan=2>⑦ 감면비율<br>(23)</th>
+                    <th rowspan=2>⑧ 감면세액<br>(⑤×⑥×⑦)</th>
+                    <th rowspan=2 class="wid1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></th>
+                    <th rowspan=2 class="wid1"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></th>
+                  </tr>
+                  <tr class="success">
+                    <th>② 감면대상<br> 사업</th>
+                    <th>③ 비감면<br> 사  업</th>
+                    <th>④ 계</th>
+                  </tr>
+                </thead>
+              <tbody>
+                <tr class="success">
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control cacE T_30_001 ADMarr next110 1_3_5_7_x_0_2_4_6"></td>
+                  <td><input type="text" class="form-control cacE T_30_001 ADdMarr next120 2_3_5_7_x_1_2_4_6"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cacE T_10_001 Marr3 next210 4_7_x_3_4"></td>
+                  <td><input type="text" class="form-control cac Marr" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac Mp" value=0.1 readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td> 
+                  <td class="maxwidth-22"><input type="text" class="form-control plus2"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control minus delete1"></td>
+                </tr>
+                <tr class="success">
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control cacE T_30_001 ADMarr next110 1_3_5_7_x_0_2_4_6"></td>
+                  <td><input type="text" class="form-control cacE T_30_001 ADdMarr next120 2_3_5_7_x_1_2_4_6"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cacE T_10_001 Marr3 next210 4_7_x_3_4"></td>
+                  <td><input type="text" class="form-control cac Marr" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac Mp" value=0.1 readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td> 
+                  <td class="maxwidth-22"><input type="text" class="form-control plus2"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control minus delete1"></td>
+                </tr>
+                <tr class="success">
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control cacE T_30_001 ADMarr next110 1_3_5_7_x_0_2_4_6"></td>
+                  <td><input type="text" class="form-control cacE T_30_001 ADdMarr next120 2_3_5_7_x_1_2_4_6"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cacE T_10_001 Marr3 next210 4_7_x_3_4"></td>
+                  <td><input type="text" class="form-control cac Marr" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac Mp" value=0.1 readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td> 
+                  <td class="maxwidth-22"><input type="text" class="form-control plus2"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control minus delete1"></td>
+                </tr>
+                <tr class="success nodel">
+                  <td class="tacvam">계</td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td></td>
+                  <td></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td> 
+                  <td colspan=2></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+       <div class="well well-sm mar_tm18">2. 감면비율의 계산</div>
+       <div class="table-responsive mar_tm18">
+           <table class="table table-bordered table-hover table-condensed">
+              <thead>
+                  <tr class="danger">
+                    <th rowspan=2>⑨<br>증자<br>횟수</th>
+                    <th rowspan=2>⑩<br>구분</th>
+                    <th rowspan=2>11.<br>증자<br>등기<br>일자</th>
+                    <th rowspan=2>12.<br>등록<br>일자</th>
+                    <th colspan=3>증자 자본금<br>(합병 후 자본금)</th>
+                    <th colspan=2>감면기간</th>
+                    <th rowspan=2>18.해당<br> 사업연도<br>감면율<br>(16또는17 )</th>
+                    <th rowspan=2>19.감면대상<br>외국투자가<br>자본금<br>[(⑭-⑮)×18]</th>
+                    <th rowspan=2>20.해당<br>사업연도<br> 또는 증자분<br> 감면사업<br> 총자본금</th>
+                    <th rowspan=2>21.<br>대여금<br>차감 전<br>감면비율<br>(19/20)</th>
+                    <th rowspan=2>22.<br>감면배제<br>대여금<br>비율</th>
+                    <th rowspan=2>23.<br>감면비율<br>[21×<br>(1-22)]</th>
+                    <th rowspan=2 class="wid1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></th>
+                    <th rowspan=2 class="wid1"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></th>
+                  </tr>
+                  <tr class="danger">
+                    <th>13.<br>총액</th>
+                    <th>14.<br>외국<br>투자가<br>자본금</th>
+                    <th>15.<br>감면<br>배제<br>자본금</th>
+                    <th>16.100%<br>연월일</th>
+                    <th>17.<br>50%<br>연월일</th>
+                  </tr>
+                </thead>
+              <tbody>
+                <tr class="success">
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control input-sm next110 datepicker" readonly="readonly"></td>
+                  <td><input type="text" class="form-control input-sm next110 datepicker" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac X_4 AnSMnDnSM next110 4_10_12_14"></td>
+                  <td><input type="text" class="form-control cac X_4 AnSmMnDnSM next130 4_10_12_14"></td>
+                  <td><input type="text" class="form-control input-sm next110 datepicker" readonly="readonly"></td>
+                  <td><input type="text" class="form-control input-sm next110 datepicker" readonly="readonly"></td>  
+                  <td><input type="text" class="form-control cac X_3 SSmMnDnSM next120 10_12_14"></td>
+                  <td><input type="text" class="form-control cac D" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac X_2 DdnSM next120 12_14"></td>
+                  <td><input type="text" class="form-control cac M" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac X_1_a SmD next210 14"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control plusdate"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control minus"></td>
+                </tr>
+                <tr class="success">
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control input-sm next110 datepicker" readonly="readonly"></td>
+                  <td><input type="text" class="form-control input-sm next110 datepicker" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac X_4 AnSMnDnSM next110 4_10_12_14"></td>
+                  <td><input type="text" class="form-control cac X_4 AnSmMnDnSM next130 4_10_12_14"></td>
+                  <td><input type="text" class="form-control input-sm next110 datepicker" readonly="readonly"></td>
+                  <td><input type="text" class="form-control input-sm next110 datepicker" readonly="readonly"></td>  
+                  <td><input type="text" class="form-control cac X_3 SSmMnDnSM next120 10_12_14"></td>
+                  <td><input type="text" class="form-control cac D" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac X_2 DdnSM next120 12_14"></td>
+                  <td><input type="text" class="form-control cac M" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac X_1_a SmD next210 14"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control plusdate"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control minus"></td>
+                </tr>
+                <tr class="success">
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control input-sm next110 datepicker" readonly="readonly"></td>
+                  <td><input type="text" class="form-control input-sm next110 datepicker" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac X_4 AnSMnDnSM next110 4_10_12_14"></td>
+                  <td><input type="text" class="form-control cac X_4 AnSmMnDnSM next130 4_10_12_14"></td>
+                  <td><input type="text" class="form-control input-sm next110 datepicker" readonly="readonly"></td>
+                  <td><input type="text" class="form-control input-sm next110 datepicker" readonly="readonly"></td>  
+                  <td><input type="text" class="form-control cac X_3 SSmMnDnSM next120 10_12_14"></td>
+                  <td><input type="text" class="form-control cac D" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac X_2 DdnSM next120 12_14"></td>
+                  <td><input type="text" class="form-control cac M" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac X_1_a SmD next210 14"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control plusdate"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control minus"></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        <div class="well well-sm mar_tm18">3. 감면한도·감면의 제한 및 당기 감면세액의 계산<br>3-1. 감면한도의 계산</div>
+        <div class="table-responsive mar_tm18" style="overflow:visible;">
+           <table class="table table-bordered table-hover table-condensed">
+              <thead>
+                  <tr class="success">
+                    <th rowspan=2>24.<br>증자<br>횟수</th>
+                    <th colspan=3>투자금액기준한도계산</th>
+                    <th colspan=6>고용기준한도계산</th>
+                    <th rowspan=2>33.감면<br>한도<br>세액<br>(27+32)</th>
+                    <th rowspan=2>34.<br>감면<br>세액<br>누계액</th>
+                    <th rowspan=2>35.한도<br>초과세액<br>(34-33)</th>
+                    <th rowspan=2>36.당기<br>감면세액<br>(⑧-35)</th>
+                    <th rowspan=2 class="wid1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></th>
+                    <th rowspan=2 class="wid1"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></th>
+                  </tr>
+                  <tr class="success">
+                    <th>25.외국인<br>투자<br>누계액</th>
+                    <th>26.한도율<br>(70%,<br>50%)</th>
+                    <th>27.투자<br>기준<br>한도액<br>(25×26)</th>
+                    <th>28.해당<br> 사업연도<br> 상시근로<br>자수</th>
+                    <th>한도율</th>
+                    <th>29.한도액<br>(28×1천<br>만원, 1천<br>5백만원,<br> 2천만원)</th>
+                    <th>30.외국인<br>투자<br>누계액<br>(25)</th>
+                    <th>31.한도액<br>(30×20%)</th>
+                    <th>32.고용기준<br>한도액<br>Min(29,31)</th>
+                  </tr>
+                </thead>
+              <tbody>
+                <tr class="success">
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control cac X_7 MEMMinASSm next110a 2_5_6_7_8_10_11"></td>
+                  <td class="tacvam">
+                      <div class="dropdown">
+                          <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">50 <span class="caret"></span></a>
+                          <ul class="dropdown-menu next220 foc">
+                             <li><a href="#">50</a></li>
+                             <li><a href="#">70</a></li>
+                          </ul>
+                      </div>
+                  </td>                       
+                  <td><input type="text" class="form-control cac A" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac X_5 MMinASSm next110a 4_7_8_10_11"></td>
+                  <td class="tacvam">
+                        <div class="dropdown">
+                           <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">10 <span class="caret"></span></a>
+                           <ul class="dropdown-menu next250 foc">
+                             <li><a href="#">10</a></li>
+                             <li><a href="#">15</a></li>
+                             <li><a href="#">20</a></li>
+                           </ul>
+                        </div>
+                  </td> 
+                  <td><input type="text" class="form-control cac Min" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac Min2" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac S" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac X_2 SSm next210 10_11"></td>
+                  <td><input type="text" class="form-control cac a next110" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac a next210" readonly="readonly"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control minus"></td>
+                </tr>
+                <tr class="success">
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control cac X_7 MEMMinASSm next110a 2_5_6_7_8_10_11"></td>
+                  <td class="tacvam">
+                      <div class="dropdown">
+                          <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">50 <span class="caret"></span></a>
+                          <ul class="dropdown-menu next220 foc">
+                             <li><a href="#">50</a></li>
+                             <li><a href="#">70</a></li>
+                          </ul>
+                      </div>
+                  </td>                       
+                  <td><input type="text" class="form-control cac A" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac X_5 MMinASSm next110a 4_7_8_10_11"></td>
+                  <td class="tacvam">
+                        <div class="dropdown">
+                           <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">10 <span class="caret"></span></a>
+                           <ul class="dropdown-menu next250 foc">
+                             <li><a href="#">10</a></li>
+                             <li><a href="#">15</a></li>
+                             <li><a href="#">20</a></li>
+                           </ul>
+                        </div>
+                  </td> 
+                  <td><input type="text" class="form-control cac Min" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac Min2" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac S" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac X_2 SSm next210 10_11"></td>
+                  <td><input type="text" class="form-control cac a next110" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac a next210" readonly="readonly"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control minus"></td>
+                </tr>
+                <tr class="success">
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control cac X_7 MEMMinASSm next110a 2_5_6_7_8_10_11"></td>
+                  <td class="tacvam">
+                      <div class="dropdown">
+                          <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">50 <span class="caret"></span></a>
+                          <ul class="dropdown-menu next220 foc">
+                             <li><a href="#">50</a></li>
+                             <li><a href="#">70</a></li>
+                          </ul>
+                      </div>
+                  </td>                       
+                  <td><input type="text" class="form-control cac A" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac X_5 MMinASSm next110a 4_7_8_10_11"></td>
+                  <td class="tacvam">
+                        <div class="dropdown">
+                           <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">10 <span class="caret"></span></a>
+                           <ul class="dropdown-menu next250 foc">
+                             <li><a href="#">10</a></li>
+                             <li><a href="#">15</a></li>
+                             <li><a href="#">20</a></li>
+                           </ul>
+                        </div>
+                  </td> 
+                  <td><input type="text" class="form-control cac Min" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac Min2" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac S" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac X_2 SSm next210 10_11"></td>
+                  <td><input type="text" class="form-control cac a next110" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac a next210" readonly="readonly"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control minus"></td>
+                </tr>
+                <tr class="success">
+                  <td><input type="text" class="form-control foc a next110"></td>
+                  <td><input type="text" class="form-control cac X_7 MEMMinASSm next110a 2_5_6_7_8_10_22" ></td>
+                  <td class="tacvam">
+                      <div class="dropdown">
+                          <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="btn btn-success btn-xs dropdown-toggle" href="#">
+                              <span id="selected">50</span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu next220 foc">
+                             <li><a href="#">50</a></li>
+                             <li><a href="#">70</a></li>
+                          </ul>
+                      </div>
+                  </td>                      
+                  <td><input type="text" class="form-control cac a next110" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac a a next110a"></td>
+                  <td class="tacvam">
+                        <div class="dropdown">
+                           <a href="#" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">10 <span class="caret"></span></a>
+                           <ul class="dropdown-menu next250 foc">
+                             <li><a href="#">10</a></li>
+                             <li><a href="#">15</a></li>
+                             <li><a href="#">20</a></li>
+                           </ul>
+                        </div>
+                  </td>
+                  <td><input type="text" class="form-control cac a next110" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac a next110" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac a next110" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac a next110" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac a next110" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac a next110"></td>
+                  <td><input type="text" class="form-control cac a next110" readonly="readonly"></td>
+                  <td><input type="text" class="form-control cac a next210" readonly="readonly"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control plus"></td>
+                  <td class="maxwidth-22"><input type="text" class="form-control minus"></td>
+                </tr>                
+              </tbody>
+            </table>
+         </div>
+         <div class="well well-sm mar_tm18">3-2. 감면의 제한 (「조세특례제한법」 제121조의4제4항)</div>
+         <div class="table-responsive mar_tm18">
+           <table class="table table-bordered table-hover table-condensed">
+              <thead>
+                  <tr class="success">
+                    <th>37.종전사업의 사업용<br> 고정자산의 가액</th>
+                    <th>38.증자분 사업의 사업<br>용 고정자산의<br> 총가액</th>
+                    <th>39.종전 사업의 사업용<br> 고정자산의 재사용<br> 비율(37/38)</th>
+                    <th>40.감면의 제한이 적용<br>된 감면세액<br>[⑧×(1-39)]</th>
+                    <th>41.당기 감면세액<br>[Min(26,40)]</th>
+                  </tr>
+                </thead>
+              <tbody>
+                <tr class="success">                        
+                  <td><input type="text" class="form-control cac a a next110"></td>                     
+                  <td><input type="text" class="form-control cac a a next130"></td>
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>                         
+                  <td><input type="text" class="form-control cac" readonly="readonly"></td>                     
+                  <td><input type="text" class="form-control cac"></td>                                             
+                </tr>  
+                <tr class="warning">                        
+                  <td colspan=5>&nbsp;</td>                                                             
+                </tr>            
+              </tbody>
+            </table> 
+       </div>
+     
+     <div class="nav navbar-nav navbar-right">
+            <div class="btn-group btn-group-xs mtm10mb10pr30">
+                <button type="button" class="btn btn-info tableinput-toggle" name="tab-tax1">수정취소</button>
+                <button type="button" class="btn btn-success table-toggle">재수정</button>
+                <button type="button" class="btn btn-info table-toggle pagemove" id="deduction_addition_sub_04_hh" />등록현황</button>
+            </div>
+     </div>
+  </div> <!-- end col-md-9 -->
+  </div> <!-- end row -->
+  </div> <!-- end container -->
+
+<div class="container"> 
+<div class="row">
+<div class="col-md-12">    
+<div class="footer well">
+<div class="">
+        <p><a href="#" title="당신&apos;s 이름은">Tooltips</a> 무엇인가요?. 자세히 보아야 예쁘다
+오래 보아야 사랑스럽다
+너도 그렇다</p>
+        <p>But as it's not a native tooltip, it can be styled. Any themes built with<a href="http://jqueryui.com/themeroller/" title="당신은 나의 동반자">ThemeRoller</a>will also style tooltips accordingly.</p>
+        <p>그대가 꺾어준 꽃
+시들 때 까지 들여다 보았네
+그대가 남기고 간 시든 꽃
+다시 필 때까지</p>
+        <p><label for="age">Your age:</label> <input id="age" title="We ask for your age only for statistical purposes."></p>
+        <p>Hover the field to see the tooltip.</p>
+      </div>
+             <div class="bs-example"> 
+    <button type="button" class="btn btn-default" rel="txtTooltip" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+<button type="button" class="btn btn-primary" rel="txtTooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+<button type="button" class="btn btn-info" rel="txtTooltip" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+<button type="button" class="btn btn-danger" rel="txtTooltip" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+</div>
+ </div>
+</div>
+</div>
+</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!--<script>window.jQuery || document.write('<script src="../../../js/jquery.min.js"></script>')</script> -->
+    <script src="../../../asset/js/jquery.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.12.3.min.js"></script> -->
+
+    <script src="../../../asset/js/bootstrap.min.js"></script>
+    <script src="../../../asset/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../../asset/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="../../../asset/js/header-content.js"></script>
+
+    <script src="../../../asset/js/jssor/jssor.slider.mini.js"></script>
+    <script src="../../../asset/js/jssor.js"></script>
+  
+    <script src="../../../asset/js/main.js"></script> 
+    <script src="../../../asset/js/main_popup.js"></script> 
+    <script src="../../../asset/js/main_popup_item.js"></script> 
+    <script src="../../../asset/js/datepicker.js"></script>
+    <script src="../../../asset/js/lan_ko.js"></script>
+    <script src="../../../asset/js/con_tab.js"></script>
+    <script src="../../../asset/js/con_topmenu.js"></script>
+    <script src="../../../asset/js/toolbar_popup.js"></script>
+    <script src="../../../asset/js/con_mainmenu.js"></script>
+        
+    <!-- dialog로딩 시 autofocus없애기 -->
+    <script>$.ui.dialog.prototype._focusTabbable = function(){};</script>
+   
+    <script src="../../../asset/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="../../../asset/DataTables/media/js/dataTables.jqueryui.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/dataTables.buttons.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.jqueryui.js"></script>
+    <script src="../../../asset/DataTables/extensions/Scroller/js/dataTables.scroller.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.html5.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.print.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.colVis.js"></script> 
+    <script class="init">
+ 
+    </script>
+  </body>
+</html>

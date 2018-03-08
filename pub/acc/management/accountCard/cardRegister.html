@@ -1,0 +1,749 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../asset/favicon.ico">
+    <title>Jumbotron Template for Bootstrap</title>
+    <!-- <link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../../../asset/css/nanumgothic.css" />
+    <!-- Bootstrap core CSS -->
+    <link href="../../../asset/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../../asset/css/jumbotron-navbar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../asset/css/header-content.css" />
+    <link rel="stylesheet" href="../../../asset/jquery-ui-1.11.4.custom/jquery-ui.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../../asset/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../../asset/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <!--<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../asset/js/html5shiv.min.js"></script>')</script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../../../asset/js/respond.min.js"></script>')</script> -->
+      <script src="../../../asset/js/html5shiv.min.js"></script>
+      <script src="../../../asset/js/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="../../../asset/css/jssor.css" rel="stylesheet">
+    <link href="../../../asset/css/style.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/media/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/media/css/dataTables.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/extensions/Scroller/css/scroller.jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../../asset/DataTables/extensions/Buttons/css/buttons.jqueryui.css">
+    <style type="text/css" class="init">
+	
+    </style>
+</head>
+<body>    
+  <!-- Static navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"> Kimrim Project</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">사용자정보 <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+              <li><a href="#">김영식</a></li>
+              <li></li>
+              <li><a href="#">경기도</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">(주)삼성전자 회장</li>
+              <li><a href="#">Se@dd.com</a></li>
+              <li><a href="#">나는 누구인가?</a></li>
+            </ul>       
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="./">Logoout <span class="sr-only">(current)</span></a></li>
+          <li><a href="../navbar-static-top/">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">        
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사용회사 <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li>       
+                <table class="table table-bordered table-condensed" style="width: 250px;margin:10px;">
+                  <thead>
+                    <tr>
+                      <th>코드</th>
+                      <th>회사명</th>
+                      <th>사용여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="success">
+                      <td>1001</td>
+                      <td>(주)kimrim</td>
+                      <td>사용</td>
+                    </tr>
+                    <tr class="warning">
+                      <td>1002</td>
+                      <td>박후영</td>
+                      <td>미사용</td>
+                    </tr>
+                    <tr class="danger">
+                      <td>1003</td>
+                      <td>김배현</td>
+                      <td>사용</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="nav navbar-nav navbar-right">
+                  <div class="btn-group btn-group-sm" style="padding-right: 30px; margin-bottom: 10px;">
+                    <button type="button" class="btn btn-info">확인</button>
+                    <button type="button" class="btn btn-success">닫기</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3 logo">
+          <div class="well well-sm">
+            <h5>Logo</h5>
+            <img src="../../../asset/img/logo_4.jpg" class="img-responsive img-thumbnail" id="logo" alt="Responsive image">
+            <p>안녕하세요 박후영님</p>
+          </div>
+        </div>
+        <div class="col-md-9 menu-open">
+          <div class="navbar navbar-default" role="navigation">
+              <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav h-c">
+                  <li class="dropdown open">
+                    <a href="../../../acc/tradeInsert/trade_insert/revenue.html" class="dropdown-toggle" role="button">회계관리 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li role="presentation"><a href="../../basic_registration/formerly_information_management/cor_registration.html" role="menuitem">기초등록</a></li>
+                      <li role="presentation"><a href="../../tradeInsert/trade_insert/revenue.html" role="menuitem">거래입력</a></li>
+                      <li role="presentation"><a href="../../account_book/book_management/buying_selling.html" role="menuitem">회계장부</a></li>
+                      <li role="presentation"><a href="../../fs/settlement/data_insert_01.html" role="menuitem">결산/재무제표</a></li>
+                      <li role="presentation"><a href="../../fixAsset/fixing_asset/fixing_asset_regeister.html" role="menuitem">고정자산</a></li>
+                      <li class="open2" role="presentation"><a href="../../management/fundsBudget/receivableNoteHh.html" role="menuitem">경영관리</a></li>
+                      <li role="presentation"><a href="../../dataManagement/dataManagement/dataBackUp.html" role="menuitem">데이타관리</a></li>
+                      <li role="presentation"><a href="../../managementConsulting/businessAnalysis/profitabilityAnalysis.html" role="menuitem">경영자문</a></li>
+                      <li role="presentation"><a href="../../hhDeclaration/basic/saup_report.html" role="menuitem">사업장현황신고</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../vat/report/report01/report.html" class="dropdown-toggle" role="button">부가가치세 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                     <a href="../../../stk/sales/sales_trade/sales.html" class="dropdown-toggle" role="button">물류관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../pay/salary/earned_income/salary_insert.html" class="dropdown-toggle" role="button">급여관리 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../cor/base/base_establishment/totalCorTable.html" class="dropdown-toggle">법인조정 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="../../../per/base/base_establishment/totalPerTable.html" class="dropdown-toggle">개인조정 <span class="caret"></span></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">환경설정 <span class="caret"></span></a>
+                    <ul class="dropdown-menu child" role="menu">
+                      <li class="open2"><a href="#">시스템 구성</a></li>
+                      <li><a href="#">화면셋팅</a></li>
+                    </ul>
+                  </li>
+                </ul>                
+              </div><!--/.nav-collapse -->                                    
+          </div>         
+          <div class="container" id="page">
+            <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden; visibility: hidden;">
+              <!-- Loading Screen -->
+              <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position:absolute;display:block;background:url('../../../asset/img/jssor/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+              </div>
+              <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 809px; height: 150px; overflow: hidden;">
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/005.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/006.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/011.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/013.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/014.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/019.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/020.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/021.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/022.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/024.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/025.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/027.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/029.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/031.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/030.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/034.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/038.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/039.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/043.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/044.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/047.jpg" />
+               </div>
+               <div style="display: none;">
+                <img data-u="image" src="../../../asset/img/jssor/050.jpg" />
+               </div>
+             </div>
+             <!-- Bullet Navigator -->
+             <div data-u="navigator" class="jssorb03" style="bottom:10px;right:10px;">
+               <!-- bullet navigator item prototype -->
+               <div data-u="prototype" style="width:21px;height:21px;">
+                <div data-u="numbertemplate"></div>
+               </div>
+             </div>
+             <!-- Arrow Navigator -->
+             <span data-u="arrowleft" class="jssora03l" style="top:123px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <span data-u="arrowright" class="jssora03r" style="top:123px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+             <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
+           </div>
+           <!-- #endregion Jssor Slider End -->
+        </div><!-- div class="container" id="page" end -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="well well-sm">        
+          <div class="panel-group">
+            <div class="panel panel-danger">
+	      <!-- Default panel contents -->
+	      <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" href="#collapse11">자금및 예산관리</a></h4>
+              </div>
+              <div id="collapse11" class="panel-collapse collapse">
+	        <div class="panel-body">
+		  <p>여기는 빈공간</p>
+	        </div>
+	        <!-- List group -->
+	        <div class="list-group">
+		  <a href="../fundsBudget/receivableNoteHh.html" class="list-group-item">받을어음현황 <span class="badge">50</span></a>
+		  <a href="../fundsBudget/paymentleNoteHh.html" class="list-group-item">지급어음현황 <span class="badge">145</span></a>
+		  <a href="../fundsBudget/borrowingHh.html" class="list-group-item">차입금현황 <span class="badge">30</span></a>  
+		  <a href="../fundsBudget/dailyFundsDetails.html" class="list-group-item">일일자금명세(경리일보) <span class="badge">65</span></a>
+		  <a href="../fundsBudget/fundsProductInsert.html" class="list-group-item">자금계획 입력 <span class="badge">8</span></a>
+                  <a href="../fundsBudget/fundsProductDocument.html" class="list-group-item">자금계획서 <span class="badge">8</span></a>
+                  <a href="../fundsBudget/fundsHh.html" class="list-group-item">자금현황 <span class="badge">50</span></a>
+		  <a href="../fundsBudget/depositHh.html" class="list-group-item">예.적금현항 <span class="badge">145</span></a>
+		  <a href="../fundsBudget/accountCheckHh.html" class="list-group-item">당좌수표 현황 <span class="badge">30</span></a>  
+		  <a href="../fundsBudget/budgetInsert.html" class="list-group-item">예산입력 <span class="badge">65</span></a>
+		  <a href="../fundsBudget/prevBudgetInsert.html" class="list-group-item">전기실행 예산입력 <span class="badge">8</span></a>
+                  <a href="../fundsBudget/currentBudgetMonthHh.html" class="list-group-item">당기예산 월별실적 대비현황 <span class="badge">8</span></a>
+                  <a href="../fundsBudget/prevBudgetMonthHh.html" class="list-group-item">전기예산 월별실적 대비현황 <span class="badge">65</span></a>			 
+	        </div>
+              </div>
+	    </div>
+            <div class="panel panel-danger">
+	      <!-- Default panel contents -->
+	      <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" href="#collapse12">계좌및 신용카드관리</a></h4>
+              </div>
+              <div id="collapse12" class="panel-collapse collapse in">
+	        <div class="panel-body">
+		  <p>여기는 빈공간</p>
+	        </div>
+	        <!-- List group -->
+	        <div class="list-group">
+		  <a href="../accountCard/bussinessAccountDeclaration.html" class="list-group-item">사업용계좌신고서 <span class="badge">50</span></a>
+		  <a href="../accountCard/totalAccountLookup.html" class="list-group-item">전계좌잔액조회 <span class="badge">145</span></a>
+		  <a href="../accountCard/tradeDetails.html" class="list-group-item">거래내역 <span class="badge">30</span></a>  
+		  <a href="../accountCard/transfer.html" class="list-group-item">이체 <span class="badge">65</span></a>
+		  <a href="../accountCard/transferLookup.html" class="list-group-item">이체결과 조회 <span class="badge">8</span></a>
+                  <a href="../accountCard/billLookup.html" class="list-group-item">청구서조회 <span class="badge">8</span></a>
+                  <a href="../accountCard/approveDetailsLookup.html" class="list-group-item">승인내역조회 <span class="badge">50</span></a>
+		  <a href="../accountCard/useLimitLookup.html" class="list-group-item">사용한도조회 <span class="badge">145</span></a>
+		  <a href="../accountCard/accountRegister.html" class="list-group-item">계좌등록 <span class="badge">30</span></a>  
+		  <a href="../accountCard/cardRegister.html" class="list-group-item active">카드등록 <span class="badge">65</span></a>		 
+	        </div>
+              </div>
+	    </div>
+            <div class="panel panel-danger">
+	      <!-- Default panel contents -->
+	      <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" href="#collapse13">세무포탈</a></h4>
+              </div>
+              <div id="collapse13" class="panel-collapse collapse">
+	        <div class="panel-body">
+		  <p>여기는 빈공간</p>
+	        </div>
+	        <!-- List group -->
+	        <div class="list-group">
+		  <a href="../taxTotal/elecTaxBillReception.html" class="list-group-item">전자세금계산서수취(베스트빌) <span class="badge">50</span></a>
+		  <a href="../taxTotal/elecTaxBillPublish.html" class="list-group-item">전자세금계산서발행 <span class="badge">145</span></a>
+		  <a href="../taxTotal/cardDataReception.html" class="list-group-item">신용카드데이터수취 <span class="badge">30</span></a>  
+		  <a href="../taxTotal/bestCnsReception.html" class="list-group-item">베스트CMS수취 <span class="badge">65</span></a> 
+	        </div>
+              </div>
+	    </div>            
+            <div class="panel panel-danger">
+	      <!-- Default panel contents -->
+	      <div class="panel-heading">
+                <h4 class="panel-title"><a data-toggle="collapse" href="#collapse14">금융지원자료전송</a></h4>
+              </div>
+              <div id="collapse14" class="panel-collapse collapse">
+	        <div class="panel-body">
+		  <p>여기는 빈공간</p>
+	        </div>
+	        <!-- List group -->
+	        <div class="list-group">
+		  <a href="../financeAssistDataTransmission/fsTransmissionDataProduce.html" class="list-group-item">재무제표전송 자료생성 <span class="badge">50</span></a>
+		  <a href="../financeAssistDataTransmission/vatTransmissionDataProduc.html" class="list-group-item">부가가치세전송 자료생성 <span class="badge">145</span></a>
+		  <a href="../financeAssistDataTransmission/metagateTransmissionDataProduc.html" class="list-group-item">메타게이트 자료전송 <span class="badge">30</span></a>  
+		  <a href="../financeAssistDataTransmission/businessAnalysisTransmissionDataProduc.html" class="list-group-item">경영분석자료전송 <span class="badge">65</span></a> 
+                  <a href="../financeAssistDataTransmission/businessAnalysis.html" class="list-group-item">경영분석 <span class="badge">50</span></a>
+	        </div>
+              </div>
+	    </div>
+          </div>
+        </div><!-- end well -->
+      </div><!-- end col-md-3 -->
+      <div class="col-md-9">
+        <div id="buttons" class="btn-toolbar mar_b3" role="group">
+           <button type="button" class="btn btn-xs btn-success toolbar_dialog" id="esc" title="실행하고있는 메뉴를 종료합니다">종료(ESC)</button>                                     
+           <button type="button" class="btn btn-xs btn-primary toolbar_dialog" id="help" title="사용방법이 조회됩니다">도움(F1)</button> 
+           <button type="button" class="btn btn-xs btn-danger toolbar_dialog" id="code" title="커서위치의 코드도움박스가 나타납니다">코드(F2)</button> 
+           <button type="button" class="btn btn-xs btn-default toolbar_dialog" id="cardAccountRegister_1_800">카드등록(F3)</button>
+           <button type="button" class="btn btn-xs btn-info">카드수정(F4)</button> 
+           <button type="button" class="btn btn-xs btn-warning">삭제(F5)</button>                   
+        </div>
+        <ol class="breadcrumb mar_b3">
+          <li><a href="#">경영관리</a></li>
+          <li><a href="#">계좌및 신용카드관리</a></li>
+          <li class="active">카드등록</li>
+        </ol> 
+        <div class="well well-sm mar_b3"> >>카드등록현황</div>      
+            <table id="example" class="display nowrap" cellspacing="0" width="100%">
+		<thead>
+                      <tr class="success">
+                        <th class=""></th>
+                        <th class=""></th>
+                        <th class="">카드사</th>
+                        <th class="">카드번호</th>
+                        <th class="">카드별칭</th> 
+                        <th class="">결제일</th>
+                        <th class="">인증정보</th>
+                      </tr>
+                    </thead>  
+                  </table>
+              <div class="well well-sm" style="margin-top: 3px;"> >>카드등록정보</div>      
+                <form class="form-horizontal mar_tm18" id="form1">
+                <div class="well well-sm">                            
+                <div class="form-group">
+                  <label class="control-label col-md-3">카드사</label>
+                  <div class="col-md-2">
+                    <input type="text" class="form-control input-sm"> 
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3">카드종류</label>
+                  <div class="col-md-1">
+                    <input type="text" class="form-control input-sm">
+                  </div>
+                  <label class="control-label col-md-2">1.법인 2.개인</label>
+                  <label class="control-label col-md-3">등록방식</label>
+                  <div class="col-md-1">
+                    <input type="text" class="form-control input-sm">
+                  </div>
+                  <label class="control-label col-md-2">1.아이디 2.인증서</label>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3">웹회원아이디</label>
+                  <div class="col-md-2">
+                    <input type="text" class="form-control input-sm">
+                  </div>
+                  <label class="control-label col-md-2">웹회원비밀번호</label>
+                  <div class="col-md-2">
+                    <input type="text" class="form-control input-sm">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3">인증서</label>
+                  <div class="col-md-5">
+                    <input type="text" class="form-control input-sm">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3">인증서비밀번호</label>
+                  <div class="col-md-2">
+                    <input type="text" class="form-control input-sm">
+                  </div>
+                  <label class="control-label col-md-2">주민/사업자번호</label>
+                  <div class="col-md-2">
+                    <input type="text" class="form-control input-sm">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3">카드번호</label>
+                  <div class="col-md-2">
+                    <input type="text" class="form-control input-sm">
+                  </div>
+                  <label class="control-label col-md-2">카드비밀번호</label>
+                  <div class="col-md-2">
+                    <input type="text" class="form-control input-sm">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3">카드별칭</label>
+                  <div class="col-md-2">
+                    <input type="text" class="form-control input-sm">
+                  </div>
+                  <label class="control-label col-md-2">결제일</label>
+                  <div class="col-md-1">
+                    <input type="text" class="form-control input-sm">
+                  </div>
+                  <label class="control-label col-md-1">일</label>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3">결제은행</label>
+                  <div class="col-md-2">
+                    <input type="text" class="form-control input-sm">
+                  </div>
+                  <label class="control-label col-md-2">결제계좌번호</label>
+                  <div class="col-md-3">
+                    <input type="text" class="form-control input-sm">
+                  </div>
+                </div>
+            </div>
+          </form>
+             <div class="row">
+           <div class="col-md-12">
+              <div class="nav navbar-nav">
+                <div class="btn-group btn-group-xs" style="margin-top: 7px;">
+                  <button type="button" class="btn btn-primary tableinput-toggle" name="tab-tax1">조회</button>
+                </div>
+              </div>
+           </div>       
+         </div><!-- end row -->
+         
+         
+      </div> <!-- end well --> 
+           
+    </div> <!-- end col-md-9 -->
+  </div> <!-- end row -->
+  </div> <!-- end container -->
+
+
+
+<div class="container"> 
+<div class="row">
+<div class="col-md-12">    
+<div class="footer well">
+<div class="">
+        <p><a href="#" title="당신&apos;s 이름은">Tooltips</a> 무엇인가요?. 자세히 보아야 예쁘다
+오래 보아야 사랑스럽다
+너도 그렇다</p>
+        <p>But as it's not a native tooltip, it can be styled. Any themes built with<a href="http://jqueryui.com/themeroller/" title="당신은 나의 동반자">ThemeRoller</a>will also style tooltips accordingly.</p>
+        <p>그대가 꺾어준 꽃
+시들 때 까지 들여다 보았네
+그대가 남기고 간 시든 꽃
+다시 필 때까지</p>
+        <p><label for="age">Your age:</label> <input id="age" title="We ask for your age only for statistical purposes."></p>
+        <p>Hover the field to see the tooltip.</p>
+      </div>
+             <div class="bs-example"> 
+    <button type="button" class="btn btn-default" rel="txtTooltip" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+<button type="button" class="btn btn-primary" rel="txtTooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+<button type="button" class="btn btn-info" rel="txtTooltip" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+<button type="button" class="btn btn-danger" rel="txtTooltip" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+</div>
+ </div>
+</div>
+</div>
+</div>
+
+<!-- dialog_cardAccountRegister -->
+<div id="dialog_cardAccountRegister" class="lookup_popup" style="display:none; padding: 7px;"> 
+  <p style="font-size: 12px;">아무 것도 하지 않을 것입니다. 동의하십니까?</p>
+  <div class="row">
+              <form class="form-horizontal" id="">
+               <div class="well well-sm">                            
+                <div class="form-group">
+                  <label class="control-label col-md-2">카드사</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm" readonly="readonly"> 
+                  </div>
+                  
+                </div>                          
+                <div class="form-group">
+                  <label class="control-label col-md-2">카드종류</label>
+                  <div class="col-md-4">
+                    <div class="input-group">                           
+                      <input type="text" class="form-control input-sm">
+                      <span class="input-group-addon">1.개인 2.법인</span> 
+                    </div>
+                  </div>
+                  <label class="control-label col-md-2">등록방식</label>
+                  <div class="col-md-4">
+                    <div class="input-group">                           
+                      <input type="text" class="form-control input-sm">
+                      <span class="input-group-addon">1.아이디2.인증서</span> 
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">웹회원아이디</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm"> 
+                  </div>
+                  <label class="control-label col-md-2">웹회원비밀번호</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm"> 
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">인증서</label>
+                  <div class="col-md-8">
+                    <input type="text" class="form-control input-sm"> 
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">인증서비밀번호</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm"> 
+                  </div>
+                  <label class="control-label col-md-2">주민/사업자번호</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm"> 
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">카드번호</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm"> 
+                  </div>
+                  <label class="control-label col-md-2">카드비밀번호</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm"> 
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">카드별칭</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm"> 
+                  </div>
+                  <label class="control-label col-md-2">결제일</label>
+                  <div class="col-md-2">
+                    <div class="input-group">                                                 
+                      <input type="text" class="form-control input-sm"> 
+                      <span class="input-group-addon">일</span>                      
+                    </div> 
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-2">결제은행</label>
+                  <div class="col-md-4">                          
+                      <input type="text" class="form-control input-sm">                       
+                  </div>
+                  <label class="control-label col-md-2">결제계좌번호</label>
+                  <div class="col-md-4">
+                    <input type="text" class="form-control input-sm"> 
+                  </div>
+                </div>                
+             </div>              
+             </form>
+           </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                    </button>
+                     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Email:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                    </button>
+                     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>코드</th>
+        <th>회사명</th>
+        <th>사용여부</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>1001</td>
+        <td>(주)kimrim</td>
+        <td>사용</td>
+      </tr>
+      <tr class="warning">
+        <td>1002</td>
+        <td>박후영</td>
+        <td>미사용</td>
+      </tr>
+      <tr class="danger">
+        <td>1003</td>
+        <td>김배현</td>
+        <td>사용</td>
+      </tr>
+    </tbody>
+  </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!--<script>window.jQuery || document.write('<script src="../../../js/jquery.min.js"></script>')</script> -->
+    <script src="../../../asset/js/jquery.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.12.3.min.js"></script> -->
+
+    <script src="../../../asset/js/bootstrap.min.js"></script>
+    <script src="../../../asset/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../../asset/js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="../../../asset/js/header-content.js"></script>
+
+    <script src="../../../asset/js/jssor/jssor.slider.mini.js"></script>
+    <script src="../../../asset/js/jssor.js"></script>
+  
+    <script src="../../../asset/js/main.js"></script> 
+    <script src="../../../asset/js/main_popup.js"></script> 
+    <script src="../../../asset/js/main_popup_item.js"></script> 
+    <script src="../../../asset/js/datepicker.js"></script>
+    <script src="../../../asset/js/lan_ko.js"></script>
+    <script src="../../../asset/js/con_tab.js"></script>
+    <script src="../../../asset/js/con_topmenu.js"></script>
+    <script src="../../../asset/js/toolbar_popup.js"></script>
+    <script src="../../../asset/js/con_mainmenu.js"></script>
+        
+    <!-- dialog로딩 시 autofocus없애기 -->
+    <script>$.ui.dialog.prototype._focusTabbable = function(){};</script>
+   
+    <script src="../../../asset/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="../../../asset/DataTables/media/js/dataTables.jqueryui.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/dataTables.buttons.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.jqueryui.js"></script>
+    <script src="../../../asset/DataTables/extensions/Scroller/js/dataTables.scroller.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="http://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.html5.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.print.js"></script>
+    <script src="../../../asset/DataTables/extensions/Buttons/js/buttons.colVis.js"></script>
+    <script class="init">	
+       $(document).ready(function() {
+	   $("body").con_tab({cla2: "1", exam: "#example", url: "../../data/2500_07.txt"});
+        });
+    </script>  
+    <script src="../../../asset/js/common.js"></script>
+  </body>
+</html>

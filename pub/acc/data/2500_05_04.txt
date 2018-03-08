@@ -1,0 +1,17 @@
+﻿{ "aaData": [
+	[ "1.당기순이익", "Armand", "Warren", "56045", "Taiwan, Province of China" ],
+	[ "2.회계정책의 누적효과", "Xenos", "Salas", "71090", "Liberia"],
+	[ "3.기타포괄이익", "Virginia", "Whitaker", "62723", "Nicaragua"  ],
+	[ "(1)매도가능증권평가손익", "Kato", "Patrick", "97662", "Palau" ],
+	[ "매도가능증권평가이익", "Penelope", "Hensley", "76634", "Greenland" ],
+	[ "매도가능증권평가손", "Georgia", "Erickson", "81358", "Bolivia"  ],
+	[ "(2)해외사업환산손익", "Shad", "Pena", "20600", "Palestinian Territory, Occupied"],
+	[ "해외사업환산이익", "Tanisha", "Humphrey", "93371", "Kenya"  ],
+	[ "해외사업환산손실", "Claire", "Espinoza", "I8S 2S8", "Panama" ],
+	[ "(3)파생상품평가손", "Raya", "Tucker", "O8D 8W7", "Botswana"  ],
+	[ "파생상품평가이익", "Otto", "Briggs", "57590", "Anguilla"  ],
+	[ "파생상품평가손실", "Logan", "Burt", "53041", "Venezuela" ],
+	[ "(4)재평가잉여금", "Cooper", "Pennington", "36994", "France"  ],
+	[ "재평가차익", "Kristen", "Peterson", "52917", "Sao Tome and Principe"  ],
+	[ "4.포괄이익", "Jordan", "Velasquez", "08884", "Switzerland" ]
+] }
